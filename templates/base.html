@@ -1,0 +1,43 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags for the whole site -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A monthly subscription service of coffee">
+        <meta name="keywords" content="subscription, coffee, shop, reviews">
+        
+        <!-- Additional meta tags for specific pages -->
+        {% block extra_meta %}
+        {% endblock %}
+
+        <!-- favicon -->
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+        
+        <!-- Bootstrap CSS -->
+        <link>
+        
+        <!-- custom css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        
+        <!-- page specific css -->
+        {% block additional_css %}
+        {% endblock %}
+        
+        <!-- page specific js -->
+        {% block additional_js %}
+        {% endblock %}
+
+        <title>MochaBean {% block extra_title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+        </header>
+    
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
+    
