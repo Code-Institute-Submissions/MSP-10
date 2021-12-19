@@ -40,7 +40,7 @@
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
-            <nav class="navbar navbar-expand-lg" id="navigation">
+            <nav class="navigation-bar navbar navbar-expand-lg">
                 <div class="container px-5 navigation-bar">
                     <a class="navbar-brand navigation-bar" href="index.html">MochaBean</a>
                     <!-- botton to change the Navbar to a hamburger on smaller devices-->
@@ -51,25 +51,45 @@
                             <li class="nav-item navigation-bar"><a class="nav-link" href="">About</a></li>
                             <li class="nav-item navigation-bar"><a class="nav-link" href="">Subscription</a></li>
                             <li class="nav-item navigation-bar"><a class="nav-link" href="">FAQ</a></li>
+                            <!-- Button will appear if user not logged in-->
                             <li class="nav-item navigation-bar"><a class="nav-link" href="">Login</a></li>
-							<!-- The following will only show if the user is logged in This will be Updated-->
+                            <!-- The following will only show if the user is logged in This will be Updated-->
                             <li class="nav-item dropdown navigation-bar">
                                 <a class="nav-link dropdown-toggle navigation-bar" id="navbarCustomerDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Customer Name</a>
                                 <ul class="dropdown-menu dropdown-menu-end navigation-bar" aria-labelledby="navbarCustomerDropdown">
                                     <li><a class="dropdown-item navigation-bar" href="#">Profile</a></li>
                                     <li><a class="dropdown-item navigation-bar" href="#">Subscription</a></li>
-									<li><a class="dropdown-item navigation-bar" href="#">Logout</a></li>
+                                    <li><a class="dropdown-item navigation-bar" href="#">Logout</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            
             {% block content %}
             {% endblock %}
         </main>
-        <footer>
+        <footer  class="py-4 mt-auto footer-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto">
+                        <div class="small m-0 footer-bar">Copyright &copy; MochaBeans 2021-2022</div>
+                        <div class="small m-0 footer-bar">Copyright &copy; MochaBeans 2021-2022</div>
+                    </div>
+					<div class="col-auto">
+                        <a class="footer-bar" href="#!">Privacy</a>
+                        <span class="mx-1 footer-bar">&middot;</span>
+                        <a class="footer-bar" href="#!">Terms</a>
+                        <span class="mx-1 footer-bar">&middot;</span>
+                        <a class="footer-bar" href="#!">Contact</a>
+                    </div>
+                    <div class="col-auto">
+                        <span class="mx-1 footer-bar"><i class="bi bi-cup-fill"></i></span>
+                        <span class="mx-1 footer-bar"><i class="bi bi-cup-fill"></i></span>
+                        <span class="mx-1 footer-bar"><i class="bi bi-cup-fill"></i></span>
+                    </div>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
