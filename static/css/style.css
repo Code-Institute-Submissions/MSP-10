@@ -22,9 +22,10 @@ body {
     color: #E6CCB2 !important;
 }
 
-.darkmocha-button {
+.darkmocha-button, .darkmocha {
     background-color: #543826 !important;
     border-color: #543826 !important;
+    color: #E6CCB2 !important;
 }
 
 .darkmocha-button:hover {
