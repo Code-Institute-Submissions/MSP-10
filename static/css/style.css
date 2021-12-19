@@ -11,13 +11,13 @@ body {
 }
 
 .navigation-bar, .footer-bar {
-    color: #ddb892 !important;
+    color: #E6CCB2 !important;
     background-color: #543826 !important;
     text-decoration: none !important;
     font-weight: bold;
 }
 
-.index-header {
+.index-header, .feedback {
     background-color: #7f5539 !important;
     color: #E6CCB2 !important;
 }
@@ -44,4 +44,8 @@ body {
     background-color: #543826 !important;
     border-color: #543826 !important;
     color: #E6CCB2 !important;
+}
+
+.guide {
+    background-color: #E6CCB2 !important; 
 }
