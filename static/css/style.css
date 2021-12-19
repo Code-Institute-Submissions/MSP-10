@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
+/* Base template css settings */
+body {
+    /* font-family: 'Shadows Into Light', cursive; */
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 300;
+    color: #543826;
+}
+
+#navigation {
+    background-color: #543826 !important;
+    color: #ddb892 !important;
+}
+
+.navbar-brand, .navbar-nav, .nav-item {
+    color: #ddb892 !important;
+    background-color: #543826 !important;
+}

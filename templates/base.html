@@ -16,6 +16,12 @@
         <!-- favicon -->
         <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
         
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         
@@ -34,22 +40,21 @@
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container px-5">
+            <nav class="navbar navbar-expand-lg" id="navigation">
+                <div class="container px-5 nav-custom">
                     <a class="navbar-brand" href="index.html">MochaBean</a>
                     <!-- botton to change the Navbar to a hamburger on smaller devices-->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobileContent" aria-controls="navbarMobileContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <!-- actual navigation bar -->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarMobileContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Subscription</a></li>
                             <li class="nav-item"><a class="nav-link" href="">FAQ</a></li>
 							<!-- The following will only show if the user is logged in This will be Updated-->
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Customer Name Placeholder</a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownCustomerDetails">
+                                <a class="nav-link dropdown-toggle" id="navbarCustomerDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Customer Name</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarCustomerDropdown">
                                     <li><a class="dropdown-item" href="#">Profile</a></li>
                                     <li><a class="dropdown-item" href="#">Subscription</a></li>
 									<li><a class="dropdown-item" href="#">Logout</a></li>
@@ -60,6 +65,7 @@
                     </div>
                 </div>
             </nav>
+            
             {% block content %}
             {% endblock %}
         </main>
