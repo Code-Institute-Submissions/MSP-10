@@ -16,3 +16,31 @@ body {
     text-decoration: none !important;
     font-weight: bold;
 }
+
+.index-header {
+    background-color: #7f5539 !important;
+    color: #E6CCB2 !important;
+}
+
+.darkmocha-button {
+    background-color: #543826 !important;
+    border-color: #543826 !important;
+}
+
+.darkmocha-button:hover {
+    background-color: #E6CCB2 !important;
+    border-color: #E6CCB2 !important;
+    color: #543826 !important;
+}
+
+.lightmocha-button {
+    background-color: #E6CCB2 !important;
+    border-color: #E6CCB2 !important;
+    color: #543826 !important;
+}
+
+.lightmocha-button:hover {
+    background-color: #543826 !important;
+    border-color: #543826 !important;
+    color: #E6CCB2 !important;
+}
