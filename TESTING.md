@@ -92,59 +92,27 @@ The following list of tools have been utilised during the testing of this projec
 11th December - 17th December 2021
 
 ### User Stories Closed
-* 
-* 
-* 
+* As a Developer I want to see the base Django app has been created
 
 ### Unit Tests Conducted
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
+No Unit Tests were built as part of this Sprint
+
 
 ### Exploratory Test Session Goals
-* I want to confirm that the base templates load as expected
-* I want to confirm the exam list basic page load with modal
+* I want to confirm that the base project has been created
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
 
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
 
 ### Potential Automation Test Cases
-* 
-* 
-* 
+No potential Automation Test Cases were identified during this sprint
 
 ### Issues Faced / Found
-* 
-* 
-* 
+No Issues were faced / found as part of this Sprint
 
 ### Python Validation
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
-
+No Python validation occured during this Sprint
 
 ## Sprint 2 
 18th December - 24th December 2021
@@ -167,7 +135,6 @@ The following list of tools have been utilised during the testing of this projec
 
 ### Exploratory Test Session Goals
 * I want to confirm that the base templates load as expected
-* I want to confirm the exam list basic page load with modal
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
@@ -224,8 +191,7 @@ The following list of tools have been utilised during the testing of this projec
 </details>
 
 ### Exploratory Test Session Goals
-* I want to confirm that the base templates load as expected
-* I want to confirm the exam list basic page load with modal
+
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
@@ -282,8 +248,7 @@ The following list of tools have been utilised during the testing of this projec
 </details>
 
 ### Exploratory Test Session Goals
-* I want to confirm that the base templates load as expected
-* I want to confirm the exam list basic page load with modal
+
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
@@ -340,8 +305,7 @@ The following list of tools have been utilised during the testing of this projec
 </details>
 
 ### Exploratory Test Session Goals
-* I want to confirm that the base templates load as expected
-* I want to confirm the exam list basic page load with modal
+
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
@@ -398,8 +362,7 @@ The following list of tools have been utilised during the testing of this projec
 </details>
 
 ### Exploratory Test Session Goals
-* I want to confirm that the base templates load as expected
-* I want to confirm the exam list basic page load with modal
+
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
