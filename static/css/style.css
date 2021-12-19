@@ -11,21 +11,21 @@ body {
 }
 
 .navigation-bar, .footer-bar {
-    color: #E6CCB2 !important;
+    color: #EDE0D4 !important;
     background-color: #543826 !important;
     text-decoration: none !important;
     font-weight: bold;
 }
 
-.index-header, .feedback {
+.index-header, .feedback, .newsletter-box {
     background-color: #7f5539 !important;
-    color: #E6CCB2 !important;
+    color: #EDE0D4 !important;
 }
 
 .darkmocha-button, .darkmocha {
     background-color: #543826 !important;
     border-color: #543826 !important;
-    color: #E6CCB2 !important;
+    color: #EDE0D4 !important;
 }
 
 .darkmocha-button:hover {
@@ -43,9 +43,9 @@ body {
 .lightmocha-button:hover {
     background-color: #543826 !important;
     border-color: #543826 !important;
-    color: #E6CCB2 !important;
+    color: #EDE0D4 !important;
 }
 
-.guide {
+.guide, .newsletter {
     background-color: #E6CCB2 !important; 
 }
