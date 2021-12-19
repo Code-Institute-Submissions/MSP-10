@@ -1,0 +1,27 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Additional meta tags for specific pages -->
+{% block extra_meta %}
+{% endblock %}
+
+<!-- page specific css -->
+{% block additional_css %}
+{% endblock %}
+        
+<!-- page specific js -->
+{% block additional_js %}
+{% endblock %}
+
+<!-- Updates the page title -->
+{% block title %}
+Home Page
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+<!-- Indented to align with the base template -->
+            {% block content %}
+            {% endblock %}
