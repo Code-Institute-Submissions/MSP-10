@@ -1,0 +1,66 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Additional meta tags for specific pages -->
+{% block extra_meta %}
+{% endblock %}
+
+<!-- page specific css -->
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+        
+<!-- page specific js -->
+{% block additional_js %}
+{% endblock %}
+
+<!-- Updates the page title -->
+{% block title %}
+Policies Page
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+<!-- Indented to align with the base template -->
+            {% block content %}
+                <!-- Header-->
+                <header class="bg-dark py-5 index-header">
+                    <div class="container px-5">
+                        <div class="row gx-5 align-items-center justify-content-center">
+                            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                                <div class="my-5 text-center text-xl-start">
+                                    <h1 class="display-5 fw-bolder mb-2">Coffee Coffee Coffee</h1>
+                                    <p class="lead fw-normal text-50 mb-4">Sales pitch place holder! Sales pitch place holder! Sales pitch place holder! Sales pitch place holder! Sales pitch place holder!</p>
+                                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                        <a class="btn btn-primary btn-lg px-4 me-sm-3 darkmocha-button" href="#features">Get Started</a>
+                                        <a class="btn btn-outline-light btn-lg px-4 lightmocha-button" href="#!">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                        </div>
+                    </div>
+                </header>
+                <!-- Newsletter Subscription Section -->
+                <section class="py-5 newsletter">
+                    <div class="container px-5 my-5">
+                        <aside class=" newsletter-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                            <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+                                <div class="mb-4 mb-xl-0">
+                                    <div class="fs-3 fw-bold">Coffee is not just a drink, it's an experience.</div>
+                                    <div class="text-50">Sign up to the MochaBeans newsletter and keep up to date with all the latest coffee news.</div>
+                                </div>
+                                <div class="ms-xl-4">
+                                    <div class="input-group mb-2">
+                                        <input class="form-control" type="text" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter" />
+                                        <button class="btn darkmocha-button" id="button-newsletter" type="button">Sign up</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            </main>
+            {% endblock %}
