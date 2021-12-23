@@ -18,3 +18,18 @@ class HomePageTests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
 
+class PoliciesPageTests(SimpleTestCase):
+    # Status check of the websites policies page
+    def test_policies_page_status(self):
+        response = self.client.get('/policies/')
+        self.assertEquals(response.status_code, 200)
+
+    def test_policies_page_by_name(self):
+        response = self.client.get(reverse('policies'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_policies_page_template(self):
+        response = self.client.get(reverse('policies'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'information/policies.html', 'base.html')
+
