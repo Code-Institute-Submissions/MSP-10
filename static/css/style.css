@@ -17,7 +17,7 @@ body {
     font-weight: bold;
 }
 
-.index-header, .feedback, .newsletter-box {
+.index-header, .feedback, .newsletter-box, .static-box {
     background-color: #7f5539 !important;
     color: #EDE0D4 !important;
 }
@@ -46,6 +46,6 @@ body {
     color: #EDE0D4 !important;
 }
 
-.guide, .newsletter {
+.guide, .newsletter, .static-page {
     background-color: #E6CCB2 !important; 
 }
