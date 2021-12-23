@@ -1,0 +1,60 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Additional meta tags for specific pages -->
+{% block extra_meta %}
+{% endblock %}
+
+<!-- page specific css -->
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+        
+<!-- page specific js -->
+{% block additional_js %}
+{% endblock %}
+
+<!-- Updates the page title -->
+{% block title %}
+Shipping Page
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+<!-- Indented to align with the base template -->
+            {% block content %}
+                <!-- Body Section of the Shipping page -->
+                <section class="py-5 static-page">
+                    <h1 class="text-center">MochaBean Shipping</h1>
+                    <div class="container px-5 my-5">
+                        <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                            <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+                                <div class="mb-4 mb-xl-0">
+                                    <div class="fs-3 fw-bold">Membership Terms</div>
+                                    <div class="text-50 py-2">.</div>
+                                    <div class="text-50 py-2">.</div>
+                                    <hr>
+                                    <div class="fs-3 pt-3 fw-bold">Payments and Billing</div>
+                                    <div class="text-50 py-2">.</div>
+                                    <div class="text-50 py-2">.</div>
+                                    <div class="text-50 py-2">.</div>
+                                    <hr>
+                                    <div class="fs-3 pt-3 fw-bold">General Terms and Conditions</div>
+                                    <div class="text-50 py-2"></div>
+                                    <div class="text-50 py-2"></div>
+                                    <div class="text-50 py-2"></div>
+                                    <ul class="text-50 py-1">
+                                        <li>U</li>
+                                        <li>S</li>
+                                        <li>D</li>
+                                        <li>I</li>
+                                        <li>U</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            {% endblock %}

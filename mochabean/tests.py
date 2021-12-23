@@ -31,5 +31,4 @@ class PoliciesPageTests(SimpleTestCase):
     def test_policies_page_template(self):
         response = self.client.get(reverse('policies'))
         self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'information/policies.html', 'base.html')
-
+        self.assertTemplateUsed(response, 'information/policies.html')
