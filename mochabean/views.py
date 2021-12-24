@@ -8,3 +8,7 @@ def index(request):
 def policies(request):
     # View for displaying the resource list page
     return render(request, 'information/policies.html')
+
+def shipping(request):
+    # View for displaying the resource list page
+    return render(request, 'information/shipping.html')
