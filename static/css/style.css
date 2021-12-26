@@ -4,7 +4,6 @@
 
 /* Base template css settings */
 body {
-    /* font-family: 'Shadows Into Light', cursive; */
     font-family: 'Signika Negative', sans-serif;
     font-weight: 300;
     color: #543826;
@@ -53,6 +52,10 @@ body {
 /* Remover the default settings of the accordion buttons accross the site */
 /* Primarily on the FAQs page and the Shipping Page */
 .accordion-button {
+    box-shadow: none !important;
+    background-image: none !important;
+}
+.accordion-button::after {
     box-shadow: none !important;
     background-image: none !important;
 }
