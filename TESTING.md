@@ -118,9 +118,9 @@ No Python validation occured during this Sprint
 18th December - 24th December 2021
 
 ### User Stories Closed
-* 
-* 
-* 
+* As a Developer I want to see the base html templates in place
+* As a User I want to view the initial landing page for the site
+* As a User I want to view the store policies
 
 ### Unit Tests Conducted
 <details>
@@ -134,6 +134,9 @@ No Python validation occured during this Sprint
 </details>
 
 ### Exploratory Test Session Goals
+* I want to confirm the inital landing page loads correctly
+* I want to confirm the Policies page loads correctly
+* I want to confirm the Navigation bar has been updated for the landing page and policies pages
 * I want to confirm that the base templates load as expected
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
@@ -144,32 +147,16 @@ No Python validation occured during this Sprint
     <p float="left">
         <img src="" alt="Initial Python Unit Test"/>
 		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
     </p>
 </details>
 
 ### Potential Automation Test Cases
-* 
-* 
-* 
+* Landing page loading as expected
+* Policies page loads correctly
+* Policies page loads from footer navigation
 
 ### Issues Faced / Found
-* 
-* 
-* 
-
-### Python Validation
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
-
+* None located at this time
 
 ## Sprint 3
 25th December - 31st December 2021
