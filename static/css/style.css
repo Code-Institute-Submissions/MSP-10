@@ -34,7 +34,7 @@ body {
     color: #543826 !important;
 }
 
-.lightmocha-button {
+.lightmocha-button, .lightmocha {
     background-color: #E6CCB2 !important;
     border-color: #E6CCB2 !important;
     color: #543826 !important;
@@ -48,4 +48,11 @@ body {
 
 .guide, .newsletter, .static-page {
     background-color: #E6CCB2 !important; 
+}
+
+/* Remover the default settings of the accordion buttons accross the site */
+/* Primarily on the FAQs page and the Shipping Page */
+.accordion-button {
+    box-shadow: none !important;
+    background-image: none !important;
 }
