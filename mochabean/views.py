@@ -12,3 +12,7 @@ def policies(request):
 def shipping(request):
     # View for displaying the resource list page
     return render(request, 'information/shipping.html')
+
+def faq(request):
+    # View for displaying the resource list page
+    return render(request, 'information/faq.html')
