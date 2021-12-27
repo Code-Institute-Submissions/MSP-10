@@ -1,0 +1,120 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Additional meta tags for specific pages -->
+{% block extra_meta %}
+{% endblock %}
+
+<!-- page specific css -->
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+        
+<!-- page specific js -->
+{% block additional_js %}
+{% endblock %}
+
+<!-- Updates the page title -->
+{% block title %}
+About Page
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+<!-- Indented to align with the base template -->
+            {% block content %}
+                <!-- Header-->
+                <header class="bg-dark py-5 index-header">
+                    <div class="container px-5">
+                        <div class="row gx-5 align-items-center justify-content-center">
+                            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                                <div class="my-5 text-center text-xl-start">
+                                    <h1 class="display-5 fw-bolder mb-2">Coffee Coffee Coffee</h1>
+                                    <p class="lead fw-normal text-50 mb-4">Sales pitch place holder! Sales pitch place holder! Sales pitch place holder! Sales pitch place holder! Sales pitch place holder!</p>
+                                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                        <a class="btn btn-primary btn-lg px-4 me-sm-3 darkmocha-button" href="#features">Get Started</a>
+                                        <a class="btn btn-outline-light btn-lg px-4 lightmocha-button" href="#!">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </header>
+                <!-- Guide to the process section-->
+                <section class="py-5 guide">
+                    <div class="container px-5 my-5">
+                        <div class="row gx-5">
+                            <div class="col-lg-6">
+                                <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                    <div class="col mb-5 h-100">
+                                        <div class="feature darkmocha rounded-3 mb-3 text-center"><i class="bi bi-person-badge-fill"></i></div>
+                                        <h2 class="h5">Step One</h2>
+                                        <p class="mb-0">Create an account</p>
+                                    </div>
+                                    <div class="col mb-5 h-100">
+                                        <div class="feature darkmocha rounded-3 mb-3 text-center"><i class="bi bi-plus-circle-fill"></i></div>
+                                        <h2 class="h5">Step Two</h2>
+                                        <p class="mb-0">Pick you favourite coffee</p>
+                                    </div>
+                                    <div class="col mb-5 mb-md-0 h-100">
+                                        <div class="feature darkmocha rounded-3 mb-3 text-center"><i class="bi bi-patch-check-fill"></i></div>
+                                        <h2 class="h5">Step Three</h2>
+                                        <p class="mb-0">Confirm your order</p>
+                                    </div>
+                                    <div class="col h-100">
+                                        <div class="feature darkmocha rounded-3 mb-3 text-center"><i class="bi bi-cup-fill"></i></div>
+                                        <h2 class="h5">Step Four</h2>
+                                        <p class="mb-0">Enjoy your coffee delivery</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-1" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Feedback section -->
+                <!-- Single entry for now, will update to revolving display -->
+                <div class="py-5 bg-light feedback">
+                    <div class="container px-5 my-5">
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-10 col-xl-7">
+                                <div class="text-center">
+                                    <div class="fs-4 mb-4 fst-italic">"There is no easier way to enjoy coffee. An easy way to recieve my monthly coffee needs."</div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                        <div class="fw-bold">
+                                            Jon Snow
+                                            <span class="fw-bold mx-1">/</span>
+                                            Coffee Addict
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Newsletter Subscription Section -->
+                <section class="py-5 newsletter">
+                    <div class="container px-5 my-5">
+                        <aside class="newsletter-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                            <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+                                <div class="mb-4 mb-xl-0">
+                                    <div class="fs-3 fw-bold">Keep up to date</div>
+                                    <div class="text-50">To keep up to date with the latest MochaBean news, Signup to our newsletter.</div>
+                                </div>
+                                <div class="ms-xl-4">
+                                    <div class="input-group mb-2">
+                                        <input class="form-control" type="text" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter" />
+                                        <button class="btn darkmocha-button" id="button-newsletter" type="button">Sign up</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            </main>
+            {% endblock %}
