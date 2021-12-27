@@ -47,3 +47,19 @@ class ShippingPageTests(SimpleTestCase):
         response = self.client.get(reverse('shipping'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'information/shipping.html')
+
+class FAQPageTests(SimpleTestCase):
+    # Status check of the websites policies page
+    def test_faq_page_status(self):
+        response = self.client.get('/faq/')
+        self.assertEquals(response.status_code, 200)
+
+    def test_faq_page_by_name(self):
+        response = self.client.get(reverse('faq'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_faq_page_template(self):
+        response = self.client.get(reverse('faq'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'information/faq.html')
+        
