@@ -77,4 +77,3 @@ class AboutPageTests(SimpleTestCase):
         response = self.client.get(reverse('about'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'information/about.html')
-        
