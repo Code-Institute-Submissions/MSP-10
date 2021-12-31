@@ -1,8 +1,4 @@
 from django.db import models
-
-# Create your models here.
-
-from django.db import models
 from django.contrib.auth.models import User
 
 
@@ -44,8 +40,8 @@ class Profile(models.Model):
     address3 = models.CharField(max_length=80, null=True, blank=True)
     city = models.CharField(max_length=50, null=True, blank=True)
     postcode = models.CharField(max_length=15, null=True, blank=True)
-    country = models.CharField(blank_label='Select Country', choices=COUNTRIES, null=True, blank=True)
-    subscription_packet = models.ForeignKey(Subscriptions, on_delete=models.CASCADE)
+    country = models.CharField(choices=COUNTRIES, null=True, blank=True)
+    # subscription_packet = models.ForeignKey(Subscriptions, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
     
 
