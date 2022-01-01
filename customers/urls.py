@@ -4,8 +4,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from . import views
 
-app_name = 'customer'
+app_name = 'customers'
 
 urlpatterns = [
-    path('customer/login/', views.login, name='login'),
+    path('customers/login/', views.login, name='login'),
 ]

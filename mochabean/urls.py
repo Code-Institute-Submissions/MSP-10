@@ -27,5 +27,5 @@ urlpatterns = [
     path('shipping/', views.shipping, name='shipping'),
     path('faq/', views.faq, name='faq'),
     path('about/', views.about, name='about'),
-    path('', include('users.urls', namespace='users')),
+    path('', include('customers.urls', namespace='customers')),
 ]
