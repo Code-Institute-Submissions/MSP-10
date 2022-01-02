@@ -162,9 +162,8 @@ No Python validation occured during this Sprint
 25th December - 31st December 2021
 
 ### User Stories Closed
-* 
-* 
-* 
+* As a User I want to view the FAQ page
+* As a User I want to know what the delivery/returns policies are
 
 ### Unit Tests Conducted
 <details>
@@ -179,6 +178,9 @@ No Python validation occured during this Sprint
 
 ### Exploratory Test Session Goals
 
+* I want to confirm the FAQ page loads correctly
+* I want to confirm that each question expands to show the answer when selected
+* I want to confirm that the shipping page loads correctly
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
@@ -199,9 +201,8 @@ No Python validation occured during this Sprint
 * 
 
 ### Issues Faced / Found
-* 
-* 
-* 
+* Initial issue while creating the Database for users, there was a conflict between the customer model and the django defaul user model. This was resolved by changing the custom app name to customers.
+
 
 ### Python Validation
 <details>
