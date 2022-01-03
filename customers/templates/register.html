@@ -33,6 +33,7 @@ Register Page
                             <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
                                 <div class="mb-4 mb-xl-0">
                                     <div class="fs-3 fw-bold">Register</div>
+                                    {{form.errors}}
                                     <div class="text-50 py-2">
                                         <form method="POST">
                                             {% csrf_token %}
@@ -46,7 +47,7 @@ Register Page
                                             <input type="password" name="password2" placeholder="Confirm Password..." class="form-control"  aria-label="confirm password field">
                                             <!--Submit button -->
                                             <div class="p-3 d-flex justify-content-center">
-                                                <input type="submit" value="Sign In" class="btn btn-secondary btn-warning fw-bold">
+                                                <input type="submit" value="Register" class="btn darkmocha-button fw-bold">
                                             </div>
                                         </form>
                                     </div>

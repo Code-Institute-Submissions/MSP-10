@@ -7,35 +7,24 @@ from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
-# def login(request):
-#     # form = UserCreationForm()
-    
-#     # if request.method == 'POST':
-#     #     form = UserCreationForm(request.POST)
-#     #     if form.is_valid():
-#     #         form.save()
-    
-#     # context = {'form:form'}
-#     return render(request, 'login.html', context)
+def loginPage(request):
+    # Ensure page is not displayed to logged in user
+    # if request.user.is_authenticated:
+    #     return redirect('index')
+    # else:
+        # View for basic display of the login page
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
 
-# def login(request):
-#     # Ensure page is not displayed to logged in user
-#     # if request.user.is_authenticated:
-#     #     return redirect('index')
-#     # else:
-#         # View for basic display of the login page
-#     if request.method == 'POST':
-#         username = request.POST.get('username')
-#         password = request.POST.get('password')
-#         user = authenticate(request, username=username, password=password)
-
-#         if user is not None:
-#             login(request, user)
-#             return redirect('index')
-#         else:
-#             messages.info(request, 'The entered details are incorrect')
-#     context = {}
-#     return render(request, 'login.html', context)
+        if user is not None:
+            login(request, user)
+            return redirect('index')
+        else:
+            messages.info(request, 'The entered details are incorrect')
+    context = {}
+    return render(request, 'login.html', context)
 
 
 
@@ -46,25 +35,10 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Account created successfully')
-            # return redirect('login')
+            user = form.cleaned_data.get('username')
+            messages.success(request, 'Account created successfully for ' + user)
+            return redirect('customers:login-page')
     
     context = {'form':form}
     return render(request, 'register.html', context)
    
-    # form = RegisterForm()
-    # if request.method == "POST":
-    #     form = RegisterForm(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         # messages.success(request, 'Account created successfully')
-    #         # username = form.cleaned_data['username']
-    #         # password = form.cleaned_data['password1']
-    #         # user = authenticate(username=username, password=password)
-    #         # login(request, user)
-    #         return redirect('login')
-    # else:
-    #     form = RegisterForm()
-    # return render(request, 'register.html', {
-    #     'form': form,
-    #      })
