@@ -86,17 +86,20 @@
                             <li class="nav-item"><a class="nav-link navigation-bar" href="{% url 'about' %}">About</a></li>
                             <li class="nav-item"><a class="nav-link navigation-bar" href="">Subscription</a></li>
                             <li class="nav-item"><a class="nav-link navigation-bar" href="{% url 'faq' %}">FAQ</a></li>
-                            <!-- Button will appear if user not logged in-->
-                            <li class="nav-item"><a class="nav-link navigation-bar" href="">Login</a></li>
+                            {% if user.is_authenticated %}
                             <!-- The following will only show if the user is logged in This will be Updated-->
-                            <li class="nav-item dropdown navigation-bar">
-                                <a class="nav-link dropdown-toggle navigation-bar" id="navbarCustomerDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Customer Name</a>
-                                <ul class="dropdown-menu dropdown-menu-end navigation-bar" aria-labelledby="navbarCustomerDropdown">
-                                    <li><a class="dropdown-item navigation-bar" href="#">Profile</a></li>
-                                    <li><a class="dropdown-item navigation-bar" href="#">Subscription</a></li>
-                                    <li><a class="dropdown-item navigation-bar" href="#">Logout</a></li>
-                                </ul>
-                            </li>
+                                <li class="nav-item dropdown navigation-bar">
+                                    <a class="nav-link dropdown-toggle navigation-bar" id="navbarCustomerDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{request.user}}</a>
+                                    <ul class="dropdown-menu dropdown-menu-end navigation-bar" aria-labelledby="navbarCustomerDropdown">
+                                        <li><a class="dropdown-item navigation-bar" href="#">Profile</a></li>
+                                        <li><a class="dropdown-item navigation-bar" href="#">Subscription</a></li>
+                                        <li><a class="dropdown-item navigation-bar" href="#">Logout</a></li>
+                                    </ul>
+                                </li>
+                            {% else %}
+                                <!-- Button will appear if user not logged in-->
+                                <li class="nav-item"><a class="nav-link navigation-bar" href="">Login</a></li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
