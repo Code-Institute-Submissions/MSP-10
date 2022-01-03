@@ -1,0 +1,56 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Additional meta tags for specific pages -->
+{% block extra_meta %}
+{% endblock %}
+
+<!-- page specific css -->
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+        
+<!-- page specific js -->
+{% block additional_js %}
+{% endblock %}
+
+<!-- Updates the page title -->
+{% block title %}
+Login Page
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+<!-- Indented to align with the base template -->
+            {% block content %}
+                <!-- Body Section of the Shipping page -->
+                <section class="py-5 static-page">
+                    <h1 class="text-center">Login</h1>
+                    <div class="container px-5 my-5">
+                        <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                            <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+                                <div class="mb-4 mb-xl-0">
+                                    <div class="fs-3 fw-bold">Login</div>
+                                    <div class="text-50 py-2">
+                                        {% for message in messages %}
+                                            <div class="alert btn-danger" role="alert">
+                                                <p>{{message}}</p>
+                                            </div>
+                                        {% endfor %}
+                                        <form method="POST">
+                                            {% csrf_token %}
+                                            {{form.as_p}}
+                                            <!--Submit button -->
+                                            <div class="p-3 d-flex justify-content-center">
+                                                <input type="submit" value="Sign In" class="btn btn-secondary btn-warning fw-bold">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            {% endblock %}
