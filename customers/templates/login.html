@@ -33,6 +33,11 @@ Login Page
                             <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
                                 <div class="col-md-5 mb-4 mb-xl-0">
                                     <div class="row justify-content-between text-50 py-2">
+                                        {% for message in messages %}
+                                        <div class="alert btn-success" role="alert">
+                                            <p>{{message}}</p>
+                                        </div>
+                                    {% endfor %}
                                         <form method="POST">
                                             {% csrf_token %}
                                             <label class="py-2" id="username" for="username"><strong>Username</strong></label>
@@ -43,12 +48,13 @@ Login Page
                                             <div class="p-3 d-flex justify-content-center">
                                                 <input type="submit" value="Sign In" class="btn darkmocha-button fw-bold">
                                             </div>
+                                            <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:register-page' %}" aria-label="Redirect to Customer Register">Not a member? Register now...</a>
                                         </form>
-                                        {% for message in messages %}
+                                        {% if form.errors %}
                                             <div class="alert btn-danger" role="alert">
-                                                <p>{{message}}</p>
+                                                <p>{{form.errors}}</p>
                                             </div>
-                                        {% endfor %}
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>

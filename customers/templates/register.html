@@ -47,12 +47,13 @@ Register Page
                                             <div class="p-3 d-flex justify-content-center">
                                                 <input type="submit" value="Register" class="btn darkmocha-button fw-bold">
                                             </div>
+                                            <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:login-page' %}" aria-label="Redirect to Customer signin">Already a member? Sign In</a>
                                         </form>
-                                        {% for message in messages %}
+                                        {% if form.errors %}
                                             <div class="alert btn-danger" role="alert">
-                                                <p>{{message}}</p>
+                                                <p>{{form.errors}}</p>
                                             </div>
-                                        {% endfor %}
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>

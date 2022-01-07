@@ -8,11 +8,7 @@ from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 
 def loginPage(request):
-    # Ensure page is not displayed to logged in user
-    # if request.user.is_authenticated:
-    #     return redirect('index')
-    # else:
-        # View for basic display of the login page
+
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
