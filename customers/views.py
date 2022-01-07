@@ -28,7 +28,7 @@ def loginPage(request):
 
 
 
-def register(request):
+def registerPage(request):
     form = RegisterForm()
     
     if request.method == 'POST':
