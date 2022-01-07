@@ -1,13 +1,9 @@
 from django.contrib.auth.forms import UsernameField
 from django.db import models
 
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 
-from django.conf import settings
-
-User = settings.AUTH_USER_MODEL
-
-class Customer(models.Model):
+class CustomerProfile(models.Model):
     COUNTRIES = (
         ('Austria', 'Austria'),
         ('Belgium', 'Belgium'),
@@ -38,11 +34,9 @@ class Customer(models.Model):
         ('Sweden', 'Sweden'),
     )
     
-    REQUIRED_FIELDS = ('username', 'email', 'password')
-    
-    username = models.OneToOneField(User, max_length=30, on_delete=models.CASCADE, primary_key=True)
-    email = models.EmailField(max_length=254, null=True, blank=True)
-    password = models.CharField(max_length=20, null=True, blank=True)
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=100, null=True, blank=True)
+    last_name = models.CharField(max_length=100, null=True, blank=True)
     address1 = models.CharField(max_length=100, null=True, blank=True)
     address2 = models.CharField(max_length=100, null=True, blank=True)
     address3 = models.CharField(max_length=100, null=True, blank=True)

@@ -93,12 +93,12 @@
                                     <ul class="dropdown-menu dropdown-menu-end navigation-bar" aria-labelledby="navbarCustomerDropdown">
                                         <li><a class="dropdown-item navigation-bar" href="#">Profile</a></li>
                                         <li><a class="dropdown-item navigation-bar" href="#">Subscription</a></li>
-                                        <li><a class="dropdown-item navigation-bar" href="#">Logout</a></li>
+                                        <li><a class="dropdown-item navigation-bar" href="{% url 'customers:logout-page' %}">Logout</a></li>
                                     </ul>
                                 </li>
                             {% else %}
                                 <!-- Button will appear if user not logged in-->
-                                <li class="nav-item"><a class="nav-link navigation-bar" href="">Login</a></li>
+                                <li class="nav-item"><a class="nav-link navigation-bar" href="{% url 'customers:login-page' %}">Login</a></li>
                             {% endif %}
                         </ul>
                     </div>
