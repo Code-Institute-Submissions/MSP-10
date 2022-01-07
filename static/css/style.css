@@ -7,6 +7,7 @@ body {
     font-family: 'Signika Negative', sans-serif;
     font-weight: 300;
     color: #543826;
+    height: 100% !important;
 }
 
 .navigation-bar, .footer-bar {

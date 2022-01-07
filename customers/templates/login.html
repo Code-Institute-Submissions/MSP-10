@@ -30,26 +30,25 @@ Login Page
                     <h1 class="text-center">Login</h1>
                     <div class="container px-5 my-5">
                         <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
-                            <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
-                                <div class="mb-4 mb-xl-0">
-                                    <div class="fs-3 fw-bold">Login</div>
-                                    <div class="text-50 py-2">
-                                        {% for message in messages %}
-                                            <div class="alert btn-danger" role="alert">
-                                                <p>{{message}}</p>
-                                            </div>
-                                        {% endfor %}
+                            <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
+                                <div class="col-md-5 mb-4 mb-xl-0">
+                                    <div class="row justify-content-between text-50 py-2">
                                         <form method="POST">
                                             {% csrf_token %}
-                                            <label id="username" for="username">Username</label>
+                                            <label class="py-2" id="username" for="username"><strong>Username</strong></label>
                                             <input type="text" name="username" placeholder="Username..." class="form-control" aria-label="User name field">
-                                            <label id="password" for="password">Password</label>
+                                            <label class="py-2" id="password" for="password">Password</label>
                                             <input type="password" name="password" placeholder="Password..." class="form-control" aria-label="password field">
                                             <!--Submit button -->
                                             <div class="p-3 d-flex justify-content-center">
                                                 <input type="submit" value="Sign In" class="btn darkmocha-button fw-bold">
                                             </div>
                                         </form>
+                                        {% for message in messages %}
+                                            <div class="alert btn-danger" role="alert">
+                                                <p>{{message}}</p>
+                                            </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
