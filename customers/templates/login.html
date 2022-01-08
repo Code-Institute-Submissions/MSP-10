@@ -40,15 +40,20 @@ Login Page
                                     {% endfor %}
                                         <form method="POST">
                                             {% csrf_token %}
-                                            <label class="py-2" id="username" for="username"><strong>Username</strong></label>
+                                            <div class="p-2 d-flex justify-content-center">
+                                                <label class="p-2" id="username" for="username"><strong>Username</strong></label>
+                                            </div>
                                             <input type="text" name="username" placeholder="Username..." class="form-control" aria-label="User name field">
-                                            <label class="py-2" id="password" for="password">Password</label>
+                                            <div class="p-2 d-flex justify-content-center">
+                                                <label class="p-2" id="password" for="password">Password</label>
+                                            </div>
                                             <input type="password" name="password" placeholder="Password..." class="form-control" aria-label="password field">
                                             <!--Submit button -->
                                             <div class="p-3 d-flex justify-content-center">
                                                 <input type="submit" value="Sign In" class="btn darkmocha-button fw-bold">
                                             </div>
                                             <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:register-page' %}" aria-label="Redirect to Customer Register">Not a member? Register now...</a>
+                                            <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:reset_password' %}" aria-label="Redirect to Password Reset">Forgotten your password?</a>
                                         </form>
                                         {% if form.errors %}
                                             <div class="alert btn-danger" role="alert">
