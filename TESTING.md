@@ -204,25 +204,14 @@ No Python validation occured during this Sprint
 * Initial issue while creating the Database for users, there was a conflict between the customer model and the django defaul user model. This was resolved by changing the custom app name to customers.
 
 
-### Python Validation
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
-
-
 ## Sprint 4
 1st January 2022 - 7th January 2022
 
 ### User Stories Closed
-* 
-* 
-* 
+* As a User I want to be able to log in
+* As a User I want to be able to know more about MochaBeans
+* As a User I want to become a member
+* As a User I want to be able to log out
 
 ### Unit Tests Conducted
 <details>
@@ -237,6 +226,16 @@ No Python validation occured during this Sprint
 
 ### Exploratory Test Session Goals
 
+* I want to confirm that I can Register as a new User
+* I want to confirm that if the register form is invalid then error(s) will display
+* I want to confirm that once registered the user is directed to the login page (and not automatically logged in)
+* I want to confirm that as an existing user I can log in
+* I want to confirm that if the login form is invalid then error(s) will display
+* I want to confirm that there is a link at the base of the register form for existing users to go to the login page
+* I want to confirm that there is a link at the base of the login form for new users to go to the register page
+* I want to confirm that as a logged in user the username appears in the nav bar along with a placeholder dropdown menu
+* I want to confirm that as an annonymous user, a login button will appear in the top nav bar
+* I want to confirm that the About MochaBeans page loads and there is a link in the nav bar
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
