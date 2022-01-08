@@ -12,10 +12,6 @@
 {% block additional_css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock %}
-        
-<!-- page specific js -->
-{% block additional_js %}
-{% endblock %}
 
 <!-- Updates the page title -->
 {% block title %}
@@ -25,13 +21,14 @@ FAQ Page
 <!-- The following is the unique content for this page -->
 <!-- Indented to align with the base template -->
             {% block content %}
-                <!-- Body Section of the Shipping page -->
+                <!-- Body Section of the FAQ page -->
                 <section class="py-5 static-page">
                     <h1 class="text-center">Fequently Asked Questions</h1>
                     <div class="container px-5 my-5">
                         <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
                             <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
                                 <div class="accordion accordion-flush w-100" id="accordionQuestions">
+                                    <!-- Question one with expandable answer -->
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="questionOne">
                                             <button class="accordion-button darkmocha-button w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">How often will I receive my coffee?
@@ -44,6 +41,7 @@ FAQ Page
                                         </div>
                                     </div>
                                     <hr>
+                                    <!-- Question two with expandable answer -->
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="questionTwo">
                                             <button class="accordion-button darkmocha-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">I have not received my coffee yet. Where is it?
@@ -56,6 +54,7 @@ FAQ Page
                                         </div>
                                     </div>
                                     <hr>
+                                    <!-- Question three with expandable answer -->
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="questionThree">
                                             <button class="accordion-button darkmocha-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Can I cancel my order?
@@ -72,6 +71,7 @@ FAQ Page
                                         </div>
                                     </div>
                                     <hr>
+                                    <!-- Question four with expandable answer -->
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="questionFour">
                                             <button class="accordion-button darkmocha-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">My Box is missing an item or is damaged. What can I do?
@@ -84,6 +84,7 @@ FAQ Page
                                         </div>
                                     </div>
                                     <hr>
+                                    <!-- Question five with expandable answer -->
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="questionFive">
                                             <button class="accordion-button darkmocha-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Difficulties logging into my account
@@ -97,6 +98,7 @@ FAQ Page
                                         </div>
                                     </div>
                                     <hr>
+                                    <!-- Question six with expandable answer -->
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="questionSix">
                                             <button class="accordion-button darkmocha-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">I've moved, how can I update my address?
@@ -109,6 +111,7 @@ FAQ Page
                                         </div>
                                     </div>
                                     <hr>
+                                    <!-- Question seven with expandable answer -->
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="questionSeven">
                                             <button class="accordion-button darkmocha-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">How can I change my payment method
@@ -121,6 +124,7 @@ FAQ Page
                                         </div>
                                     </div>
                                     <hr>
+                                    <!-- Question eight with expandable answer -->
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="questionEight">
                                             <button class="accordion-button darkmocha-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">Are all your products fairtrade and ethically sourced?

@@ -13,10 +13,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock %}
         
-<!-- page specific js -->
-{% block additional_js %}
-{% endblock %}
-
 <!-- Updates the page title -->
 {% block title %}
 About Page
@@ -25,7 +21,7 @@ About Page
 <!-- The following is the unique content for this page -->
 <!-- Indented to align with the base template -->
             {% block content %}
-                <!-- Header-->
+                <!-- Header section block -->
                 <header class="bg-dark py-5 index-header">
                     <div class="container px-5">
                         <div class="row gx-5 align-items-center justify-content-center">
@@ -44,7 +40,7 @@ About Page
                         </div>
                     </div>
                 </header>
-                <!-- Guide to the process section-->
+                <!-- Highlights of the benefits section -->
                 <section class="py-5 guide">
                     <div class="container px-5 my-5">
                         <div class="row gx-5">
@@ -95,5 +91,4 @@ About Page
                         </aside>
                     </div>
                 </section>
-            </main>
             {% endblock %}

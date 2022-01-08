@@ -12,10 +12,6 @@
 {% block additional_css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock %}
-        
-<!-- page specific js -->
-{% block additional_js %}
-{% endblock %}
 
 <!-- Updates the page title -->
 {% block title %}
@@ -33,6 +29,7 @@ Register Page
                             <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
                                 <div class="col-md-5 mb-4 mb-xl-0">
                                     <div class="row justify-content-between text-50 py-2">
+                                        <!-- Form for Registration of new user -->
                                         <form method="POST">
                                             {% csrf_token %}
                                             <label class="py-2 fs-3 fw-bold" id="username" for="username">Username:</label>
@@ -47,8 +44,10 @@ Register Page
                                             <div class="p-3 d-flex justify-content-center">
                                                 <input type="submit" value="Register" class="btn darkmocha-button fw-bold">
                                             </div>
+                                            <!-- Redirection to login page -->
                                             <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:login-page' %}" aria-label="Redirect to Customer signin">Already a member? Sign In</a>
                                         </form>
+                                        <!-- Error display function -->
                                         {% if form.errors %}
                                             <div class="alert btn-danger" role="alert">
                                                 <p>{{form.errors}}</p>

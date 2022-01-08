@@ -12,10 +12,6 @@
 {% block additional_css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock %}
-        
-<!-- page specific js -->
-{% block additional_js %}
-{% endblock %}
 
 <!-- Updates the page title -->
 {% block title %}
@@ -25,7 +21,7 @@ Login Page
 <!-- The following is the unique content for this page -->
 <!-- Indented to align with the base template -->
             {% block content %}
-                <!-- Body Section of the Shipping page -->
+                <!-- Body Section of the login page page -->
                 <section class="py-5 static-page">
                     <h1 class="text-center">Login</h1>
                     <div class="container px-5 my-5">
@@ -33,11 +29,7 @@ Login Page
                             <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
                                 <div class="col-md-5 mb-4 mb-xl-0">
                                     <div class="row justify-content-between text-50 py-2">
-                                        {% for message in messages %}
-                                        <div class="alert btn-success" role="alert">
-                                            <p>{{message}}</p>
-                                        </div>
-                                    {% endfor %}
+                                        <!-- Login form -->
                                         <form method="POST">
                                             {% csrf_token %}
                                             <div class="p-2 d-flex justify-content-center">
@@ -55,6 +47,7 @@ Login Page
                                             <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:register-page' %}" aria-label="Redirect to Customer Register">Not a member? Register now...</a>
                                             <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:reset_password' %}" aria-label="Redirect to Password Reset">Forgotten your password?</a>
                                         </form>
+                                        <!-- Error display functionality -->
                                         {% if form.errors %}
                                             <div class="alert btn-danger" role="alert">
                                                 <p>{{form.errors}}</p>
