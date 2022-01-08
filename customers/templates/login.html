@@ -41,11 +41,11 @@ Login Page
                                         <form method="POST">
                                             {% csrf_token %}
                                             <div class="p-2 d-flex justify-content-center">
-                                                <label class="p-2" id="username" for="username"><strong>Username</strong></label>
+                                                <label class="p-2 fs-3 fw-bold" id="username" for="username">Username:</label>
                                             </div>
                                             <input type="text" name="username" placeholder="Username..." class="form-control" aria-label="User name field">
                                             <div class="p-2 d-flex justify-content-center">
-                                                <label class="p-2" id="password" for="password">Password</label>
+                                                <label class="p-2 fs-3 fw-bold" id="password" for="password">Password:</label>
                                             </div>
                                             <input type="password" name="password" placeholder="Password..." class="form-control" aria-label="password field">
                                             <!--Submit button -->
