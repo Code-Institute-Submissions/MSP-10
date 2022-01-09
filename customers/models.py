@@ -49,7 +49,7 @@ class Profile(models.Model):
     country = models.CharField(max_length=15, null=True, choices=COUNTRIES)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
     
-    
+   
     def __str__(self):
         return self.name
 

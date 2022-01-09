@@ -6,15 +6,11 @@ from .models import Profile
 
 def create_profile(sender, instance, created, **kwargs):
     if created:
-        group = Group.objects.get(name='customer')
-        instance.groups.add(group)
+        # Adds Username to the Profile Model
         Profile.objects.create(
 			user=instance,
 			name=instance.username,
 			)
-        print('Profile created!')
-        # Profile.objects.create(user=instance)
-        # print('Profile Created')
 
 post_save.connect(create_profile, sender=User)
 

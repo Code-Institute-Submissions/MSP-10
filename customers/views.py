@@ -50,7 +50,7 @@ def logoutPage(request):
 
 def customerProfileView(request, pk):
     customer = User.objects.get(id=pk)
-    # print(customer)
-    
-    # context = {'customer':customer}
-    return render(request, 'profile_view.html', {'obj': customer})
+    current_user = request.user
+    profile = Profile.objects.filter(name=current_user)
+    context = {'customer':customer, 'profile':profile}
+    return render(request, 'profile_view.html', context)
