@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 
+
 # Create your views here.
 
 def loginPage(request):
@@ -32,6 +33,7 @@ def registerPage(request):
         if form.is_valid():
             form.save()
             user = form.cleaned_data.get('username')
+            
             messages.success(request, 'Account created successfully for ' + user)
             return redirect('customers:login-page')
     
@@ -42,3 +44,10 @@ def registerPage(request):
 def logoutPage(request):
     logout(request)
     return redirect('index')
+
+def customerProfileView(request):
+    customer = request.user.profile.all()
+    print(customer)
+    
+    context = {'customer':customer}
+    return render(request, 'customers/profile_view.html', context)

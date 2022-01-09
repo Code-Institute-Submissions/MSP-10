@@ -12,6 +12,7 @@ urlpatterns = [
     path('customers/register/', views.registerPage, name='register-page'),
     path('customers/logout/', views.logoutPage, name='logout-page'),
     
+    path('customers/profile/',views.customerProfileView, name='customer-profile'),
     
     
     path('customers/reset_password/', 

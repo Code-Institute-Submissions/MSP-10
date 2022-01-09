@@ -15,7 +15,7 @@
 
 <!-- Updates the page title -->
 {% block title %}
-Login Page
+Profile Page
 {% endblock title %}
 
 <!-- The following is the unique content for this page -->
@@ -23,14 +23,14 @@ Login Page
             {% block content %}
                 <!-- Body Section of the login page page -->
                 <section class="py-5 static-page">
-                    <h1 class="text-center">Login</h1>
+                    <h1 class="text-center">Profile</h1>
                     <div class="container px-5 my-5">
                         <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
                             <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
                                 <div class="col-md-5 mb-4 mb-xl-0">
                                     <div class="row justify-content-between text-50 py-2">
                                         <!-- Login form -->
-                                        <form method="POST">
+                                        {% comment %} <form method="POST">
                                             {% csrf_token %}
                                             <div class="p-2 d-flex justify-content-center">
                                                 <label class="p-2 fs-3 fw-bold" id="username" for="username">Username:</label>
@@ -46,13 +46,7 @@ Login Page
                                             </div>
                                             <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:register-page' %}" aria-label="Redirect to Customer Register">Not a member? Register now...</a>
                                             <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:reset_password' %}" aria-label="Redirect to Password Reset">Forgotten your password?</a>
-                                            <!-- Error display functionality -->
-                                            {% if form.errors %}
-                                                <div class="alert btn-danger" role="alert">
-                                                    <p>{{form.errors}}</p>
-                                                </div>
-                                            {% endif %}
-                                        </form>
+                                        </form> {% endcomment %}
                                         <!-- Error display functionality -->
                                         {% if form.errors %}
                                             <div class="alert btn-danger" role="alert">
