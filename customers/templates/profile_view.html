@@ -29,30 +29,7 @@ Profile Page
                             <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
                                 <div class="col-md-5 mb-4 mb-xl-0">
                                     <div class="row justify-content-between text-50 py-2">
-                                        <!-- Login form -->
-                                        {% comment %} <form method="POST">
-                                            {% csrf_token %}
-                                            <div class="p-2 d-flex justify-content-center">
-                                                <label class="p-2 fs-3 fw-bold" id="username" for="username">Username:</label>
-                                            </div>
-                                            <input type="text" name="username" placeholder="Username..." class="form-control" aria-label="User name field">
-                                            <div class="p-2 d-flex justify-content-center">
-                                                <label class="p-2 fs-3 fw-bold" id="password" for="password">Password:</label>
-                                            </div>
-                                            <input type="password" name="password" placeholder="Password..." class="form-control" aria-label="password field">
-                                            <!--Submit button -->
-                                            <div class="p-3 d-flex justify-content-center">
-                                                <input type="submit" value="Sign In" class="btn darkmocha-button fw-bold">
-                                            </div>
-                                            <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:register-page' %}" aria-label="Redirect to Customer Register">Not a member? Register now...</a>
-                                            <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:reset_password' %}" aria-label="Redirect to Password Reset">Forgotten your password?</a>
-                                        </form> {% endcomment %}
-                                        <!-- Error display functionality -->
-                                        {% if form.errors %}
-                                            <div class="alert btn-danger" role="alert">
-                                                <p>{{form.errors}}</p>
-                                            </div>
-                                        {% endif %}
+                                       <p> Placeholder for view page </p>
                                     </div>
                                 </div>
                             </div>

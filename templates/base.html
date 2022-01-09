@@ -91,7 +91,7 @@
                                 <li class="nav-item dropdown navigation-bar">
                                     <a class="nav-link dropdown-toggle navigation-bar" id="navbarCustomerDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{request.user}}</a>
                                     <ul class="dropdown-menu dropdown-menu-end navigation-bar" aria-labelledby="navbarCustomerDropdown">
-                                        <li><a class="dropdown-item navigation-bar" href="{% url 'customers:customer-profile' %}">Profile</a></li>
+                                        <li><a class="dropdown-item navigation-bar" href="{% url 'customers:customer-profile' user.pk %}">Profile</a></li>
                                         <li><a class="dropdown-item navigation-bar" href="#">Subscription</a></li>
                                         <li><a class="dropdown-item navigation-bar" href="{% url 'customers:logout-page' %}">Logout</a></li>
                                     </ul>

@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import Group, User
+from .models import Profile
 
 
 # Create your views here.
@@ -45,9 +47,10 @@ def logoutPage(request):
     logout(request)
     return redirect('index')
 
-def customerProfileView(request):
-    customer = request.user.profile.all()
-    print(customer)
+
+def customerProfileView(request, pk):
+    customer = User.objects.get(id=pk)
+    # print(customer)
     
-    context = {'customer':customer}
-    return render(request, 'customers/profile_view.html', context)
+    # context = {'customer':customer}
+    return render(request, 'profile_view.html', {'obj': customer})
