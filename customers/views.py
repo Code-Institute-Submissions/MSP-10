@@ -3,8 +3,7 @@ from .forms import RegisterForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import Group, User
+from django.contrib.auth.models import User
 from .models import Profile
 
 
@@ -51,6 +50,6 @@ def logoutPage(request):
 def customerProfileView(request, pk):
     customer = User.objects.get(id=pk)
     current_user = request.user
-    profile = Profile.objects.filter(name=current_user)
+    profile = Profile.objects.get(name=current_user)
     context = {'customer':customer, 'profile':profile}
     return render(request, 'profile_view.html', context)

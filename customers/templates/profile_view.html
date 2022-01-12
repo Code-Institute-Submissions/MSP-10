@@ -30,13 +30,11 @@ Profile Page
                                 <div class="col-md-5 mb-4 mb-xl-0">
                                     <div class="row justify-content-between text-50 py-2">
                                         <p> Placeholder for view page </p>
-                                        <tr>
-                                            <td>{{details.first_name}}</td>
-                                            <td>{{details.last_name}}</td>
-                                            <td>{{details.address1}}</td>
-                                            <td>{{details.address2}}</td>
-                                            <td>{{details.address3}}</td>
-                                        </tr>
+                                        <p>First Name.{{ profile.name }}</p>
+                                        <p>Last Name.{{ profile.last_name }}</p>
+                                        <p>Address.{{ profile.address1 }}</p>
+                                        <p>.{{ profile.address2 }}</p>
+                                        <p>.{{ profile.address3 }}</p>
                                     </div>
                                 </div>
                             </div>
