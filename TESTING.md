@@ -276,8 +276,8 @@ No Python validation occured during this Sprint
 8th January 2022 - 14th January 2022
 
 ### User Stories Closed
-* 
-* 
+* As a User I want to be able to reset my password
+* As a User I want the reset password forms to be aligned with MochaBean theme
 * 
 
 ### Unit Tests Conducted
