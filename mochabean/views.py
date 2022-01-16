@@ -38,5 +38,15 @@ def faq(request):
 
 
 def about(request):
-    # View for displaying the about page
-    return render(request, 'information/about.html')
+    if request.method == 'POST':
+        form = SubscriberForm(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            if newsletterSubscribers.objects.filter(email=instance.email).exists():
+                messages.error(request, 'You are already subscribed')
+            else:
+                instance.save()
+                messages.success(request, 'You are now Subscribed')
+    form = SubscriberForm()
+    context = {'form': form,}
+    return render(request, 'information/about.html', context)

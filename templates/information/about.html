@@ -81,11 +81,17 @@ About Page
                                     <div class="fs-3 fw-bold">Keep up to date with all things coffee</div>
                                     <div class="text-50">To keep up to date with the latest MochaBean news, Signup to our newsletter.</div>
                                 </div>
-                                <div class="ms-xl-4">
-                                    <div class="input-group mb-2">
-                                        <input class="form-control" type="text" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter" />
-                                        <button class="btn darkmocha-button" id="button-newsletter" type="button">Sign up</button>
+                                <div class="xl-5">
+                                    <div class="input-group mb-2 text-right">
+                                        <form method="POST">
+                                            {% csrf_token %}
+                                            <input class="form-control" type="email" name="email" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter"/>
+                                            <input type="submit" value="Sign up" class="btn darkmocha-button fw-bold align-self-end">
+                                        </form>
                                     </div>
+                                    {% for message in messages %}
+                                        {{message}}
+                                    {% endfor %}
                                 </div>
                             </div>
                         </aside>
