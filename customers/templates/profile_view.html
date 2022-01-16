@@ -23,7 +23,7 @@ Profile Page
             {% block content %}
                 <!-- Body Section of the login page page -->
                 <section class="py-5 static-page">
-                    <h1 class="text-center">Customer Details</h1>
+                    <h1 class="text-center fs-1 fw-bold">Customer Details</h1>
                     <div class="container px-5 my-5">
                         <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
                             <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
@@ -37,7 +37,11 @@ Profile Page
                                         <p class="fs-4 fw-bold">{{ profile.postcode }}</p>
                                         <p class="fs-4 fw-bold">{{ profile.country }}</p>
                                     </div>
+                                    <div class="p-3 d-flex justify-content-center">
+                                        <a class="btn btn-outline-light btn-lg px-4 lightmocha-button" href="{% url 'customers:customer-update' user.pk %}">Edit Profile</a>
+                                    </div>
                                 </div>
+
                             </div>
                         </aside>
                     </div>

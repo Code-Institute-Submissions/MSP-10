@@ -1,6 +1,4 @@
 from asyncio.windows_events import NULL
-from logging import NullHandler
-from queue import Empty
 from django.shortcuts import render, redirect
 from .forms import RegisterForm, UpdateProfileForm
 from django.contrib.auth import authenticate, login, logout
@@ -10,10 +8,8 @@ from django.contrib.auth.models import User
 from .models import Profile
 
 
-# Create your views here.
-
 def login_page(request):
-
+    # Enables a registered customer to log in
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -28,19 +24,17 @@ def login_page(request):
     return render(request, 'login.html', context)
 
 
-
 def register_page(request):
+    # Enables a New customer to register
     form = RegisterForm()
-    
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
             user = form.cleaned_data.get('username')
-            
+            # Success message to appear
             messages.success(request, 'Account created successfully for ' + user)
             return redirect('customers:login-page')
-    
     context = {'form':form}
     return render(request, 'register.html', context)
 
@@ -57,13 +51,13 @@ def customer_profile_view(request, pk):
     
     # The below will direct the customer to the update page if address is empty
     addy = Profile.objects.get(name=current_user).address1
-    print(str(addy))
     if addy == None:
         return redirect('customers:customer-update', pk)
     # Loads the customers Profile Page
     else:
         context = {'customer':customer, 'profile':profile}
         return render(request, 'profile_view.html', context)
+
 
 def customer_profile_update(request, pk):
     # Ensuring only staff can view amend page

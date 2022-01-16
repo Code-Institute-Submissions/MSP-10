@@ -23,7 +23,7 @@ Profile Update Page
             {% block content %}
                 <!-- Body Section of the update details page -->
                 <section class="py-5 static-page">
-                    <h1 class="text-center">Update Details</h1>
+                    <h1 class="text-center fs-1 fw-bold">Update Details</h1>
                     <div class="container px-5 my-5">
                         <aside class="static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
                             <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
@@ -50,10 +50,8 @@ Profile Update Page
                                             {{form.country}}
                                             <!--Submit button -->
                                             <div class="p-3 d-flex justify-content-center">
-                                                <input type="submit" value="Register" class="btn darkmocha-button fw-bold">
+                                                <input type="submit" value="Update" class="btn darkmocha-button fw-bold">
                                             </div>
-                                            <!-- Redirection to login page -->
-                                            <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:login-page' %}" aria-label="Redirect to Customer signin">Already a member? Sign In</a>
                                         </form>
                                         <!-- Error display function -->
                                         {% if form.errors %}
