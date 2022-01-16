@@ -23,18 +23,19 @@ Profile Page
             {% block content %}
                 <!-- Body Section of the login page page -->
                 <section class="py-5 static-page">
-                    <h1 class="text-center">Profile</h1>
+                    <h1 class="text-center">Customer Details</h1>
                     <div class="container px-5 my-5">
                         <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
                             <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
                                 <div class="col-md-5 mb-4 mb-xl-0">
                                     <div class="row justify-content-between text-50 py-2">
-                                        <p> Placeholder for view page </p>
-                                        <p>First Name.{{ profile.name }}</p>
-                                        <p>Last Name.{{ profile.last_name }}</p>
-                                        <p>Address.{{ profile.address1 }}</p>
-                                        <p>.{{ profile.address2 }}</p>
-                                        <p>.{{ profile.address3 }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.first_name }} {{ profile.last_name }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.address1 }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.address2 }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.address3 }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.city }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.postcode }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.country }}</p>
                                     </div>
                                 </div>
                             </div>
