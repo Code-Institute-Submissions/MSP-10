@@ -54,11 +54,9 @@ Profile Update Page
                                             </div>
                                         </form>
                                         <!-- Error display function -->
-                                        {% if form.errors %}
-                                            <div class="alert btn-danger" role="alert">
-                                                <p>{{form.errors}}</p>
-                                            </div>
-                                        {% endif %}
+                                        {% for message in messages %}
+                                            {{message}}
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>

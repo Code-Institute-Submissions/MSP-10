@@ -47,18 +47,11 @@ Login Page
                                             <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:register-page' %}" aria-label="Redirect to Customer Register">Not a member? Register now...</a>
                                             <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:reset_password' %}" aria-label="Redirect to Password Reset">Forgotten your password?</a>
                                             <!-- Error display functionality -->
-                                            {% if form.errors %}
-                                                <div class="alert btn-danger" role="alert">
-                                                    <p>{{form.errors}}</p>
-                                                </div>
-                                            {% endif %}
                                         </form>
                                         <!-- Error display functionality -->
-                                        {% if form.errors %}
-                                            <div class="alert btn-danger" role="alert">
-                                                <p>{{form.errors}}</p>
-                                            </div>
-                                        {% endif %}
+                                        {% for message in messages %}
+                                            {{message}}
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>

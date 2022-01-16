@@ -48,11 +48,9 @@ Register Page
                                             <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:login-page' %}" aria-label="Redirect to Customer signin">Already a member? Sign In</a>
                                         </form>
                                         <!-- Error display function -->
-                                        {% if form.errors %}
-                                            <div class="alert btn-danger" role="alert">
-                                                <p>{{form.errors}}</p>
-                                            </div>
-                                        {% endif %}
+                                        {% for message in messages %}
+                                            {{message}}
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
