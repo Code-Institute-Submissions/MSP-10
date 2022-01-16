@@ -86,7 +86,7 @@ def customer_profile_delete(request, pk):
         Profile.delete(profile)
         User.delete(current_user)
         messages.success(request, 'Account Deleted Successfully')
-        return redirect('index')
+        return redirect('customers:login-page')
     profile = UpdateProfileForm(instance=profile)
     context = {'profile': profile}
     return render(request, 'delete.html', context)

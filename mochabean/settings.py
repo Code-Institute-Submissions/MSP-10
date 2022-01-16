@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'customers.apps.CustomersConfig',
+    'subscriptions',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
@@ -131,6 +132,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'customers\static'),
+    os.path.join(BASE_DIR, 'subscriptions\static'),
 ]
 
 # Default primary key field type

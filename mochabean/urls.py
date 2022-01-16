@@ -28,4 +28,5 @@ urlpatterns = [
     path('faq/', views.faq, name='faq'),
     path('about/', views.about, name='about'),
     path('', include('customers.urls', namespace='customers')),
+    path('', include('subscriptions.urls', namespace='subscriptions')),
 ]
