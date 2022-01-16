@@ -1,0 +1,52 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Additional meta tags for specific pages -->
+{% block extra_meta %}
+{% endblock %}
+
+<!-- page specific css -->
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+<!-- Updates the page title -->
+{% block title %}
+Delete Profile Page
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+<!-- Indented to align with the base template -->
+            {% block content %}
+                <!-- Body Section of the Delete Account page -->
+                <section class="py-5 static-page">
+                    <h1 class="text-center fs-1 fw-bold">Are you sure?</h1>
+                    <div class="container px-5 my-5">
+                        <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                            <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
+                                <div class="col-md-5 mb-4 mb-xl-0">
+                                    <div class="row justify-content-between text-50 py-2">
+                                        <p class="fs-4 fw-bold">{{ profile.first_name }} {{ profile.last_name }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.address1 }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.address2 }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.address3 }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.city }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.postcode }}</p>
+                                        <p class="fs-4 fw-bold">{{ profile.country }}</p>
+                                    </div>
+                                    <form method="post" action="{% url 'customers:customer-delete' user.pk %}" enctype="multipart/form-data" aria-label="Delete Provider form">
+                                        {% csrf_token %}
+                                        <div class="p-3 d-flex justify-content-center">
+                                            <input type="submit" name="Confirm" class="btn btn-danger" aria-label="Confirm Delete account button">
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            {% endblock %}

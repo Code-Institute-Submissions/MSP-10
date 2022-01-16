@@ -14,6 +14,7 @@ urlpatterns = [
     
     path('customers/profile/<str:pk>/',views.customer_profile_view, name='customer-profile'),
     path('customers/profile/<str:pk>/update',views.customer_profile_update, name='customer-update'),
+    path('customers/profile/<str:pk>/delete',views.customer_profile_delete, name='customer-delete'),
     
     path('customers/reset_password/', 
         auth_views.PasswordResetView.as_view(
