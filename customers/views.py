@@ -68,7 +68,7 @@ def customer_profile_view(request, pk):
 def customer_profile_update(request, pk):
     # Ensuring only staff can view amend page
     # if request.user.is_staff:
-        # View for Updating an existing Provider
+        # View for Updating Customer Details
         profile = User.objects.get(id=pk)
         current_user = request.user
         profile = Profile.objects.get(name=current_user)

@@ -21,30 +21,46 @@ Profile Update Page
 <!-- The following is the unique content for this page -->
 <!-- Indented to align with the base template -->
             {% block content %}
-                <!-- Body Section of the login page page -->
+                <!-- Body Section of the update details page -->
                 <section class="py-5 static-page">
                     <h1 class="text-center">Update Details</h1>
                     <div class="container px-5 my-5">
-                        <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                        <aside class="static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
                             <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
                                 <div class="col-md-5 mb-4 mb-xl-0">
                                     <div class="row justify-content-between text-50 py-2">
-                                        <form method="post" enctype="multipart/form-data">
+                                        <!-- Form for Registration of new user -->
+                                        <form method="POST">
                                             {% csrf_token %}
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-4 text-left" aria-label="Provider name field">
-                                                        {{ form }}
-                                                    </div>
-                                                </div>
-                                                <br>
-                                            </div>  
-                                            <div class="text-right pr-5">
-                                                <button class="btn btn-dark my-4" type="submit" aria-label="Submit Amended details for provider">Submit</button>
-                                                <strong>{{message}}</strong>
-                                            </div> 
+                                            <label class="py-2 fs-3 fw-bold" id="first_name" for="first_name">First Name:</label>
+                                            <input type="text" name="first_name" placeholder="First Name..." class="form-control" aria-label="First name field">
+                                            <label class="py-2 fs-3 fw-bold" id="last_name" for="last_name">Surname:</label>
+                                            <input type="text" name="last_name" placeholder="Surname..." class="form-control" aria-label="Surname field">
+                                            <label class="py-2 fs-3 fw-bold" id="address1" for="address1">Address Line 1:</label>
+                                            <input type="text" name="address1" placeholder="Address Line 1..." class="form-control" aria-label="Address Line one field">
+                                            <label class="py-2 fs-3 fw-bold" id="address2" for="address2">Address Line 2:</label>
+                                            <input type="text" name="address2" placeholder="Address Line 2..." class="form-control" aria-label="Address Line Two field">
+                                            <label class="py-2 fs-3 fw-bold" id="address3" for="address3">Address Line 3:</label>
+                                            <input type="text" name="address3" placeholder="Address Line 3..." class="form-control" aria-label="Address Line Three field">
+                                            <label class="py-2 fs-3 fw-bold" id="city" for="city">City:</label>
+                                            <input type="text" name="city" placeholder="City..." class="form-control" aria-label="City field">
+                                            <label class="py-2 fs-3 fw-bold" id="postcode" for="postcode">Postcode:</label>
+                                            <input type="text" name="postcode" placeholder="Postcode..." class="form-control" aria-label="Postcode field">
+                                            <label class="py-2 fs-3 fw-bold" id="country" for="country">Country:</label>
+                                            {{form.country}}
+                                            <!--Submit button -->
+                                            <div class="p-3 d-flex justify-content-center">
+                                                <input type="submit" value="Register" class="btn darkmocha-button fw-bold">
+                                            </div>
+                                            <!-- Redirection to login page -->
+                                            <a class="d-block text-center mt-2 medium darkmocha" href="{% url 'customers:login-page' %}" aria-label="Redirect to Customer signin">Already a member? Sign In</a>
                                         </form>
-
+                                        <!-- Error display function -->
+                                        {% if form.errors %}
+                                            <div class="alert btn-danger" role="alert">
+                                                <p>{{form.errors}}</p>
+                                            </div>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>

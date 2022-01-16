@@ -15,6 +15,15 @@ class RegisterForm(UserCreationForm):
 class UpdateProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['first_name', 'last_name', 'address1', 'address2', 'address3', 'city', 'postcode', 'country']
+        fields = [
+            'first_name', 
+            'last_name', 
+            'address1', 
+            'address2', 
+            'address3', 
+            'city', 
+            'postcode', 
+            'country'
+        ]
 
     
