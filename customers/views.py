@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import RegisterForm
+from .forms import RegisterForm, UpdateProfileForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -9,7 +9,7 @@ from .models import Profile
 
 # Create your views here.
 
-def loginPage(request):
+def login_page(request):
 
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -26,7 +26,7 @@ def loginPage(request):
 
 
 
-def registerPage(request):
+def register_page(request):
     form = RegisterForm()
     
     if request.method == 'POST':
@@ -42,14 +42,36 @@ def registerPage(request):
     return render(request, 'register.html', context)
 
 
-def logoutPage(request):
+def logout_page(request):
     logout(request)
     return redirect('index')
 
 
-def customerProfileView(request, pk):
+def customer_profile_view(request, pk):
     customer = User.objects.get(id=pk)
     current_user = request.user
     profile = Profile.objects.get(name=current_user)
     context = {'customer':customer, 'profile':profile}
     return render(request, 'profile_view.html', context)
+
+def customer_profile_update(request, pk):
+    # Ensuring only staff can view amend page
+    # if request.user.is_staff:
+        # View for Updating an existing Provider
+        profile = User.objects.get(id=pk)
+        current_user = request.user
+        profile = Profile.objects.get(name=current_user)
+        
+        form = UpdateProfileForm(instance=profile)
+        if request.method == 'POST':
+            form = UpdateProfileForm(
+                request.POST, request.FILES, instance=profile)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Provider Updated Successfully')
+                form = UpdateProfileForm()
+                return redirect('customers:customer-profile')
+        else:
+            context = {'form': form}
+            return render(request, 'customers:profile_update.html', context)
+        

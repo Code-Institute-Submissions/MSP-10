@@ -8,12 +8,12 @@ from . import views
 app_name = 'customers'
 
 urlpatterns = [
-    path('customers/login/', views.loginPage, name='login-page'),
-    path('customers/register/', views.registerPage, name='register-page'),
-    path('customers/logout/', views.logoutPage, name='logout-page'),
+    path('customers/login/', views.login_page, name='login-page'),
+    path('customers/register/', views.register_page, name='register-page'),
+    path('customers/logout/', views.logout_page, name='logout-page'),
     
-    path('customers/profile/<str:pk>/',views.customerProfileView, name='customer-profile'),
-    
+    path('customers/profile/<str:pk>/',views.customer_profile_view, name='customer-profile'),
+    path('customers/profile/<str:pk>/update',views.customer_profile_update, name='customer-update'),
     
     path('customers/reset_password/', 
         auth_views.PasswordResetView.as_view(
