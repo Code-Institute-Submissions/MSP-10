@@ -2,14 +2,14 @@ from django.shortcuts import render
 
 from django.shortcuts import render
 from django.shortcuts import render, redirect
-from subscriptions.forms import SubsciberForm
+from subscriptions.forms import SubscriberForm
 from subscriptions.models import newsletterSubscribers
 from django.contrib import messages
 
 
 def index(request):
     if request.method == 'POST':
-        form = SubsciberForm(request.POST)
+        form = SubscriberForm(request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
             if newsletterSubscribers.objects.filter(email=instance.email).exists():
@@ -17,8 +17,7 @@ def index(request):
             else:
                 instance.save()
                 messages.success(request, 'You are now Subscribed')
-                return redirect('/')
-    form = SubsciberForm()
+    form = SubscriberForm()
     context = {'form': form,}
     return render(request, 'index.html', context)
 
