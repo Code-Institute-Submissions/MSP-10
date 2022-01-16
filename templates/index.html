@@ -106,9 +106,12 @@ Home Page
                                     <div class="text-50">Sign up to the MochaBeans newsletter and keep up to date with all the latest coffee news.</div>
                                 </div>
                                 <div class="ms-xl-4">
-                                    <div class="input-group mb-2">
-                                        <input class="form-control" type="text" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter" />
-                                        <button class="btn darkmocha-button" id="button-newsletter" type="button">Sign up</button>
+                                    <div class="input-group mb-2 text-right">
+                                        <form method="POST">
+                                            {% csrf_token %}
+                                            <input class="form-control" type="email" name="email" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter"/>
+											<button class="btn darkmocha-button float-right" id="button-newsletter" type="button">Sign up</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

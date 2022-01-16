@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'customers.apps.CustomersConfig',
-    'subscriptions',
+    'subscriptions.apps.SubscriptionsConfig',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'

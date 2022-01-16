@@ -5,8 +5,8 @@ from django.contrib.auth import views as auth_views
 from django.conf.urls.static import static
 from . import views
 
-app_name = 'sunscriptions'
+app_name = 'subscriptions'
 
-# urlpatterns = [
-#     path('customers/login/', views.login_page, name='login-page'),
-# ]
+urlpatterns = [
+    # path('subs/', views.login_page, name='login-page'),
+]
