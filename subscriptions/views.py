@@ -12,9 +12,9 @@ def newsletter_subscription_delete(request):
     if request.method == "POST":
         # instance = form.save(commit=False)
         email1 = request.POST.get('email')
-        emailid = newsletterSubscribers.objects.filter(email=email1).values('id')
         if newsletterSubscribers.objects.filter(email=email1).exists():
-            emailid.delete
+            emailid = newsletterSubscribers.objects.get(email=email1)
+            emailid.delete()
             messages.error(request, 'You have successfully unsubscribed')
             return redirect('subscriptions:newsletter-unsubscribed')
         else:
