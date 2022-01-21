@@ -68,7 +68,7 @@ def customer_profile_update(request, pk):
     form = UpdateProfileForm(instance=profile)
     if request.method == 'POST':
         form = UpdateProfileForm(
-            request.POST, request.FILES, instance=profile)
+            request.POST, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Provider Updated Successfully')

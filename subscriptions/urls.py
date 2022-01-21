@@ -8,5 +8,5 @@ from . import views
 app_name = 'subscriptions'
 
 urlpatterns = [
-    # path('subs/', views.login_page, name='login-page'),
+    path('unsubscribe/', views.newsletter_subscription_delete, name='newsletter-unsubscribe'),
 ]
