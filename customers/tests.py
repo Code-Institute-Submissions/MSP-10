@@ -54,3 +54,63 @@ class TestCustomerLogin(TestCase):
             'password1': 'a1b2c3d4',
         })
         self.assertEqual(response.status_code, 200)
+
+# class TestCustomerProfilePageTests(TestCase):
+#     # Test for the customer Profile page load
+#     def test_profile_page_status_code(self):
+#         response = self.client.get('/customers/profile/1/')
+#         self.assertEquals(response.status_code, 200)
+
+#     def test_profile_url_by_name(self):
+#         response = self.client.get(reverse('customers:customer-profile'))
+#         self.assertEquals(response.status_code, 200)
+
+#     def test_profile_uses_correct_template(self):
+#         response = self.client.get(reverse('customers:customer-profile'))
+#         self.assertEquals(response.status_code, 200)
+#         self.assertTemplateUsed(response, 'profile_view.html')
+
+class TestResetPasswordTests(TestCase):
+    # Test for the customer reset_password load
+    def test_reset_password_status_code(self):
+        response = self.client.get('/customers/reset_password/')
+        self.assertEquals(response.status_code, 200)
+
+    def test_reset_password_url_by_name(self):
+        response = self.client.get(reverse('customers:reset_password'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_reset_password_uses_correct_template(self):
+        response = self.client.get(reverse('customers:reset_password'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'password/password_reset_form.html')
+
+class TestResetPasswordSentTests(TestCase):
+    # Test for the customer reset_password sent
+    def test_reset_password_sent_status_code(self):
+        response = self.client.get('/customers/reset_password_sent/')
+        self.assertEquals(response.status_code, 200)
+
+    def test_reset_password_sent_url_by_name(self):
+        response = self.client.get(reverse('customers:password_reset_done'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_reset_password_sent_uses_correct_template(self):
+        response = self.client.get(reverse('customers:password_reset_done'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'password/password_reset_done.html')
+
+class TestResetPasswordCompleteTests(TestCase):
+    # Test for the customer reset_password complete
+    def test_reset_password_complete_status_code(self):
+        response = self.client.get('/customers/reset_password_complete/')
+        self.assertEquals(response.status_code, 200)
+
+    def test_reset_password_complete_url_by_name(self):
+        response = self.client.get(reverse('customers:password_reset_complete'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_reset_password_complete_uses_correct_template(self):
+        response = self.client.get(reverse('customers:password_reset_complete'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'password/password_reset_complete.html')
