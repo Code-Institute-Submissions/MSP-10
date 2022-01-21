@@ -1,0 +1,51 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Additional meta tags for specific pages -->
+{% block extra_meta %}
+{% endblock %}
+
+<!-- page specific css -->
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+<!-- Updates the page title -->
+{% block title %}
+Unsubscribe Newsletter
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+<!-- Indented to align with the base template -->
+            {% block content %}
+                <!-- Body Section of the login page page -->
+                <section class="py-5 static-page">
+                    <h1 class="text-center fs-1 fw-bold">Newsletter unsubscribe</h1>
+                    <div class="container px-5 my-5">
+                        <aside class="newsletter-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                            <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+                                <div class="mb-4 mb-xl-0">
+                                    {% for message in messages %}
+                                        {{ message }}
+                                    {% endfor %}
+                                </div>
+                                {% comment %} <div class="ms-xl-4">
+                                    <div class="input-group mb-2 text-right">
+                                        <form method="POST">
+                                            {% csrf_token %}
+                                            <input class="form-control" type="email" name="email" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter"/>
+                                            <input type="submit" value="Unsubscribe" class="btn darkmocha-button fw-bold">
+                                        </form>
+                                    </div>
+                                    {% for message in messages %}
+                                        {{ message }}
+                                    {% endfor %}
+                                </div> {% endcomment %}
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            {% endblock %}

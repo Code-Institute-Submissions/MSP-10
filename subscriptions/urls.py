@@ -9,4 +9,5 @@ app_name = 'subscriptions'
 
 urlpatterns = [
     path('unsubscribe/', views.newsletter_subscription_delete, name='newsletter-unsubscribe'),
+    path('unsubscribed/', views.newsletter_subscription_confirmation, name='newsletter-unsubscribed'),
 ]
