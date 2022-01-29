@@ -42,6 +42,19 @@ The following sections are the results of the testing throughout the software de
     1. [Exploratory Test Session Goals]()
 	1. [Potential Automation Test Cases Identified]()
 	1. [Issues found/faced]()
+1. [Sprint 7]()
+1. [Sprint 8]()
+    1. [User Stories Closed]()
+    1. [Unit Tests Conducted]()
+    1. [Exploratory Test Session Goals]()
+	1. [Potential Automation Test Cases Identified]()
+	1. [Issues found/faced]()
+1. [Sprint 9]()
+    1. [User Stories Closed]()
+    1. [Unit Tests Conducted]()
+    1. [Exploratory Test Session Goals]()
+	1. [Potential Automation Test Cases Identified]()
+	1. [Issues found/faced]()
 1. [Sprint Deployment]()
 1. [Final Post Deployment Testing]()
 	1. [Final Compatability Testing]()
@@ -97,13 +110,11 @@ The following list of tools have been utilised during the testing of this projec
 ### Unit Tests Conducted
 No Unit Tests were built as part of this Sprint
 
-
 ### Exploratory Test Session Goals
 * I want to confirm that the base project has been created
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
-
 
 ### Potential Automation Test Cases
 No potential Automation Test Cases were identified during this sprint
@@ -113,6 +124,7 @@ No Issues were faced / found as part of this Sprint
 
 ### Python Validation
 No Python validation occured during this Sprint
+
 
 ## Sprint 2 
 18th December - 24th December 2021
@@ -158,6 +170,7 @@ No Python validation occured during this Sprint
 ### Issues Faced / Found
 * None located at this time
 
+
 ## Sprint 3
 25th December - 31st December 2021
 
@@ -196,9 +209,8 @@ No Python validation occured during this Sprint
 </details>
 
 ### Potential Automation Test Cases
-* 
-* 
-* 
+* FAQ page loads and questions expand
+* Shipping page loads
 
 ### Issues Faced / Found
 * Initial issue while creating the Database for users, there was a conflict between the customer model and the django defaul user model. This was resolved by changing the custom app name to customers.
@@ -251,14 +263,14 @@ No Python validation occured during this Sprint
 </details>
 
 ### Potential Automation Test Cases
-* 
-* 
-* 
+* Registering a new user
+* Field validation - negative tests
+* User login
+* Switch between login and register pages
+* Navigation bar updates with User details
 
 ### Issues Faced / Found
-* 
-* 
-* 
+N/A
 
 ### Python Validation
 <details>
@@ -278,7 +290,6 @@ No Python validation occured during this Sprint
 ### User Stories Closed
 * As a User I want to be able to reset my password
 * As a User I want the reset password forms to be aligned with MochaBean theme
-* 
 
 ### Unit Tests Conducted
 <details>
@@ -293,6 +304,10 @@ No Python validation occured during this Sprint
 
 ### Exploratory Test Session Goals
 
+* I want to confirm that when I request a password reset an email is sent
+* I want to confirm the email sent has a reset password link
+* I want to confirm that when I have reset my password I must use the new password to log in
+* I want to confirm the password change screen contains password validation
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
@@ -308,14 +323,10 @@ No Python validation occured during this Sprint
 </details>
 
 ### Potential Automation Test Cases
-* 
-* 
-* 
+* Password reset process
 
 ### Issues Faced / Found
-* 
-* 
-* 
+* No issues raised during this sprint
 
 ### Python Validation
 <details>
@@ -333,8 +344,77 @@ No Python validation occured during this Sprint
 15th January - 21st January 2022
 
 ### User Stories Closed
-* 
-* 
+* As a User I want to be able to delete my account
+* As a Developer I want to implement the following customer model / database
+* As a User I want to be able to view my current details (Profile page)
+* As a User I want to be able to update my details
+* As a User I want to subscribe to the MochaBean newsletter
+
+### Unit Tests Conducted
+<details>
+<summary> Expand for test results</summary>
+    <p float="left">
+        <img src="" alt="Initial Python Unit Test"/>
+		<img src="" alt="Initial Python Unit Test"/>
+		<img src="" alt="Initial Python Unit Test"/>
+		<img src="" alt="Initial Python Unit Test"/>
+    </p>
+</details>
+
+### Exploratory Test Session Goals
+
+* I want to be able to delete my account (and profile)
+* I want to confirm that a profile is created with a User registers
+* I want to view my current profile details
+* I want to confirm that if my profile details are empty, upon first visit I will be redirected to the update page
+* I want to be able to update my details
+* I want to be able to subscribe to the MochaBean newsletter
+* I want to confirm that if I am already subscribed to the Newsletter I cannot add my email again
+* I want to be able to unsubscribe from the newsletter
+* I want to confirm that all User Stories are done to my satisfaction
+* I want to identify any edge cases
+* I want to identify any potential test cases for automation
+
+<details>
+<summary> Expand for test results</summary>
+    <p float="left">
+        <img src="" alt="Initial Python Unit Test"/>
+		<img src="" alt="Initial Python Unit Test"/>
+		<img src="" alt="Initial Python Unit Test"/>
+		<img src="" alt="Initial Python Unit Test"/>
+    </p>
+</details>
+
+### Potential Automation Test Cases
+* Deleting account (and profile)
+* View Profile details
+* Amend profile details
+* MochaBean Newsletter subscription
+
+### Issues Faced / Found
+* None
+
+### Python Validation
+<details>
+<summary> Expand for test results</summary>
+    <p float="left">
+        <img src="" alt="Initial Python Unit Test"/>
+		<img src="" alt="Initial Python Unit Test"/>
+		<img src="" alt="Initial Python Unit Test"/>
+		<img src="" alt="Initial Python Unit Test"/>
+    </p>
+</details>
+
+## Sprint 7
+22nd January - 28th January 2022
+
+Due to other commitments
+
+
+## Sprint 8
+29th January - 4th February 2022
+
+### User Stories Closed
 * 
 
 ### Unit Tests Conducted
