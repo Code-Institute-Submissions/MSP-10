@@ -55,20 +55,6 @@ class TestCustomerLogin(TestCase):
         })
         self.assertEqual(response.status_code, 200)
 
-# class TestCustomerProfilePageTests(TestCase):
-#     # Test for the customer Profile page load
-#     def test_profile_page_status_code(self):
-#         response = self.client.get('/customers/profile/1/')
-#         self.assertEquals(response.status_code, 200)
-
-#     def test_profile_url_by_name(self):
-#         response = self.client.get(reverse('customers:customer-profile'))
-#         self.assertEquals(response.status_code, 200)
-
-#     def test_profile_uses_correct_template(self):
-#         response = self.client.get(reverse('customers:customer-profile'))
-#         self.assertEquals(response.status_code, 200)
-#         self.assertTemplateUsed(response, 'profile_view.html')
 
 class TestResetPasswordTests(TestCase):
     # Test for the customer reset_password load
