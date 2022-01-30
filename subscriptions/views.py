@@ -35,6 +35,10 @@ def newsletter_subscription_confirmation(request):
     return render(request, 'unsubscribe_confirm.html')
 
 
+def product(request):
+    return render(request, 'products.html')
+
+
 def subscription_checkout(request):
     try:
         if request.user.customer.membership:
@@ -46,17 +50,20 @@ def subscription_checkout(request):
         pass
     else:
         if request.method == 'GET' and 'membership' in request.GET:
-            if request.GET['membership'] == 'I like to Dabble':
+            if request.GET['membership'] == 'PlanA':
                 membership_id = 'prod_L3lkFGIDpoPbVc'
                 final_dollar = 19.95
+                membership = 'I like to Dabble'
             
-            if request.GET['membership'] == 'Finely Balanced':
+            if request.GET['membership'] == 'PlanB':
                 membership_id = 'prod_L3lkCYmTeDzArD'
                 final_dollar = 29.95
+                membership = 'Finely Balanced'
             
-            if request.GET['membership'] == 'Sleep is for the Weak':
+            if request.GET['membership'] == 'PlanC':
                 membership_id = 'prod_L3lmjcmGhSN3c5'
                 final_dollar = 39.95
+                membership = 'Sleep is for the Weak'
 
         # Create Stripe Checkout
         session = stripe.checkout.Session.create(
@@ -72,7 +79,7 @@ def subscription_checkout(request):
             cancel_url='http://127.0.0.1:8000/cancel',
         )
 
-        return render(request, 'subscriptions/checkout.html', {'final_dollar': final_dollar, 'session_id': session.id})
+        return render(request, 'checkout.html', {'final_dollar': final_dollar, 'session_id': session.id})
 
 
 def subscription_success(request):
@@ -85,8 +92,8 @@ def subscription_success(request):
         customer.cancel_at_period_end = False
         customer.stripe_subscription_id = session.subscription
         customer.save()
-    return render(request, 'subscriptions/success.html')
+    return render(request, 'success.html')
 
 def subscription_cancel(request):
     # View for cancelling payment
-    return render(request, 'subscriptions/cancel.html')
+    return render(request, 'cancel.html')
