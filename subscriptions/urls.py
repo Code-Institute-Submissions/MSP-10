@@ -11,7 +11,7 @@ urlpatterns = [
     path('unsubscribe/', views.newsletter_subscription_delete, name='newsletter-unsubscribe'),
     path('unsubscribed/', views.newsletter_subscription_confirmation, name='newsletter-unsubscribed'),
     
-    path('product/checkout/', views.subscription_checkout, name='subscription-checkout'),
-    path('product/success/', views.subscription_success, name='subscription-success'),
-    path('product/cancel/', views.newsletter_subscription_confirmation, name='subscription-cancel'),
+    path('checkout/', views.subscription_checkout, name='subscription-checkout'),
+    path('success/', views.subscription_success, name='subscription-success'),
+    path('cancel/', views.subscription_cancel, name='subscription-cancel'),
 ]
