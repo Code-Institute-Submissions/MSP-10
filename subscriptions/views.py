@@ -41,7 +41,7 @@ def product(request):
 
 def subscription_checkout(request):
     try:
-        if request.user.customer.membership:
+        if request.user.customersubscriptions.membership:
             return redirect('settings')
     except CustomerSubscriptions.DoesNotExist:
         pass
@@ -51,17 +51,17 @@ def subscription_checkout(request):
     else:
         if request.method == 'GET' and 'membership' in request.GET:
             if request.GET['membership'] == 'PlanA':
-                membership_id = 'prod_L3lkFGIDpoPbVc'
+                membership_id = 'price_1KNeD2BAHJm9GG3TRdiOiyyn'
                 final_dollar = 19.95
                 membership = 'I like to Dabble'
             
             if request.GET['membership'] == 'PlanB':
-                membership_id = 'prod_L3lkCYmTeDzArD'
+                membership_id = 'price_1KNeDIBAHJm9GG3T3un40z3y'
                 final_dollar = 29.95
                 membership = 'Finely Balanced'
             
             if request.GET['membership'] == 'PlanC':
-                membership_id = 'prod_L3lmjcmGhSN3c5'
+                membership_id = 'price_1KNeFDBAHJm9GG3TwExvJshS'
                 final_dollar = 39.95
                 membership = 'Sleep is for the Weak'
 
