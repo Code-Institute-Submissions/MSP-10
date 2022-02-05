@@ -7,9 +7,10 @@ body {
     font-family: 'Signika Negative', sans-serif;
     font-weight: 300;
     color: #543826;
-    height: 100% !important;
+    min-height: 100vh !important;
 }
 
+/* Formatting for the navigation and footer bar */
 .navigation-bar, .footer-bar {
     color: #EDE0D4 !important;
     background-color: #543826 !important;
@@ -22,24 +23,28 @@ body {
     color: #EDE0D4 !important;
 }
 
+/* Settings for dark button component */
 .darkmocha-button, .darkmocha {
     background-color: #543826 !important;
     border-color: #543826 !important;
     color: #EDE0D4 !important;
 }
 
+/* Settings for dark button component when mouse hover */
 .darkmocha-button:hover {
     background-color: #E6CCB2 !important;
     border-color: #E6CCB2 !important;
     color: #543826 !important;
 }
 
+/* Settings for light button component */
 .lightmocha-button, .lightmocha {
     background-color: #E6CCB2 !important;
     border-color: #E6CCB2 !important;
     color: #543826 !important;
 }
 
+/* Settings for light button component when mouse hover */
 .lightmocha-button:hover {
     background-color: #543826 !important;
     border-color: #543826 !important;
@@ -50,7 +55,12 @@ body {
     background-color: #E6CCB2 !important; 
 }
 
-/* Remover the default settings of the accordion buttons accross the site */
+/* The following ensures smaller page content fills view screen */
+.static-page{
+    min-height: 53.1em; 
+}
+
+/* Remove the default settings of the accordion buttons accross the site */
 /* Primarily on the FAQs page and the Shipping Page */
 .accordion-button {
     box-shadow: none !important;
