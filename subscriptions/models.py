@@ -17,6 +17,7 @@ class Subscription(models.Model):
     name = models.CharField(max_length=100)
     stripe_subscription_id = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
+    price = models.IntegerField(default=0)
     
     def __str__(self):
         return self.name

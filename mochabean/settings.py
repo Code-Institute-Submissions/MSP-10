@@ -159,3 +159,8 @@ MESSAGE_TAGS = {
         messages.WARNING: 'alert-warning',
         messages.ERROR: 'alert-danger',
 }
+
+# Stripe API keys
+STRIPE_SECRET_KEY=config('STRIPE_SECRET_KEY')
+STRIPE_PUB_KEY=config('STRIPE_PUB_KEY')
+
