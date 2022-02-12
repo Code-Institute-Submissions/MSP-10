@@ -19,6 +19,12 @@ class SubscriptionCreate(forms.ModelForm):
         'placeholder': 'Stripe ID'}))
     price = forms.IntegerField(widget=forms.NumberInput(attrs={
         'placeholder': '€00.00'}))
+    coffee = forms.IntegerField(widget=forms.NumberInput(attrs={
+        'placeholder': '0.00'}))
+    accessory = forms.IntegerField(widget=forms.NumberInput(attrs={
+        'placeholder': '0.00'}))
+    treats = forms.IntegerField(widget=forms.NumberInput(attrs={
+        'placeholder': '0.00'}))
 
     def __init__(self, *args, **kwargs):
         super(SubscriptionCreate, self).__init__(*args, **kwargs)
@@ -27,4 +33,4 @@ class SubscriptionCreate(forms.ModelForm):
 
     class Meta:
         model = Subscription
-        fields = ['name', 'description', 'stripe_subscription_id', 'price']
+        fields = ['name', 'description', 'stripe_subscription_id', 'price', 'coffee', 'accessory', 'treats']

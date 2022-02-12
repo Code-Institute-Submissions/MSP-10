@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import newsletterSubscribers, CustomerSubscriptions, Subscription
 from .forms import SubscriberForm, SubscriptionCreate
+from django.views.generic import ListView
+from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib import messages
 from django.views import View
 import stripe
@@ -15,7 +17,6 @@ def newsletter_subscription_delete(request):
     # View to delete newsletter subscription
     form = SubscriberForm(request.POST)
     if request.method == "POST":
-        # instance = form.save(commit=False)
         email1 = request.POST.get('email')
         if newsletterSubscribers.objects.filter(email=email1).exists():
             emailid = newsletterSubscribers.objects.get(email=email1)
@@ -41,12 +42,15 @@ def product_create(request):
     # if request.user.is_staff:
         # View for creating a New Provider on the site
     if request.method == 'POST':
-        form = SubscriptionCreate(request.POST, request.FILES)
+        form = SubscriptionCreate(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'New Product Created Successfully')
-            form = SubscriptionCreate()
-            return redirect('subscriptions:subscription-products')
+            print('it was a success damnit')
+            #form = SubscriptionCreate()
+            return redirect('index')
+        else:
+            messages.error(request, 'New Product NOT Created Successfully')
     else:
         form = SubscriptionCreate()
     return render(request, 'create_subscription.html', {'form': form})
@@ -80,18 +84,18 @@ def product_create(request):
 #         return render(request, context)
 
 
-def subscription_success(request):
-    if request.method == 'GET' and 'session_id' in request.GET:
-        session = stripe.checkout.Session.retrieve(request.GET['session_id'],)
-        customer = CustomerSubscriptions()
-        customer.user = request.user
-        customer.stripeid = session.customer
-        customer.membership = True
-        customer.cancel_at_period_end = False
-        customer.stripe_subscription_id = session.subscription
-        customer.save()
-    return render(request, 'success.html')
+# def subscription_success(request):
+#     if request.method == 'GET' and 'session_id' in request.GET:
+#         session = stripe.checkout.Session.retrieve(request.GET['session_id'],)
+#         customer = CustomerSubscriptions()
+#         customer.user = request.user
+#         customer.stripeid = session.customer
+#         customer.membership = True
+#         customer.cancel_at_period_end = False
+#         customer.stripe_subscription_id = session.subscription
+#         customer.save()
+#     return render(request, 'success.html')
 
-def subscription_cancel(request):
-    # View for cancelling payment
-    return render(request, 'cancel.html')
+# def subscription_cancel(request):
+#     # View for cancelling payment
+#     return render(request, 'cancel.html')

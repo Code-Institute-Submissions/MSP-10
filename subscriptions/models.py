@@ -1,5 +1,3 @@
-from unicodedata import name
-from unittest.util import _MAX_LENGTH
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -18,6 +16,9 @@ class Subscription(models.Model):
     stripe_subscription_id = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     price = models.IntegerField(default=0)
+    coffee = models.IntegerField(default=0)
+    accessory = models.IntegerField(default=0)
+    treats = models.IntegerField(default=0)
     
     def __str__(self):
         return self.name

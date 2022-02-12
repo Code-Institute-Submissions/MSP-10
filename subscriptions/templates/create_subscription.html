@@ -1,0 +1,64 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Additional meta tags for specific pages -->
+{% block extra_meta %}
+{% endblock %}
+
+<!-- page specific css -->
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+<!-- Updates the page title -->
+{% block title %}
+Create Subscription
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+<!-- Indented to align with the base template -->
+            {% block content %}
+                <!-- Body Section of the login page page -->
+                <section class="py-5 static-page">
+                    <h1 class="text-center fs-1 fw-bold">Create Subscription</h1>
+                    <div class="container px-5 my-5">
+                        <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                            <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
+                                <div class="col-md-5 mb-4 mb-xl-0">
+                                    <div class="row justify-content-between text-50 py-2">
+                                        <!-- Login form -->
+                                        <form method="POST">
+                                            {% csrf_token %}
+                                            <label class="py-2 fs-3 fw-bold" id="name" for="name">Subscription Name:</label>
+                                            <input type="text" name="name" placeholder="Name..." class="form-control" aria-label="New subscription name field">
+                                            <label class="py-2 fs-3 fw-bold" id="stripe_subscription_id" for="stripe_subscription_id">Stripe ID:</label>
+                                            <input type="text" name="stripe_subscription_id" placeholder="Stripe ID" class="form-control" aria-label="Stripe payment ID field">
+                                            <label class="py-2 fs-3 fw-bold" id="description" for="description">Description:</label>
+                                            <input type="text" name="description" placeholder="Description..." class="form-control" aria-label="New subscription name field">
+                                            <label class="py-2 fs-3 fw-bold" id="price" for="price">Monthly Price:</label>
+                                            <input type="text" name="price" placeholder="€0.00" class="form-control" aria-label="Subscription price field">
+                                            <label class="py-2 fs-3 fw-bold" id="coffee" for="coffee">Bags of coffee:</label>
+                                            <input type="text" name="coffee" placeholder="0" class="form-control" aria-label="Number of coffee bags field">
+                                            <label class="py-2 fs-3 fw-bold" id="accessories" for="accessories">Number of Accessories:</label>
+                                            <input type="text" name="accessories" placeholder="0" class="form-control" aria-label="Number of accessories field">
+                                            <label class="py-2 fs-3 fw-bold" id="treats" for="treats">Number of Treats:</label>
+                                            <input type="text" name="treats" placeholder="0" class="form-control" aria-label="Number of treats field">
+                                            <!--Submit button -->
+                                            <div class="p-3 d-flex justify-content-center">
+                                                <input type="submit" value="Create" class="btn darkmocha-button fw-bold">
+                                            </div>
+                                        </form>
+                                        <!-- Error display functionality -->
+                                        {% for message in messages %}
+                                            {{message}}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            {% endblock %}

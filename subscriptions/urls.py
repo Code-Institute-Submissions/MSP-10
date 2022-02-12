@@ -4,7 +4,7 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from django.conf.urls.static import static
 from . import views
-from subscriptions.views import subscription_checkout
+
 
 app_name = 'subscriptions'
 
@@ -14,8 +14,8 @@ urlpatterns = [
     
     path('subscription/products/', views.product, name='subscription-products'),
     path('subscription/products/create/', views.product_create, name='subscription-create'),
-    path('subscription/checkout/', views.subscription_checkout, name='subscription-checkout'),
+    #path('subscription/checkout/', views.subscription_checkout, name='subscription-checkout'),
     #path('subscription/checkout/', CreateCheckoutSession.as_view(), name='subscription-checkout'), 
-    path('subscription/success/', views.subscription_success, name='subscription-success'),
-    path('subscription/cancel/', views.subscription_cancel, name='subscription-cancel'),
+    #path('subscription/success/', views.subscription_success, name='subscription-success'),
+    #path('subscription/cancel/', views.subscription_cancel, name='subscription-cancel'),
 ]
