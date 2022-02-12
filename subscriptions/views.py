@@ -26,12 +26,12 @@ def newsletter_subscription_delete(request):
         else:
             messages.success(request, 'You have never subscribed!')
     context = {'form': form,}
-    return render(request, 'unsubscribe.html', context)
+    return render(request, 'newsletter/unsubscribe.html', context)
 
 
 def newsletter_subscription_confirmation(request):
     # View for confirmation of Unsubscribing from newsletter
-    return render(request, 'unsubscribe_confirm.html')
+    return render(request, 'newsletter/unsubscribe_confirm.html')
 
 
 def product(request):
@@ -53,9 +53,48 @@ def product_create(request):
             messages.error(request, 'New Product NOT Created Successfully')
     else:
         form = SubscriptionCreate()
-    return render(request, 'create_subscription.html', {'form': form})
+    return render(request, 'products/create_subscription.html', {'form': form})
     # else:
     #     return redirect('index')
+
+
+def product_update(request, pk):
+    # Ensuring only staff can view amend page
+# if request.user.is_staff:
+    # View for Updating an existing Provider
+    product = Subscription.objects.get(id=pk)
+    form = SubscriptionCreate(instance=product)
+    if request.method == 'POST':
+        form = SubscriptionCreate(
+            request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product Updated Successfully, Remember to update Stripe')
+            form = SubscriptionCreate()
+            return redirect('subscriptions:subscription-products')
+    context = {'form': form}
+    return render(request, 'products/update_subscription.html', context)
+# else:
+#     return redirect('index')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
