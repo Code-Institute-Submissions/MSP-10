@@ -13,6 +13,7 @@ urlpatterns = [
     path('unsubscribed/', views.newsletter_subscription_confirmation, name='newsletter-unsubscribed'),
     
     path('subscription/products/', views.product, name='subscription-products'),
+    path('subscription/products/create/', views.product_create, name='subscription-create'),
     path('subscription/checkout/', views.subscription_checkout, name='subscription-checkout'),
     #path('subscription/checkout/', CreateCheckoutSession.as_view(), name='subscription-checkout'), 
     path('subscription/success/', views.subscription_success, name='subscription-success'),

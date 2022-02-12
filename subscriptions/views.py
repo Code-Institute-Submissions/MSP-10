@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import newsletterSubscribers, CustomerSubscriptions
-from .forms import SubscriberForm
+from .models import newsletterSubscribers, CustomerSubscriptions, Subscription
+from .forms import SubscriberForm, SubscriptionCreate
 from django.contrib import messages
 from django.views import View
 import stripe
@@ -36,80 +36,48 @@ def newsletter_subscription_confirmation(request):
 def product(request):
     return render(request, 'products.html')
 
-
-# class CreateCheckoutSessionView(View):
-#     def post(self, request, *args, **kwargs):
-#         price = Price.objects.get(id=self.kwargs["pk"])
-#         YOUR_DOMAIN = "http://127.0.0.1:8000"  # change in production
-#         checkout_session = stripe.checkout.Session.create(
-#             payment_method_types=['card'],
-#             line_items=[
-#                 {
-#                     'price': price.stripe_price_id,
-#                     'quantity': 1,
-#                 },
-#             ],
-#             mode='payment',
-#             success_url=YOUR_DOMAIN + '/success/',
-#             cancel_url=YOUR_DOMAIN + '/cancel/',
-#         )
-#         return redirect(checkout_session.url)
-
-# class CreateCheckoutSession(View):
-#     def post(self, request, *args, **kwargs):
-#         if request.GET['membership'] == 'PlanA':
-#             membership_id = 'price_1KNeD2BAHJm9GG3TRdiOiyyn'
-#             price = 19.95
-#             membership = 'I like to Dabble'
-        
-#         if request.GET['membership'] == 'PlanB':
-#             membership_id = 'price_1KNeDIBAHJm9GG3T3un40z3y'
-#             price = 29.95
-#             membership = 'Finely Balanced'
-        
-#         if request.GET['membership'] == 'PlanC':
-#             membership_id = 'price_1KNeFDBAHJm9GG3TwExvJshS'
-#             price = 39.95
-#             membership = 'Sleep is for the Weak'
-            
-#         YOUR_DOMAIN = "http://127.0.0.1:8000"  # change in production
-#         checkout_session = stripe.checkout.Session.create(
-#             payment_method_types=['card'],
-#             line_items=[
-#                 {
-#                     'membership': CustomerSubscriptions.membership,
-#                     'price': CustomerSubscriptions.price,
-#                 },
-#             ],
-#             mode='subscription',
-#             success_url=YOUR_DOMAIN + '/subscription/success/',
-#             cancel_url=YOUR_DOMAIN + '/subscription/cancel/',
-#         )
-#         return redirect(checkout_session.url)
-
-
-def subscription_checkout(request, membership):
+def product_create(request):
+    # Ensuring only staff can view create page
+    # if request.user.is_staff:
+        # View for creating a New Provider on the site
     if request.method == 'POST':
-        pass
+        form = SubscriptionCreate(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'New Product Created Successfully')
+            form = SubscriptionCreate()
+            return redirect('subscriptions:subscription-products')
     else:
-        if request.method == 'GET' and 'membership' in request.GET:
-            if request.GET['membership'] == 'PlanA':
-                stripe_subscription_id = 'price_1KNeD2BAHJm9GG3TRdiOiyyn'
-                price = 19.95
-                membership = 'I like to Dabble'
-            
-            if request.GET['membership'] == 'PlanB':
-                stripe_subscription_id = 'price_1KNeDIBAHJm9GG3T3un40z3y'
-                price = 29.95
-                membership = 'Finely Balanced'
-            
-            if request.GET['membership'] == 'PlanC':
-                stripe_subscription_id = 'price_1KNeFDBAHJm9GG3TwExvJshS'
-                price = 39.95
-                membership = 'Sleep is for the Weak'
+        form = SubscriptionCreate()
+    return render(request, 'create_subscription.html', {'form': form})
+    # else:
+    #     return redirect('index')
 
-        context = {'price':price, 'membership': membership}
-        return render(request, context)
+
+
+
+# def subscription_checkout(request, membership):
+#     if request.method == 'POST':
+#         pass
+#     else:
+#         if request.method == 'GET' and 'membership' in request.GET:
+#             if request.GET['membership'] == 'PlanA':
+#                 stripe_subscription_id = 'price_1KNeD2BAHJm9GG3TRdiOiyyn'
+#                 price = 19.95
+#                 membership = 'I like to Dabble'
+            
+#             if request.GET['membership'] == 'PlanB':
+#                 stripe_subscription_id = 'price_1KNeDIBAHJm9GG3T3un40z3y'
+#                 price = 29.95
+#                 membership = 'Finely Balanced'
+            
+#             if request.GET['membership'] == 'PlanC':
+#                 stripe_subscription_id = 'price_1KNeFDBAHJm9GG3TwExvJshS'
+#                 price = 39.95
+#                 membership = 'Sleep is for the Weak'
+
+#         context = {'price':price, 'membership': membership}
+#         return render(request, context)
 
 
 def subscription_success(request):
