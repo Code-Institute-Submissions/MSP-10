@@ -1,7 +1,8 @@
+from pyexpat import model
 from django.shortcuts import render, redirect
-from .models import newsletterSubscribers, CustomerSubscriptions, Subscription
-from .forms import SubscriberForm, SubscriptionCreate
 from django.views.generic import ListView
+from .models import newsletterSubscribers, Subscription
+from .forms import SubscriberForm, SubscriptionCreate
 from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib import messages
 from django.views import View
@@ -34,8 +35,9 @@ def newsletter_subscription_confirmation(request):
     return render(request, 'newsletter/unsubscribe_confirm.html')
 
 
-def product(request):
-    return render(request, 'products.html')
+class product(ListView):
+    model = Subscription
+    template_name = 'products.html'
 
 def product_create(request):
     # Ensuring only staff can view create page
