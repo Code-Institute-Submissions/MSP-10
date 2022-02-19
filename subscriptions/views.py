@@ -36,62 +36,63 @@ def newsletter_subscription_confirmation(request):
 
 
 class product(ListView):
+    # View all available Subscription Products
     model = Subscription
     template_name = 'products.html'
     ordering = ['price']
 
+
 def product_create(request):
     # Ensuring only staff can view create page
-    # if request.user.is_staff:
-        # View for creating a New Provider on the site
-    if request.method == 'POST':
-        form = SubscriptionCreate(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, ' Created Successfully')
-            return redirect('subscriptions:subscription-products')
+    if request.user.is_staff:
+        # View for creating a New Subscription product
+        if request.method == 'POST':
+            form = SubscriptionCreate(request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, ' Created Successfully')
+                return redirect('subscriptions:subscription-products')
+            else:
+                messages.error(request, 'New Product NOT Created Successfully')
         else:
-            messages.error(request, 'New Product NOT Created Successfully')
+            form = SubscriptionCreate()
+        return render(request, 'products/create_subscription.html', {'form': form})
     else:
-        form = SubscriptionCreate()
-    return render(request, 'products/create_subscription.html', {'form': form})
-    # else:
-    #     return redirect('index')
+        return redirect('index')
 
 
 def product_update(request, pk):
     # Ensuring only staff can view amend page
-# if request.user.is_staff:
-    # View for Updating an existing Provider
-    product = Subscription.objects.get(id=pk)
-    form = SubscriptionCreate(instance=product)
-    if request.method == 'POST':
-        form = SubscriptionCreate(
-            request.POST, instance=product)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Product Updated Successfully')
-            return redirect('subscriptions:subscription-products')
-    context = {'form': form}
-    return render(request, 'products/update_subscription.html', context)
-# else:
-#     return redirect('index')
+    if request.user.is_staff:
+        # View for Updating an existing Provider
+        product = Subscription.objects.get(id=pk)
+        form = SubscriptionCreate(instance=product)
+        if request.method == 'POST':
+            form = SubscriptionCreate(
+                request.POST, instance=product)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Product Updated Successfully')
+                return redirect('subscriptions:subscription-products')
+        context = {'form': form}
+        return render(request, 'products/update_subscription.html', context)
+    else:
+        return redirect('index')
 
 
 def product_delete(request, pk):
     # Ensuring only staff can view delete page
-    #if request.user.is_staff:
+    if request.user.is_staff:
         # View to delete an existing Provider
         product = Subscription.objects.get(id=pk)
         if request.method == "POST":
             Subscription.delete(product)
             messages.success(request, 'Product Deleted Successfully')
             return redirect('subscriptions:subscription-products')
-        # product = SubscriptionCreate(instance=product)
         context = {'product': product}
         return render(request, 'products/delete_subscription.html', context)
-    #else:
-        #return redirect('index')
+    else:
+        return redirect('index')
 
 
 
