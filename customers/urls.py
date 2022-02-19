@@ -41,4 +41,8 @@ urlpatterns = [
             template_name='password/password_reset_complete.html'),
         name="password_reset_complete"
     ),
+    path('customers/feedback/', 
+        views.customer_feedback,
+        name="customer-feedback"
+    ),
 ]
