@@ -94,6 +94,7 @@
                                     <ul class="dropdown-menu dropdown-menu-end navigation-bar" aria-labelledby="navbarCustomerDropdown">
                                         <li><a class="dropdown-item navigation-bar" href="{% url 'customers:customer-profile' user.pk %}">Profile</a></li>
                                         <li><a class="dropdown-item navigation-bar" href="#">Subscription</a></li>
+                                        <li><a class="dropdown-item navigation-bar" href="{% url 'customers:customer-feedback' %}">Leave Feedback</a></li>
                                         <li><a class="dropdown-item navigation-bar" href="{% url 'customers:logout-page' %}">Logout</a></li>
                                     </ul>
                                 </li>

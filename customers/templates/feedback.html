@@ -42,12 +42,15 @@ Feedback Page
                                             <input type="text" name="comments" placeholder="Feedback..." class="form-control" aria-label="feedback field">
                                             <!--Submit button -->
                                             <div class="p-3 d-flex justify-content-center">
-                                                <input type="submit" value="Submit" class="btn darkmocha-button fw-bold">
+                                                <input type="submit" value="Submit" class="btn btn-lg px-4 me-sm-3 darkmocha-button">
                                             </div>
                                         </form>
                                         <!-- Error display functionality -->
                                         {% for message in messages %}
                                             {{message}}
+                                            <div class="p-3 d-flex justify-content-center">
+                                                <a class="btn btn-lg px-4 me-sm-3 darkmocha-button" href="{% url 'index' %}">Home</a>
+                                            </div>
                                         {% endfor %}
                                     </div>
                                 </div>
