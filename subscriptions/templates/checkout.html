@@ -13,6 +13,11 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock %}
 
+<!-- page specific js -->
+{% block additional_js %}
+  <script src="{% static 'js/checkout.js' %}" defer></script>
+{% endblock %}
+
 <!-- Updates the page title -->
 {% block title %}
 Checkout
@@ -41,8 +46,14 @@ Checkout
                       <li>{{product.accessory}} accessories for you coffee needs</li>
                       <li>{{product.treats}} treats for that sweet touch</li>
                     </ul>
-                    <!-- If User is not staff member option will be purchase -->
-                      <a href="{% url 'index' %}"><button type="button" class="btn btn-lg btn-block lightmocha-button">Purchase</button></a>
+                    <!-- Initiate Strip checkout -->
+                    <script src="https://checkout.stripe.com/checkout.js"    
+                      class="stripe-button"    
+                      data-key="pk_test_51KNe9dBAHJm9GG3TEh3TgUcOZIfUVkMpVb6Dj2USEw7Xi0vXdag2g35yEIZxiSQIjN9kDTpsbeT6Jz0OEOG000sc007CmjtRu3"    
+                      data-description="{{product.name}}"    
+                      data-amount="{{product.price}}"   
+                      data-locale="auto">
+                    </script>  
                   </div>
                 </div>
             </div>

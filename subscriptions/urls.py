@@ -25,7 +25,7 @@ urlpatterns = [
     path('subscription/products/update<pk>/', product_update, name='subscription-update'),
     path('subscription/products/delete<pk>/', product_delete, name='subscription-delete'),
     path('subscription/checkout<pk>/', subscription_checkout, name='subscription-checkout'),
-    #path('subscription/checkout/', CreateCheckoutSession.as_view(), name='subscription-checkout'), 
+    #path('subscription/create-checkout-session', CreateCheckoutSession.as_view(), name='subscription-checkout'), 
     #path('subscription/success/', views.subscription_success, name='subscription-success'),
     #path('subscription/cancel/', views.subscription_cancel, name='subscription-cancel'),
 ]

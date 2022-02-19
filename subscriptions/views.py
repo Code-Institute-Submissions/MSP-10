@@ -9,7 +9,6 @@ from django.views import View
 import stripe
 from django.conf import settings
 
-
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 ####################################################
@@ -106,11 +105,41 @@ def product_delete(request, pk):
 
 def subscription_checkout(request, pk):
     product = Subscription.objects.get(id=pk)
-    context = {'product': product}
+    price = str(int(product.price)*100)
+    key = settings.STRIPE_PUB_KEY
+    context = {'product': product, 'key': key, 'price': price}
     return render(request, 'checkout.html', context)
 
 
+# def payment_function(request, pk):
+#     def get(self, *args, **kwargs):
+#         return render(self.request, 'payment.html')
+    
+#     def post(self, *args, **kwargs):
+#         product = Subscription.objects.get(id=pk)
+#         token = self.request.POST.get('stripeToken')
+#         product
 
+#         try:
+#             # create charge in euro
+#             charge = stripe.Charge.create(
+#                 amount=amount,
+#                 currency="eur",
+#                 source=token,
+#             )
+#             # create stripe payment and save
+#             payment = Payment()
+#             payment.stripe_charge_id = charge['id']
+#             payment.customer = self.request.user
+#             payment.amount = order.get_cart_total
+#             payment.save()
+#             # create and save order
+#             order.ordered = True
+#             order.payment = payment
+#             order.save()
+#             messages.success(
+#                 self.request, "Your order was successful! You will receive a confirmation email.")
+#             return redirect("success", order.pk)
 
 
 
