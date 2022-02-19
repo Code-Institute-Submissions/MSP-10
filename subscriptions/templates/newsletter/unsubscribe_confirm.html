@@ -32,18 +32,6 @@ Unsubscribe Newsletter
                                         {{ message }}
                                     {% endfor %}
                                 </div>
-                                {% comment %} <div class="ms-xl-4">
-                                    <div class="input-group mb-2 text-right">
-                                        <form method="POST">
-                                            {% csrf_token %}
-                                            <input class="form-control" type="email" name="email" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter"/>
-                                            <input type="submit" value="Unsubscribe" class="btn darkmocha-button fw-bold">
-                                        </form>
-                                    </div>
-                                    {% for message in messages %}
-                                        {{ message }}
-                                    {% endfor %}
-                                </div> {% endcomment %}
                             </div>
                         </aside>
                     </div>

@@ -78,7 +78,20 @@ def product_update(request, pk):
 #     return redirect('index')
 
 
-
+def product_delete(request, pk):
+    # Ensuring only staff can view delete page
+    #if request.user.is_staff:
+        # View to delete an existing Provider
+        product = Subscription.objects.get(id=pk)
+        if request.method == "POST":
+            Subscription.delete(product)
+            messages.success(request, 'Product Deleted Successfully')
+            return redirect('subscriptions:subscription-products')
+        # product = SubscriptionCreate(instance=product)
+        context = {'product': product}
+        return render(request, 'products/delete_subscription.html', context)
+    #else:
+        #return redirect('index')
 
 
 
