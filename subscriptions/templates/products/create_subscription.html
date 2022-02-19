@@ -32,21 +32,48 @@ Create Subscription
                                         <!-- Login form -->
                                         <form method="POST">
                                             {% csrf_token %}
-                                            {{ form.as_p }}
-                                            <!-- <label class="py-2 fs-3 fw-bold" id="name" for="name">Subscription Name:</label>
-                                            <input type="text" name="name" placeholder="Name..." class="form-control" aria-label="New subscription name field">
-                                            <label class="py-2 fs-3 fw-bold" id="stripe_subscription_id" for="stripe_subscription_id">Stripe ID:</label>
-                                            <input type="text" name="stripe_subscription_id" placeholder="Stripe ID" class="form-control" aria-label="Stripe payment ID field">
-                                            <label class="py-2 fs-3 fw-bold" id="description" for="description">Description:</label>
-                                            <input type="text" name="description" placeholder="Description..." class="form-control" aria-label="New subscription name field">
-                                            <label class="py-2 fs-3 fw-bold" id="price" for="price">Monthly Price:</label>
-                                            <input type="text" name="price" placeholder="€0.00" class="form-control" aria-label="Subscription price field">
-                                            <label class="py-2 fs-3 fw-bold" id="coffee" for="coffee">Bags of coffee:</label>
-                                            <input type="text" name="coffee" placeholder="0" class="form-control" aria-label="Number of coffee bags field">
-                                            <label class="py-2 fs-3 fw-bold" id="accessories" for="accessories">Number of Accessories:</label>
-                                            <input type="text" name="accessories" placeholder="0" class="form-control" aria-label="Number of accessories field">
-                                            <label class="py-2 fs-3 fw-bold" id="treats" for="treats">Number of Treats:</label>
-                                            <input type="text" name="treats" placeholder="0" class="form-control" aria-label="Number of treats field"> -->
+                                            <div class="py-2 fs-3 fw-bold">
+                                                <p class="py-2 fs-3 fw-bold">Subscription Name:</p>
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                {{ form.name }}
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                <p class="py-2 fs-3 fw-bold">Stripe Payment ID:</p>
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                {{ form.stripe_subscription_id }}
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                <p class="py-2 fs-3 fw-bold">Description:</p>
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                {{ form.description }}
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                <p class="py-2 fs-3 fw-bold">Monthly Price:</p>
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                {{ form.price }}
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                <p class="py-2 fs-3 fw-bold">Bags of Coffee:</p>
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                {{ form.coffee }}
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                <p class="py-2 fs-3 fw-bold">Bags of Accessories:</p>
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                {{ form.accessory }}
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                <p class="py-2 fs-3 fw-bold">Bags of Treats:</p>
+                                            </div>
+                                            <div class="py-2 fs-3 fw-bold">
+                                                {{ form.treats }}
+                                            </div>
                                             <!--Submit button -->
                                             <div class="p-3 d-flex justify-content-center">
                                                 <input type="submit" value="Create" class="btn darkmocha-button fw-bold">
