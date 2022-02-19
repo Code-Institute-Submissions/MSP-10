@@ -100,3 +100,18 @@ class TestResetPasswordCompleteTests(TestCase):
         response = self.client.get(reverse('customers:password_reset_complete'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'password/password_reset_complete.html')
+
+class TestCustomerFeedbackTests(TestCase):
+    # Test for the customer reset_password complete
+    def test_customer_feedback_status_code(self):
+        response = self.client.get('/customers/feedback/')
+        self.assertEquals(response.status_code, 200)
+
+    def test_customer_feedback_url_by_name(self):
+        response = self.client.get(reverse('customers:customer-feedback'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_customer_feedback_uses_correct_template(self):
+        response = self.client.get(reverse('customers:customer-feedback'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'feedback.html')
