@@ -105,8 +105,8 @@ def product_delete(request, pk):
 
 def subscription_checkout(request, pk):
     product = Subscription.objects.get(id=pk)
-    price = str(int(product.price)*100)
-    key = settings.STRIPE_PUB_KEY
+    price = int(product.price)*100
+    key = stripe.api_key
     context = {'product': product, 'key': key, 'price': price}
     return render(request, 'checkout.html', context)
 

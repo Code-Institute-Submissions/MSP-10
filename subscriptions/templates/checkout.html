@@ -46,14 +46,21 @@ Checkout
                       <li>{{product.accessory}} accessories for you coffee needs</li>
                       <li>{{product.treats}} treats for that sweet touch</li>
                     </ul>
+                    <script src="https://js.stripe.com/v3"></script>
+                    <button type="button" id="checkout-button"
+                      data-name="{{product.name}}"
+                      data-stripe="{{product.stripe_subscription_id}}"
+                      data-amount="{{product.price}}"
+                      data-locale="auto"
+                    >Subscribe</button>
                     <!-- Initiate Strip checkout -->
-                    <script src="https://checkout.stripe.com/checkout.js"    
-                      class="stripe-button"    
-                      data-key="pk_test_51KNe9dBAHJm9GG3TEh3TgUcOZIfUVkMpVb6Dj2USEw7Xi0vXdag2g35yEIZxiSQIjN9kDTpsbeT6Jz0OEOG000sc007CmjtRu3"    
-                      data-description="{{product.name}}"    
-                      data-amount="{{product.price}}"   
+                    {% comment %} <script src="https://checkout.stripe.com/checkout.js"    
+                      class="stripe-button"
+                      data-key="{{key.key}}"
+                      data-description="{{product.name}}"
+                      data-amount="{{product.price}}"
                       data-locale="auto">
-                    </script>  
+                    </script>   {% endcomment %}
                   </div>
                 </div>
             </div>
