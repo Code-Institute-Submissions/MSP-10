@@ -15,7 +15,7 @@
 
 <!-- Updates the page title -->
 {% block title %}
-Create Subscription
+Create Subscription Product
 {% endblock title %}
 
 <!-- The following is the unique content for this page -->
@@ -29,8 +29,8 @@ Create Subscription
                             <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
                                 <div class="col-md-5 mb-4 mb-xl-0">
                                     <div class="row justify-content-between text-50 py-2">
-                                        <!-- Login form -->
                                         <form method="POST">
+                                            <!-- Create a new product form -->
                                             {% csrf_token %}
                                             <div class="py-2 fs-3 fw-bold">
                                                 <p class="py-2 fs-3 fw-bold">Subscription Name:</p>
@@ -74,12 +74,12 @@ Create Subscription
                                             <div class="py-2 fs-3 fw-bold">
                                                 {{ form.treats }}
                                             </div>
-                                            <!--Submit button -->
+                                            <!-- Create button -->
                                             <div class="p-3 d-flex justify-content-center">
                                                 <input type="submit" value="Create" class="btn darkmocha-button fw-bold">
                                             </div>
                                         </form>
-                                        <!-- Error display functionality -->
+                                        <!-- Success/Error message display functionality -->
                                         {% for message in messages %}
                                             {{message}}
                                         {% endfor %}

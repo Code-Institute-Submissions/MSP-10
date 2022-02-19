@@ -15,41 +15,43 @@
 
 <!-- Updates the page title -->
 {% block title %}
-Delete Product
+Delete Subscription Product
 {% endblock title %}
 
 <!-- The following is the unique content for this page -->
 <!-- Indented to align with the base template -->
 {% block content %}
-<!-- Body Section of the login page page -->
-<section class="py-5 static-page">
-    <h1 class="text-center fs-1 fw-bold">Delete Subscription Product</h1>
-    <div class="container px-5 my-5">
-        <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
-            <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
-                <div class="col-md-5 mb-4 mb-xl-0">
-                    <div class="row justify-content-between text-50 py-2">
-                        <div class="py-2 fs-3 fw-bold">
-                            <p class="py-2 fs-3 fw-bold">Are you sure you want to delete {{ product.name }}</p>
-                        </div>
-                        <!-- Login form -->
-                        <form method="POST" action="{% url 'subscriptions:subscription-delete' pk=product.pk %}" enctype="multipart/form-data" aria-label="Delete Product">
-                            {% csrf_token %}
-                            
-                            <!--Submit button -->
-                            <div class="p-3 d-flex justify-content-center">
-                                <a  href="{% url 'subscriptions:subscription-products' %}" class="btn darkmocha-button">Cancel</a>
-                                <input type="submit" value="confirm" class="btn btn-danger fw-bold" aria-label="Confirm Delete product button">
+    <!-- Body Section of the Delete product page -->
+    <section class="py-5 static-page">
+        <h1 class="text-center fs-1 fw-bold">Delete Subscription Product</h1>
+        <div class="container px-5 my-5">
+            <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
+                    <div class="col-md-5 mb-4 mb-xl-0">
+                        <div class="row justify-content-between text-50 py-2">
+                            <div class="py-2 fs-3 fw-bold">
+                                <p class="py-2 fs-3 fw-bold">Are you sure you want to delete:</p>
+                                <p class="fs-3 fw-bold text-center">{{ product.name }}</p>
                             </div>
-                        </form>
-                        <!-- Error display functionality -->
-                        {% for message in messages %}
-                            {{message}}
-                        {% endfor %}
+                            <form method="POST" action="{% url 'subscriptions:subscription-delete' pk=product.pk %}" enctype="multipart/form-data" aria-label="Delete Product">
+                                {% csrf_token %}    
+                                <!-- Cancel button -->
+                                <div class="p-3 d-flex justify-content-center">
+                                    <a  href="{% url 'subscriptions:subscription-products' %}" class="btn darkmocha-button">Cancel</a>
+                                </div>
+                                <!-- Delete button -->
+                                <div class="p-3 d-flex justify-content-center">
+                                    <input type="submit" value="Confirm" class="btn btn-danger fw-bold" aria-label="Confirm Delete product button">
+                                </div>
+                            </form>
+                            <!-- Error display functionality -->
+                            {% for message in messages %}
+                                {{message}}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </aside>
-    </div>
-</section>
+            </aside>
+        </div>
+    </section>
 {% endblock %}

@@ -15,19 +15,20 @@
 
 <!-- Updates the page title -->
 {% block title %}
-Unsubscribe Newsletter
+Unsubscribe from Newsletter
 {% endblock title %}
 
 <!-- The following is the unique content for this page -->
 <!-- Indented to align with the base template -->
             {% block content %}
-                <!-- Body Section of the login page page -->
+                <!-- Body Section of the unsubscribe newsletter page -->
                 <section class="py-5 static-page">
                     <h1 class="text-center fs-1 fw-bold">Newsletter unsubscribe</h1>
                     <div class="container px-5 my-5">
                         <aside class="newsletter-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
                             <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
                                 <div class="mb-4 mb-xl-0">
+                                    <!-- Confirmation/error message display -->
                                     {% for message in messages %}
                                         {{ message }}
                                     {% endfor %}

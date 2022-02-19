@@ -18,13 +18,13 @@
 
 <!-- Updates the page title -->
 {% block title %}
-Update Subscription
+Update Subscription Product
 {% endblock title %}
 
 <!-- The following is the unique content for this page -->
 <!-- Indented to align with the base template -->
             {% block content %}
-                <!-- Body Section of the login page page -->
+                <!-- Body Section of the update product page -->
                 <section class="py-5 static-page">
                     <h1 class="text-center fs-1 fw-bold">Update Subscription</h1>
                     <div class="container px-5 my-5">
@@ -32,7 +32,7 @@ Update Subscription
                             <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
                                 <div class="col-md-5 mb-4 mb-xl-0">
                                     <div class="row justify-content-between text-50 py-2">
-                                        <!-- Login form -->
+                                        <!-- LUpdate Product form -->
                                         <form method="POST">
                                             {% csrf_token %}
                                             <div class="py-2 fs-3 fw-bold">
@@ -77,7 +77,7 @@ Update Subscription
                                             <div class="py-2 fs-3 fw-bold">
                                                 {{ form.treats }}
                                             </div>
-                                            <!--Submit button -->
+                                            <!--Update button -->
                                             <div class="p-3 d-flex justify-content-center">
                                                 <input type="submit" value="Update" class="btn darkmocha-button fw-bold">
                                             </div>

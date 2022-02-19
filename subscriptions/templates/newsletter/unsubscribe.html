@@ -15,13 +15,13 @@
 
 <!-- Updates the page title -->
 {% block title %}
-Unsubscribe Newsletter
+Unsubscribe from Newsletter
 {% endblock title %}
 
 <!-- The following is the unique content for this page -->
 <!-- Indented to align with the base template -->
             {% block content %}
-                <!-- Body Section of the login page page -->
+                <!-- Body Section of the Newsletter unsubscribe from newsletter page -->
                 <section class="py-5 static-page">
                     <h1 class="text-center fs-1 fw-bold">Newsletter unsubscribe</h1>
                     <div class="container px-5 my-5">
@@ -34,11 +34,13 @@ Unsubscribe Newsletter
                                 <div class="ms-xl-4">
                                     <div class="input-group mb-2 text-right">
                                         <form method="POST">
+                                            <!-- Unsubscribe form -->
                                             {% csrf_token %}
                                             <input class="form-control" type="email" name="email" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter"/>
                                             <input type="submit" value="Unsubscribe" class="btn darkmocha-button fw-bold">
                                         </form>
                                     </div>
+                                    <!-- Error/success message generator -->
                                     {% for message in messages %}
                                         {{ message }}
                                     {% endfor %}

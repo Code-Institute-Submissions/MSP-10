@@ -12,45 +12,105 @@
 {% block additional_css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock %}
-
+        
 <!-- Updates the page title -->
 {% block title %}
-Products
+Product List
 {% endblock title %}
 
 <!-- The following is the unique content for this page -->
 <!-- Indented to align with the base template -->
 {% block content %}
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4">MochaBean Subscription pack</h1>
-</div>
-
-<div class="container">
-  <div class="card-deck mb-3 text-center">
-    {% for obj in object_list %}
-      <div class="card mb-4 shadow-sm">
-        <div class="card-header">
-          <h4 class="my-0 font-weight-normal">{{obj.name}}</h4>
-        </div>
-        <div class="card-body">
-          <p>{{obj.description}}</p>
-          <ul class="list-unstyled mt-3 mb-4">
-            <li>{{obj.coffee}} bags of coffee</li>
-            <li>{{obj.accessory}} accessories for you coffee needs</li>
-            <li>{{obj.treats}} treats for the sweet touch</li>
-          </ul>
-          <h1 class="card-title pricing-card-title">{{obj.price}}<small class="text-muted">/ mo</small></h1>
-          <ul class="list-unstyled mt-3 mb-4">
-            <li>Purchase now</li>
-          </ul>
-          {% if request.user.is_staff %}
-            <a href="{% url 'subscriptions:subscription-update' pk=obj.pk %}"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Get started</button></a>
-          {% else %}
-            <a href="{% url 'index' %}"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Get started</button></a>
-          {% endif %}
+<!-- Body Section of the products page -->
+<section class="py-5 static-page">
+  <h1 class="text-center fs-1 fw-bold">MochaBean Subscription packs</h1>
+  <div class="container px-5 my-5">
+    <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+      <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
+        <div class="col-md-5 mb-4 mb-xl-0">
+          <div class="row justify-content-between text-50 py-2">
+            <div class="mb-4 card-deck mb-xl-0 text-center">
+              {% for obj in object_list %}
+              <!-- Populates a card for each product in the database -->
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header fs-3 fw-bold product-card">{{obj.name}}</div>
+                  <div class="card-body product-card">
+                    <div class="text-50 py-2">{{obj.description}}</div>
+                    <h1 class="card-title pricing-card-title">{{obj.price}}<small>/ mo</small></h1>
+                    <ul class="list-unstyled text-50 mt-3 mb-4">
+                      <li>{{obj.coffee}} bags of coffee</li>
+                      <li>{{obj.accessory}} accessories for you coffee needs</li>
+                      <li>{{obj.treats}} treats for the sweet touch</li>
+                    </ul>
+                    {% if request.user.is_staff %}
+                    <!-- If User is staff member option will be delete/amend (not purchase) -->
+                      <a href="{% url 'subscriptions:subscription-update' pk=obj.pk %}"><button type="button" class="btn btn-lg btn-block lightmocha-button">Amend</button></a>
+                    {% else %}
+                    <!-- If User is not staff member option will be purchase -->
+                      <a href="{% url 'index' %}"><button type="button" class="btn btn-lg btn-block lightmocha-button">Purchase</button></a>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
         </div>
       </div>
-    {% endfor %}
+    </aside>
   </div>
-</div>
+</section>
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% block content %}
+	<!-- Body Section of the Shipping page -->
+	<section class="py-5 static-page">
+		<h1 class="text-center fs-1 fw-bold">MochaBean Shipping</h1>
+		<div class="container px-5 my-5">
+			<aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+				<div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+					<div class="mb-4 card-deck mb-xl-0">
+						{% for obj in object_list %}
+							<!-- Details surrounding delivery -->
+							<div class="card-header fs-3 fw-bold">{{obj.name}}</div>
+              <div class="card-body">
+                <div class="text-50 py-2">{{obj.description}}</div>
+                <h1 class="card-title pricing-card-title">{{obj.price}}<small>/ mo</small></h1>
+                <ul class="list-unstyled text-50 mt-3 mb-4">
+                  <li>{{obj.coffee}} bags of coffee</li>
+                  <li>{{obj.accessory}} accessories for you coffee needs</li>
+                  <li>{{obj.treats}} treats for the sweet touch</li>
+                </ul>
+                {% if request.user.is_staff %}
+                  <a href="{% url 'subscriptions:subscription-update' pk=obj.pk %}"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Amend</button></a>
+                {% else %}
+                  <a href="{% url 'index' %}"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Get started</button></a>
+                {% endif %}
+                <hr>
+              </div>
+						{% endfor %}
+					</div>
+				</div>
+			</aside>
+		</div>
+	</section>
+{% endblock %} {% endcomment %}
+
+
+

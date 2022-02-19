@@ -18,7 +18,7 @@ body {
     font-weight: bold;
 }
 
-.index-header, .feedback, .newsletter-box, .static-box {
+.index-header, .feedback, .newsletter-box, .static-box, .product-card {
     background-color: #7f5539 !important;
     color: #EDE0D4 !important;
 }
@@ -70,3 +70,4 @@ body {
     box-shadow: none !important;
     background-image: none !important;
 }
+
