@@ -17,7 +17,7 @@ class SubscriptionCreate(forms.ModelForm):
         'placeholder': 'Provider description'}))
     stripe_subscription_id = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Stripe ID'}))
-    price = forms.IntegerField(widget=forms.NumberInput(attrs={
+    price = forms.DecimalField(widget=forms.NumberInput(attrs={
         'placeholder': '€00.00'}))
     coffee = forms.IntegerField(widget=forms.NumberInput(attrs={
         'placeholder': '0.00'}))

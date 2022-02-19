@@ -45,10 +45,9 @@ def product_create(request):
         form = SubscriptionCreate(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'New Product Created Successfully')
-            print('it was a success damnit')
-            #form = SubscriptionCreate()
-            return redirect('index')
+            #product = form.cleaned_data.get('name')
+            messages.success(request, ' Created Successfully')
+            return redirect('subscriptions:subscription-products')
         else:
             messages.error(request, 'New Product NOT Created Successfully')
     else:
