@@ -43,7 +43,7 @@ Products
           <ul class="list-unstyled mt-3 mb-4">
             <li>Purchase now</li>
           </ul>
-          <a href="#"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Get started</button></a>
+          <a href="{% url 'subscriptions:subscription-update' pk=obj.pk %}"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Get started</button></a>
         </div>
       </div>
     {% endfor %}

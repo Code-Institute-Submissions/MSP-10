@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import reverse_lazy
 from django.urls import path, include
-from django.contrib.auth import views
 from django.conf.urls.static import static
 from .views import (
     newsletter_subscription_delete,

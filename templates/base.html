@@ -29,6 +29,7 @@
         <meta property="og:locale" content="en_GB">
 
         <!-- Meta Tags for Twitter Card -->
+        <!-- The data within these tags is fake, The tages have been included for college project assessment -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@MochaBeancoffeeclub"> <!--fake account for college-->
         <meta name="twitter:url" content="https://example.com/page.html">
@@ -84,7 +85,7 @@
                     <div class="collapse navbar-collapse navigation-bar" id="navbarMobileContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link navigation-bar" href="{% url 'about' %}">About</a></li>
-                            <li class="nav-item"><a class="nav-link navigation-bar" href="">Subscription</a></li>
+                            <li class="nav-item"><a class="nav-link navigation-bar" href="{% url 'subscriptions:subscription-products' %}">Subscription</a></li>
                             <li class="nav-item"><a class="nav-link navigation-bar" href="{% url 'faq' %}">FAQ</a></li>
                             {% if user.is_authenticated %}
                             <!-- The following will only show if the user is logged in This will be Updated-->

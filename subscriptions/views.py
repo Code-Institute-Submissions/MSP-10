@@ -1,6 +1,6 @@
-from pyexpat import model
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
+from crispy_forms.helper import FormHelper
 from .models import newsletterSubscribers, Subscription
 from .forms import SubscriberForm, SubscriptionCreate
 from django.http import JsonResponse, HttpResponseRedirect
@@ -38,6 +38,7 @@ def newsletter_subscription_confirmation(request):
 class product(ListView):
     model = Subscription
     template_name = 'products.html'
+    ordering = ['price']
 
 def product_create(request):
     # Ensuring only staff can view create page
@@ -47,7 +48,6 @@ def product_create(request):
         form = SubscriptionCreate(request.POST)
         if form.is_valid():
             form.save()
-            #product = form.cleaned_data.get('name')
             messages.success(request, ' Created Successfully')
             return redirect('subscriptions:subscription-products')
         else:
@@ -67,11 +67,10 @@ def product_update(request, pk):
     form = SubscriptionCreate(instance=product)
     if request.method == 'POST':
         form = SubscriptionCreate(
-            request.POST, request.FILES, instance=product)
+            request.POST, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Product Updated Successfully, Remember to update Stripe')
-            form = SubscriptionCreate()
+            messages.success(request, 'Product Updated Successfully')
             return redirect('subscriptions:subscription-products')
     context = {'form': form}
     return render(request, 'products/update_subscription.html', context)

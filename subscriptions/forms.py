@@ -13,7 +13,7 @@ class SubscriptionCreate(forms.ModelForm):
     # Form to Create a new subscription product
     name = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Subscription Name'}))
-    description = forms.CharField(widget=forms.Textarea(attrs={
+    description = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Provider description'}))
     stripe_subscription_id = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Stripe ID'}))
