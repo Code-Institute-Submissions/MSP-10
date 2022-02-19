@@ -8,20 +8,23 @@ from .views import (
     product,
     product_create,
     product_update,
-    product_delete
+    product_delete,
+    subscription_checkout
 )
 
 app_name = 'subscriptions'
 
 urlpatterns = [
+    # Newsletter subscription urls
     path('unsubscribe/', newsletter_subscription_delete, name='newsletter-unsubscribe'),
     path('unsubscribed/', newsletter_subscription_confirmation, name='newsletter-unsubscribed'),
     
+    # Subscription Product urls
     path('subscription/products/', product.as_view(), name='subscription-products'),
     path('subscription/products/create/', product_create, name='subscription-create'),
     path('subscription/products/update<pk>/', product_update, name='subscription-update'),
     path('subscription/products/delete<pk>/', product_delete, name='subscription-delete'),
-    #path('subscription/checkout/', views.subscription_checkout, name='subscription-checkout'),
+    path('subscription/checkout<pk>/', subscription_checkout, name='subscription-checkout'),
     #path('subscription/checkout/', CreateCheckoutSession.as_view(), name='subscription-checkout'), 
     #path('subscription/success/', views.subscription_success, name='subscription-success'),
     #path('subscription/cancel/', views.subscription_cancel, name='subscription-cancel'),

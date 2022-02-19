@@ -12,10 +12,12 @@ from django.conf import settings
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
-# Create your views here.
+####################################################
+# Views in relation to the newsletter subscription #
+####################################################
 
 def newsletter_subscription_delete(request):
-    # View to delete newsletter subscription
+    # View to request to delete newsletter subscription
     form = SubscriberForm(request.POST)
     if request.method == "POST":
         email1 = request.POST.get('email')
@@ -34,6 +36,9 @@ def newsletter_subscription_confirmation(request):
     # View for confirmation of Unsubscribing from newsletter
     return render(request, 'newsletter/unsubscribe_confirm.html')
 
+########################################################
+# Views in relation to Product maintenance on the site #
+########################################################
 
 class product(ListView):
     # View all available Subscription Products
@@ -83,7 +88,7 @@ def product_update(request, pk):
 def product_delete(request, pk):
     # Ensuring only staff can view delete page
     if request.user.is_staff:
-        # View to delete an existing Provider
+        # View to delete an existing Product
         product = Subscription.objects.get(id=pk)
         if request.method == "POST":
             Subscription.delete(product)
@@ -95,6 +100,14 @@ def product_delete(request, pk):
         return redirect('index')
 
 
+#################################
+# Views in relation to Payments #
+#################################
+
+def subscription_checkout(request, pk):
+    product = Subscription.objects.get(id=pk)
+    context = {'product': product}
+    return render(request, 'checkout.html', context)
 
 
 
@@ -113,11 +126,12 @@ def product_delete(request, pk):
 
 
 
-# def subscription_checkout(request, membership):
+
+# def subscription_checkout(request, name):
 #     if request.method == 'POST':
 #         pass
 #     else:
-#         if request.method == 'GET' and 'membership' in request.GET:
+#         if request.method == 'GET' and 'name' in request.GET:
 #             if request.GET['membership'] == 'PlanA':
 #                 stripe_subscription_id = 'price_1KNeD2BAHJm9GG3TRdiOiyyn'
 #                 price = 19.95
