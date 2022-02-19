@@ -91,15 +91,17 @@ def customer_profile_delete(request, pk):
     context = {'profile': profile}
     return render(request, 'delete.html', context)
 
-def customer_feedback(request, pk):
+def customer_feedback(request):
     # Feedback form for customers
     if request.method == 'POST':
         form = FeedbackForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, ' Created Successfully')
+            messages.success(request, 'Thank you for your Feedback')
             return redirect('customers:customer-feedback')
         else:
             messages.error(request, 'Please the form fully')
     else:
         form = FeedbackForm()
+        context = {'form': form}
+        return render(request, 'feedback.html', context)
