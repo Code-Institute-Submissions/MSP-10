@@ -1,0 +1,58 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Additional meta tags for specific pages -->
+{% block extra_meta %}
+{% endblock %}
+
+<!-- page specific css -->
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+<!-- page specific js -->
+{% block additional_js %}
+  <script src="{% static 'js/checkout.js' %}" defer></script>
+{% endblock %}
+
+<!-- Updates the page title -->
+{% block title %}
+Success
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+<!-- Indented to align with the base template -->
+{% block content %}
+<!-- Body Section of the products page -->
+<section class="py-5 static-page">
+  <h1 class="text-center fs-1 fw-bold">You have Subscribed to the "{{product.name}}" subscription</h1>
+  <div class="container px-5 my-5">
+    <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+      <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
+        <div class="col-md-5 mb-4 mb-xl-0">
+          <div class="row justify-content-between text-50 py-2">
+            <div class="mb-4 card-deck mb-xl-0 text-center">
+              <!-- Populates a card for each product in the database -->
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header fs-3 fw-bold product-card">{{product.name}}</div>
+                  <div class="card-body product-card">
+                    <div class="text-50 py-2">{{product.description}}</div>
+                    <h1 class="card-title pricing-card-title">{{product.price}}<small>/ mo</small></h1>
+                    <ul class="list-unstyled text-50 mt-3 mb-4">
+                      <li>{{product.coffee}} bags of coffee</li>
+                      <li>{{product.accessory}} accessories for you coffee needs</li>
+                      <li>{{product.treats}} treats for that sweet touch</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+{% endblock %}

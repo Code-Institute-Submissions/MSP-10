@@ -55,6 +55,12 @@ The following sections are the results of the testing throughout the software de
     1. [Exploratory Test Session Goals]()
 	1. [Potential Automation Test Cases Identified]()
 	1. [Issues found/faced]()
+1. [Sprint 10]()
+    1. [User Stories Closed]()
+    1. [Unit Tests Conducted]()
+    1. [Exploratory Test Session Goals]()
+	1. [Potential Automation Test Cases Identified]()
+	1. [Issues found/faced]()
 1. [Sprint Deployment]()
 1. [Final Post Deployment Testing]()
 	1. [Final Compatability Testing]()
@@ -346,6 +352,7 @@ N/A
 ### User Stories Closed
 * As a User I want to be able to delete my account
 * As a Developer I want to implement the following customer model / database
+* As a User I want to subscribe to the MochaBean newsletter
 * As a User I want to be able to view my current details (Profile page)
 * As a User I want to be able to update my details
 * As a User I want to subscribe to the MochaBean newsletter
@@ -408,11 +415,21 @@ N/A
 ## Sprint 7
 22nd January - 28th January 2022
 
-Due to other commitments
+Due to other commitments no progress was made during this time
 
 
 ## Sprint 8
 29th January - 4th February 2022
+
+Due to other commitments no progress was made during this time
+
+## Sprint 9
+5th February 2022 - 11th February 2022
+
+Due to other commitments no progress was made during this time
+
+## Sprint 10
+12th February 2022 - 22nd February 2022
 
 ### User Stories Closed
 * 
@@ -466,7 +483,7 @@ Due to other commitments
 </details>
 
 
-### Initial WAVE validation
+### WAVE validation
 The following are the results from the WAVE validation site to verify accessibility and readability.
 Note: There have been no errors raised due to the use of a pattern/texture on the body of the site.
 
@@ -535,6 +552,25 @@ Note: There have been no errors raised due to the use of a pattern/texture on th
     <img src="" width="300" height="200" alt=" WAVE Results"/>
 </p>
 
+* Subscription Products Create page WAVE analysis
+
+<p float="left">
+    <img src="" width="300" height="200" alt=" WAVE Results"/>
+</p>
+
+* Subscription Products Amend Profile page WAVE analysis
+
+<p float="left">
+    <img src="" width="300" height="200" alt=" WAVE Results"/>
+</p>
+
+* Subscription Products Delete Profile page WAVE analysis
+
+<p float="left">
+    <img src="" width="300" height="200" alt=" WAVE Results"/>
+</p>
+
+
 
 Items requiring change based on the WAVE assessment are:
 * 
@@ -544,7 +580,6 @@ Items requiring change based on the WAVE assessment are:
 
 
 ## Final Post Deployment Testing
-22nd November to 28th November (Submission)
 
 ### Final Compatability testing:
 
@@ -675,7 +710,7 @@ The following Gifs are evidence collected from the compatability testing of the 
 
 ## Final User Acceptance Testing:
 
-Due to the size and timelines of this project, there will not be a structured Alpha/Beta stage of UAT outside of the sprints. Instead, a selection of volunteers will conduct a time boxed exploratory sessions within each sprint once a Minimum Viability has been achieved. After which feedback will be collated and transformed into bugs, improvements or new features.
+Due to the size and timelines of this project, there will not be a structured Alpha/Beta stage of UAT outside of the sprints. Instead, a selection of volunteers will conduct a time boxed exploratory sessions within each sprint once Minimum Viability has been achieved. After which feedback will be collated and transformed into defects, improvements or new features.
 
 This feedback has been included above within the applicable sprint and incorporated into the project where appropriate.
 
