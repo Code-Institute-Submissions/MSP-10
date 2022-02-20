@@ -17,7 +17,8 @@
         <meta name="google" content="notranslate">
 
         <!-- Meta Tags for Facebook Open Graph -->
-        <meta property="og:url" content="#!">
+        <!--This header tag has been included here to display knowledge of the requirements to the assessor. However as this is not a real company and a real facebook site has not been created, these fields are not puplated with real data -->
+        <!--<meta property="og:url" content="#!">
         <meta property="og:type" content="website">
         <meta property="og:title" content="MochaBean">
         <meta property="og:image" content="https://">
@@ -26,17 +27,17 @@
         <meta property="og:image:alt" content="A picture of coffee beans">
         <meta property="og:description" content="A monthly subscription service delivering coffee as you need it.">
         <meta property="og:site_name" content="MochaBean">
-        <meta property="og:locale" content="en_GB">
+        <meta property="og:locale" content="en_GB"> -->
 
         <!-- Meta Tags for Twitter Card -->
-        <!-- The data within these tags is fake, The tages have been included for college project assessment -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@MochaBeancoffeeclub"> <!--fake account for college-->
+        <!--This header tag has been included here to display knowledge of the requirements to the assessor. However as this is not a real company and a real facebook site has not been created, these fields are not puplated with real data -->
+        <!-- <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@MochaBeancoffeeclub">
         <meta name="twitter:url" content="https://example.com/page.html">
         <meta name="twitter:title" content="Content Title">
         <meta name="twitter:description" content="A monthly subscription service delivering coffee as you need it.">
         <meta name="twitter:image" content="https://example.com/image.jpg">
-        <meta name="twitter:image:alt" content="A picture of coffee">
+        <meta name="twitter:image:alt" content="A picture of coffee"> -->
 
         <!-- Decline to allow twitter from using the website's info for personalization purposes -->
         <meta name="twitter:dnt" content="on">
@@ -87,20 +88,30 @@
                             <li class="nav-item"><a class="nav-link navigation-bar" href="{% url 'about' %}">About</a></li>
                             <li class="nav-item"><a class="nav-link navigation-bar" href="{% url 'subscriptions:subscription-products' %}">Subscription</a></li>
                             <li class="nav-item"><a class="nav-link navigation-bar" href="{% url 'faq' %}">FAQ</a></li>
-                            {% if user.is_authenticated %}
-                            <!-- The following will only show if the user is logged in This will be Updated-->
+                            {% if user.is_staff %}
+                                <!-- The following will only show to staff-->
+                                <li class="nav-item dropdown navigation-bar">
+                                    <a class="nav-link dropdown-toggle navigation-bar" id="navbarCustomerDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{request.user}}</a>
+                                    <ul class="dropdown-menu dropdown-menu-end navigation-bar" aria-labelledby="navbarCustomerDropdown">
+                                        <li><a class="dropdown-item navigation-bar" href="{% url 'subscriptions:subscription-create' %}">Create Subscription</a></li>
+                                        <li><a class="dropdown-item navigation-bar" href="{% url 'customers:logout-page' %}">Logout</a></li>
+                                    </ul>
+                                </li>
+                            {% elif user.is_authenticated %}
+                                <!-- Options that appear to standard user -->
                                 <li class="nav-item dropdown navigation-bar">
                                     <a class="nav-link dropdown-toggle navigation-bar" id="navbarCustomerDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{request.user}}</a>
                                     <ul class="dropdown-menu dropdown-menu-end navigation-bar" aria-labelledby="navbarCustomerDropdown">
                                         <li><a class="dropdown-item navigation-bar" href="{% url 'customers:customer-profile' user.pk %}">Profile</a></li>
-                                        <li><a class="dropdown-item navigation-bar" href="#">Subscription</a></li>
+                                        <li><a class="dropdown-item navigation-bar" href="{% url 'subscriptions:subscription-customer' %}">Subscription</a></li>
                                         <li><a class="dropdown-item navigation-bar" href="{% url 'customers:customer-feedback' %}">Leave Feedback</a></li>
                                         <li><a class="dropdown-item navigation-bar" href="{% url 'customers:logout-page' %}">Logout</a></li>
                                     </ul>
                                 </li>
                             {% else %}
-                                <!-- Button will appear if user not logged in-->
+                                <!-- Buttons will appear if user not logged in-->
                                 <li class="nav-item"><a class="nav-link navigation-bar" href="{% url 'customers:login-page' %}">Login</a></li>
+                                <li class="nav-item"><a class="nav-link navigation-bar" href="{% url 'customers:register-page' %}">Register</a></li>
                             {% endif %}
                         </ul>
                     </div>
@@ -123,9 +134,9 @@
                         <a class="footer-bar" href="{% url 'customers:contact-us' %}">Contact</a>
                     </div>
                     <div class="col-auto">
-                        <a class="mx-2 footer-bar" href="#!"><i class="bi bi-twitter"></i></a>
-                        <a class="mx-2 footer-bar" href="#!"><i class="bi bi-instagram"></i></a>
-                        <a class="mx-2 footer-bar" href="#!"><i class="bi bi-facebook"></i></a>
+                        <a class="mx-2 footer-bar" href="https://twitter.com/?lang=en" target="_blank" aria-label="Visit MochaBean twitter page (opens in a new tab)"><i class="bi bi-twitter"></i></a>
+                        <a class="mx-2 footer-bar" href="https://www.instagram.com/" target="_blank" aria-label="Visit MochaBean instagram page (opens in a new tab)"><i class="bi bi-instagram"></i></a>
+                        <a class="mx-2 footer-bar" href="https://www.facebook.com/" target="_blank" aria-label="Visit MochaBean facebook page (opens in a new tab)"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
             </div>

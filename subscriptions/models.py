@@ -40,3 +40,4 @@ class CustomerSubscriptions(models.Model):
 
     def __str__(self):
         return str(self.stripe_subscription_id )
+    
