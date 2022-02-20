@@ -3,78 +3,27 @@
 The following sections are the results of the testing throughout the software development lifecycle for project "MSP-5 MochaBean". This information has been included in a separate document in order to keep the [README document]() uncluttered.
 
 # Table of Contents
-1. [Testing Plan]()
-1. [Testing Tools]()
-1. [Sprint 1]()
-    1. [User Stories Closed]()
-    1. [Unit Tests Conducted]()
-    1. [Exploratory Test Session Goals]()
-	1. [Potential Automation Test Cases Identified]()
-	1. [Issues found/faced]()
-1. [Sprint 2]()
-    1. [User Stories Closed]()
-    1. [Unit Tests Conducted]()
-    1. [Exploratory Test Session Goals]()
-	1. [Potential Automation Test Cases Identified]()
-	1. [Issues found/faced]()
-1. [Sprint 3]()
-    1. [User Stories Closed]()
-    1. [Unit Tests Conducted]()
-    1. [Exploratory Test Session Goals]()
-	1. [Potential Automation Test Cases Identified]()
-	1. [Issues found/faced]()
-	1. [Python Validation]()
-1. [Sprint 4]()
-    1. [User Stories Closed]()
-    1. [Unit Tests Conducted]()
-    1. [Exploratory Test Session Goals]()
-	1. [Potential Automation Test Cases Identified]()
-	1. [Issues found/faced]()
-1. [Sprint 5]()
-    1. [User Stories Closed]()
-    1. [Unit Tests Conducted]()
-    1. [Exploratory Test Session Goals]()
-	1. [Potential Automation Test Cases Identified]()
-	1. [Issues found/faced]()
-1. [Sprint 6]()
-    1. [User Stories Closed]()
-    1. [Unit Tests Conducted]()
-    1. [Exploratory Test Session Goals]()
-	1. [Potential Automation Test Cases Identified]()
-	1. [Issues found/faced]()
-1. [Sprint 7]()
-1. [Sprint 8]()
-    1. [User Stories Closed]()
-    1. [Unit Tests Conducted]()
-    1. [Exploratory Test Session Goals]()
-	1. [Potential Automation Test Cases Identified]()
-	1. [Issues found/faced]()
-1. [Sprint 9]()
-    1. [User Stories Closed]()
-    1. [Unit Tests Conducted]()
-    1. [Exploratory Test Session Goals]()
-	1. [Potential Automation Test Cases Identified]()
-	1. [Issues found/faced]()
-1. [Sprint 10]()
-    1. [User Stories Closed]()
-    1. [Unit Tests Conducted]()
-    1. [Exploratory Test Session Goals]()
-	1. [Potential Automation Test Cases Identified]()
-	1. [Issues found/faced]()
-1. [Sprint Deployment]()
-1. [Final Post Deployment Testing]()
-	1. [Final Compatability Testing]()
+1. [Testing Plan](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#testing-plan)
+1. [Testing Tools](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#testing-tools)
+1. [Sprint 1](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#sprint-1)
+1. [Sprint 2](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#sprint-2)
+1. [Sprint 3](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#sprint-3)
+1. [Sprint 4](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#sprint-4)
+1. [Sprint 5](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#sprint-5)
+1. [Sprint 6](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#sprint-6)
+1. [Sprint 7](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#sprint-7)
+1. [Sprint 8](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#sprint-8)
+1. [Sprint 9](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#sprint-9)
+1. [Sprint 10](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#sprint-10)
+1. [WAVE validation](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#wave-validation)
+1. [Final Post Deployment Testing](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#final-post-deployment-testing)
+	1. [Final Compatability Testing](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#final-compatability-testing)
 	1. [Final Code Validation]()
-		1. [HTML Validation]()
-		1. [CSS Validation]()
-		1. [JavaScript Validation]()
-		1. [Python Validation]()
 	1. [General Site validation]()
 	1. [User Acceptance Testing:]()
 	1. [Performance Testing:]()
 		1. [Issues Located]()
 		1. [Warnings Located]()
-	1. [Final WAVE Accessibility Assessment]()
 1. [Unfixed bugs/ Improvements to current features]()
 
 
@@ -144,10 +93,10 @@ No Python validation occured during this Sprint
 <details>
 <summary> Expand for test results</summary>
     <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_19.12.21_1.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_19.12.21_coverage.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_23.12.21_1.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_23.12.21_coverage.PNG" alt="Initial Python Unit Test"/>
     </p>
 </details>
 
@@ -188,10 +137,11 @@ No Python validation occured during this Sprint
 <details>
 <summary> Expand for test results</summary>
     <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_26.12.21_1.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_26.12.21_2.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_26.12.21_coverage.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_27.12.21_1.PNG" alt="Initial Python Unit Test"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_27.12.21_coverage.PNG" alt="Initial Python Unit Test"/>
     </p>
 </details>
 
@@ -235,10 +185,9 @@ No Python validation occured during this Sprint
 <details>
 <summary> Expand for test results</summary>
     <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_07.01.22_1.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_07.01.22_2.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_07.01.22_3.PNG" alt="Initial Python Unit Test"/>
     </p>
 </details>
 
@@ -278,18 +227,6 @@ No Python validation occured during this Sprint
 ### Issues Faced / Found
 N/A
 
-### Python Validation
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
-
-
 ## Sprint 5
 8th January 2022 - 14th January 2022
 
@@ -301,10 +238,7 @@ N/A
 <details>
 <summary> Expand for test results</summary>
     <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_14.01.22_1.PNG" alt="Initial Python Unit Test"/>
     </p>
 </details>
 
@@ -334,18 +268,6 @@ N/A
 ### Issues Faced / Found
 * No issues raised during this sprint
 
-### Python Validation
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
-
-
 ## Sprint 6
 15th January - 21st January 2022
 
@@ -361,10 +283,13 @@ N/A
 <details>
 <summary> Expand for test results</summary>
     <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_21.01.22_1.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_21.01.22_2.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_21.01.22_3.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_21.01.22_4.PNG" alt="Initial Python Unit Test"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_21.01.22_5.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_21.01.22_coverage.PNG" alt="Initial Python Unit Test"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/unit_testing/python_21.01.22_coverage_1.PNG" alt="Initial Python Unit Test"/>
     </p>
 </details>
 
@@ -382,16 +307,6 @@ N/A
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
 
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
-
 ### Potential Automation Test Cases
 * Deleting account (and profile)
 * View Profile details
@@ -401,22 +316,10 @@ N/A
 ### Issues Faced / Found
 * None
 
-### Python Validation
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
-
 ## Sprint 7
 22nd January - 28th January 2022
 
 Due to other commitments no progress was made during this time
-
 
 ## Sprint 8
 29th January - 4th February 2022
@@ -432,56 +335,41 @@ Due to other commitments no progress was made during this time
 12th February 2022 - 22nd February 2022
 
 ### User Stories Closed
-* 
-
-### Unit Tests Conducted
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
+* As a User I want to know if I payment was successful
+* As a User I want to select a subscription
+* As a logged in User I want to pay for my subscription
+* As a logged in User I want to view my current subscriptions
+* As a User I want to contact Customer service
+* As a User I want to know if my payment was unsuccessful
+* As a staff member I want to delete a product
+* As a staff member I want to amend a current product
+* As a staff member I want to create a new product
+* As an Admin User I need to setup stripe payment service
+* As a User I want to view available subscriptions
+* As a User I want to leave feedback/review
+* As an Admin member I want to create a (fake) facebook page
 
 ### Exploratory Test Session Goals
 
+* I want to confirm that if a payment is unsuccessful I am notified
+* I want to confirm that I can select a subscription product
+* I want to be able to enter payment details to purchase a subscription
+* I want to confirm that if a payment is successful I am notified
+* I want to view what subscription I have purchased
+* I want to be able to contact customer service
+* I want to confirm that as a staff member I can create/amend/delete products
+* I want to confirm that as a staff member I can cannot purchase a subscription
+* I want to confirm that payments are processed via stripe
+* I want to confirm that I can see all available subscriptions/products
+* I want to confirm I can leave feedback
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
 
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
-
 ### Potential Automation Test Cases
-* 
-* 
-* 
-
-### Issues Faced / Found
-* 
-* 
-* 
-
-### Python Validation
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
-
+* Create/amend/delete product/subscriptions
+* Confirm payment process
+* Contact/feedback forms
 
 ### WAVE validation
 The following are the results from the WAVE validation site to verify accessibility and readability.
@@ -552,6 +440,12 @@ Note: There have been no errors raised due to the use of a pattern/texture on th
     <img src="" width="300" height="200" alt=" WAVE Results"/>
 </p>
 
+* Subscription Products View Profile page WAVE analysis
+
+<p float="left">
+    <img src="" width="300" height="200" alt=" WAVE Results"/>
+</p>
+
 * Subscription Products Create page WAVE analysis
 
 <p float="left">
@@ -592,8 +486,6 @@ The following Gifs are evidence collected from the compatability testing of the 
         <img src="" width="300" height="200" alt="iphone6/7/8 plus test results for "/>
 		<img src="" width="300" height="200" alt="iphone6/7/8 plus test results for "/>
 		<img src="" width="300" height="200" alt="iphone6/7/8 plus test results for "/>
-		<img src="" width="300" height="200" alt="iphone6/7/8 plus test results for "/>
-		<img src="" width="300" height="200" alt="iphone6/7/8 plus test results for "/>
     </p>
 </details>
 
@@ -601,9 +493,6 @@ The following Gifs are evidence collected from the compatability testing of the 
     <summary><b>__samsung galaxy s5__</b></summary>
     Device width: 360px
     <p float="left">
-        <img src="" width="300" height="200" alt="Galaxy S5 test results for "/>
-        <img src="" width="300" height="200" alt="Galaxy S5 test results for "/>
-        <img src="" width="300" height="200" alt="Galaxy S5 test results for "/>
         <img src="" width="300" height="200" alt="Galaxy S5 test results for "/>
         <img src="" width="300" height="200" alt="Galaxy S5 test results for "/>
         <img src="" width="300" height="200" alt="Galaxy S5 test results for "/>
@@ -617,8 +506,6 @@ The following Gifs are evidence collected from the compatability testing of the 
         <img src="" width="300" height="200" alt="Moto G4 test results for"/>
         <img src="" width="300" height="200" alt="Moto G4 test results for"/>
         <img src="" width="300" height="200" alt="Moto G4 test results for"/>
-        <img src="" width="300" height="200" alt="Moto G4 test results for"/>
-        <img src="" width="300" height="200" alt="Moto G4 test results for"/>
     </p>
 </details>
 
@@ -626,8 +513,6 @@ The following Gifs are evidence collected from the compatability testing of the 
     <summary><b>__iPad__</b></summary>
     Device width: 1024px
     <p float="left">
-        <img src="" width="300" height="200" alt="iPad test results for"/>
-        <img src="" width="300" height="200" alt="iPad test results for"/>
         <img src="" width="300" height="200" alt="iPad test results for"/>
         <img src="" width="300" height="200" alt="iPad test results for"/>
         <img src="" width="300" height="200" alt="iPad test results for"/>
