@@ -11,6 +11,7 @@ from django.conf import settings
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
+
 ####################################################
 # Views in relation to the newsletter subscription #
 ####################################################
@@ -34,6 +35,7 @@ def newsletter_subscription_delete(request):
 def newsletter_subscription_confirmation(request):
     # View for confirmation of Unsubscribing from newsletter
     return render(request, 'newsletter/unsubscribe_confirm.html')
+
 
 ########################################################
 # Views in relation to Product maintenance on the site #
@@ -105,6 +107,7 @@ def product_delete(request, pk):
 #################################
 
 def subscription_checkout(request, pk):
+    # Enables the checkout process
     product = Subscription.objects.get(id=pk)
     context = {'product': product}
     return render(request, 'checkout.html', context)
@@ -118,3 +121,7 @@ def subscription_success(request, pk):
     customer_sub = CustomerSubscriptions.objects.create(user=user, stripe_subscription_id=subscript)  
     context = {'product': product}    
     return render(request, 'success.html', context)
+
+def subscription_unsuccess(request):
+    # Populates HTML screen with users selection
+    return render(request, 'unsuccess.html')

@@ -1,0 +1,56 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Additional meta tags for specific pages -->
+{% block extra_meta %}
+{% endblock %}
+
+<!-- page specific css -->
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+<!-- page specific js -->
+{% block additional_js %}
+  <script src="{% static 'js/checkout.js' %}" defer></script>
+{% endblock %}
+
+<!-- Updates the page title -->
+{% block title %}
+Success
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+<!-- Indented to align with the base template -->
+{% block content %}
+<!-- Body Section of the products page -->
+<section class="py-5 static-page">
+  <h1 class="text-center fs-1 fw-bold">Payment Unsuccessful</h1>
+  <div class="container px-5 my-5">
+    <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+      <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
+        <div class="col-md-5 mb-4 mb-xl-0">
+          <div class="row justify-content-between text-50 py-2">
+            <div class="mb-4 card-deck mb-xl-0 text-center">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-body product-card">
+                    <div class="text-50 py-2">Unfortunately your payment has been Unsuccessful. This could be because:</div>
+                    <ul class="list-unstyled text-50 mt-3 mb-4">
+                      <li>- The payment methid was invalid</li>
+                      <li>- Payment Functionality is unavailable at this time</li>
+                    </ul>
+                    <div class="text-50 py-2">If this problem continues, please contact our customer service department</div>
+                  </div>
+                </div>
+                <a href="{% url 'customers:contact-us' %}"><button type="button" class="btn btn-lg btn-block darkmocha-button">Amend</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+{% endblock %}

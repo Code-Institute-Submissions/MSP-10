@@ -10,7 +10,8 @@ from .views import (
     product_update,
     product_delete,
     subscription_checkout,
-    subscription_success
+    subscription_success,
+    subscription_unsuccess
 )
 
 app_name = 'subscriptions'
@@ -47,7 +48,7 @@ urlpatterns = [
         'subscription/checkout<pk>/', 
         subscription_checkout, 
         name='subscription-checkout'),
-    #path('subscription/create-checkout-session', CreateCheckoutSession.as_view(), name='subscription-checkout'), 
+    path('subscription/unsuccess/', subscription_unsuccess, name='subscription-unsuccess'),
     path('subscription/success/<pk>', subscription_success, name='subscription-success'),
     #path('subscription/cancel/', views.subscription_cancel, name='subscription-cancel'),
 ]
