@@ -107,32 +107,48 @@ def product_delete(request, pk):
 #################################
 
 def subscription_checkout(request, pk):
-    # Enables the checkout process
-    product = Subscription.objects.get(id=pk)
-    context = {'product': product}
-    return render(request, 'checkout.html', context)
+        # Ensure page is not displayed to logged in user
+    if request.user.is_authenticated:
+            return redirect('index')
+    else:
+        # Enables the checkout process
+        product = Subscription.objects.get(id=pk)
+        context = {'product': product}
+        return render(request, 'checkout.html', context)
 
 def subscription_success(request, pk):
-    # Populates HTML screen with users selection
-    # Creates entry on CustomerSubscriptions model
-    product = Subscription.objects.get(id=pk)
-    user = request.user
-    subscript = product.stripe_subscription_id 
-    customer_sub = CustomerSubscriptions.objects.create(user=user, stripe_subscription_id=subscript)  
-    context = {'product': product}    
-    return render(request, 'success.html', context)
+    # Ensure page is not displayed to logged in user
+    if request.user.is_authenticated:
+            return redirect('index')
+    else:
+        # Populates HTML screen with users selection
+        # Creates entry on CustomerSubscriptions model
+        product = Subscription.objects.get(id=pk)
+        user = request.user
+        subscript = product.stripe_subscription_id 
+        customer_sub = CustomerSubscriptions.objects.create(user=user, stripe_subscription_id=subscript)  
+        context = {'product': product}    
+        return render(request, 'success.html', context)
 
 def subscription_unsuccess(request):
-    #Page displayed when payment is unsuccessful
-    return render(request, 'unsuccess.html')
+        # Ensure page is not displayed to logged in user
+    if request.user.is_authenticated:
+            return redirect('index')
+    else:
+        #Page displayed when payment is unsuccessful
+        return render(request, 'unsuccess.html')
 
 def customer_subscription(request):
-    # Populates the users chosen subscription
-    current_user = request.user
-    customer = CustomerSubscriptions.objects.get(user=current_user)
-    plan = customer.stripe_subscription_id
-    print(plan)
-    product = Subscription.objects.get(stripe_subscription_id=plan)
-    print(product)
-    context = {'product': product}    
-    return render(request, 'customer_subscription.html', context)
+    # Ensure page is not displayed to logged in user
+    if request.user.is_authenticated:
+            return redirect('index')
+    else:
+        # Populates the users chosen subscription
+        current_user = request.user
+        customer = CustomerSubscriptions.objects.get(user=current_user)
+        plan = customer.stripe_subscription_id
+        print(plan)
+        product = Subscription.objects.get(stripe_subscription_id=plan)
+        print(product)
+        context = {'product': product}    
+        return render(request, 'customer_subscription.html', context)
