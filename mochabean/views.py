@@ -12,7 +12,8 @@ def index(request):
         form = SubscriberForm(request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
-            if newsletterSubscribers.objects.filter(email=instance.email).exists():
+            if newsletterSubscribers.objects.filter(
+                email=instance.email).exists():
                 messages.error(request, 'You are already subscribed')
             else:
                 instance.save()
@@ -42,7 +43,8 @@ def about(request):
         form = SubscriberForm(request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
-            if newsletterSubscribers.objects.filter(email=instance.email).exists():
+            if newsletterSubscribers.objects.filter(
+                email=instance.email).exists():
                 messages.error(request, 'You are already subscribed')
             else:
                 instance.save()

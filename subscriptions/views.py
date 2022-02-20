@@ -60,7 +60,8 @@ def product_create(request):
                 messages.error(request, 'New Product NOT Created Successfully')
         else:
             form = SubscriptionCreate()
-        return render(request, 'products/create_subscription.html', {'form': form})
+        return render(request, 
+                      'products/create_subscription.html', {'form': form})
     else:
         return redirect('index')
 
@@ -109,89 +110,3 @@ def subscription_checkout(request, pk):
     key = stripe.api_key
     context = {'product': product, 'key': key, 'price': price}
     return render(request, 'checkout.html', context)
-
-
-# def payment_function(request, pk):
-#     def get(self, *args, **kwargs):
-#         return render(self.request, 'payment.html')
-    
-#     def post(self, *args, **kwargs):
-#         product = Subscription.objects.get(id=pk)
-#         token = self.request.POST.get('stripeToken')
-#         product
-
-#         try:
-#             # create charge in euro
-#             charge = stripe.Charge.create(
-#                 amount=amount,
-#                 currency="eur",
-#                 source=token,
-#             )
-#             # create stripe payment and save
-#             payment = Payment()
-#             payment.stripe_charge_id = charge['id']
-#             payment.customer = self.request.user
-#             payment.amount = order.get_cart_total
-#             payment.save()
-#             # create and save order
-#             order.ordered = True
-#             order.payment = payment
-#             order.save()
-#             messages.success(
-#                 self.request, "Your order was successful! You will receive a confirmation email.")
-#             return redirect("success", order.pk)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def subscription_checkout(request, name):
-#     if request.method == 'POST':
-#         pass
-#     else:
-#         if request.method == 'GET' and 'name' in request.GET:
-#             if request.GET['membership'] == 'PlanA':
-#                 stripe_subscription_id = 'price_1KNeD2BAHJm9GG3TRdiOiyyn'
-#                 price = 19.95
-#                 membership = 'I like to Dabble'
-            
-#             if request.GET['membership'] == 'PlanB':
-#                 stripe_subscription_id = 'price_1KNeDIBAHJm9GG3T3un40z3y'
-#                 price = 29.95
-#                 membership = 'Finely Balanced'
-            
-#             if request.GET['membership'] == 'PlanC':
-#                 stripe_subscription_id = 'price_1KNeFDBAHJm9GG3TwExvJshS'
-#                 price = 39.95
-#                 membership = 'Sleep is for the Weak'
-
-#         context = {'price':price, 'membership': membership}
-#         return render(request, context)
-
-
-# def subscription_success(request):
-#     if request.method == 'GET' and 'session_id' in request.GET:
-#         session = stripe.checkout.Session.retrieve(request.GET['session_id'],)
-#         customer = CustomerSubscriptions()
-#         customer.user = request.user
-#         customer.stripeid = session.customer
-#         customer.membership = True
-#         customer.cancel_at_period_end = False
-#         customer.stripe_subscription_id = session.subscription
-#         customer.save()
-#     return render(request, 'success.html')
-
-# def subscription_cancel(request):
-#     # View for cancelling payment
-#     return render(request, 'cancel.html')

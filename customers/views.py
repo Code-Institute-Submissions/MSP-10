@@ -33,7 +33,8 @@ def register_page(request):
             form.save()
             user = form.cleaned_data.get('username')
             # Success message to appear
-            messages.success(request, 'Account created successfully for ' + user)
+            messages.success(
+                request, 'Account created successfully for ' + user)
             return redirect('customers:login-page')
     context = {'form':form}
     return render(request, 'register.html', context)
@@ -47,7 +48,7 @@ def logout_page(request):
 def customer_profile_view(request, pk):
     current_user = request.user
     profile = Profile.objects.get(name=current_user)
-    # The below will direct the customer to the update page if address is empty
+    # Below will direct the customer to the update page if address is empty
     addy = Profile.objects.get(name=current_user).address1
     if addy == None:
         return redirect('customers:customer-update', pk)
