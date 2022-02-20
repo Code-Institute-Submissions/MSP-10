@@ -123,5 +123,16 @@ def subscription_success(request, pk):
     return render(request, 'success.html', context)
 
 def subscription_unsuccess(request):
-    # Populates HTML screen with users selection
+    #Page displayed when payment is unsuccessful
     return render(request, 'unsuccess.html')
+
+def customer_subscription(request):
+    # Populates the users chosen subscription
+    current_user = request.user
+    customer = CustomerSubscriptions.objects.get(user=current_user)
+    plan = customer.stripe_subscription_id
+    print(plan)
+    product = Subscription.objects.get(stripe_subscription_id=plan)
+    print(product)
+    context = {'product': product}    
+    return render(request, 'customer_subscription.html', context)

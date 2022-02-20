@@ -24,16 +24,19 @@ class Subscription(models.Model):
         return "{0:.2f}".format(self.price / 100)
     
     def __str__(self):
-        return str(self.text)
+        return str(self.name)
+    
+    def __str__(self):
+        return str(self.stripe_subscription_id )
 
 # Model that links the customers subscription with their account
 class CustomerSubscriptions(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     stripe_subscription_id = models.CharField(max_length=255)
     cancel_at_period_end = models.BooleanField(default=False)
-    price = models.DecimalField(default=0.00, max_digits=5, decimal_places=2)
-    membership = models.BooleanField(default=False)
-    
-    def get_display_price(self):
-        return "{0:.2f}".format(self.price / 100)
+      
+    def __str__(self):
+        return str(self.user)
 
+    def __str__(self):
+        return str(self.stripe_subscription_id )
