@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from crispy_forms.helper import FormHelper
-from .models import newsletterSubscribers, Subscription
+from .models import newsletterSubscribers, Subscription, CustomerSubscriptions
 from .forms import SubscriberForm, SubscriptionCreate
 from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib import messages
@@ -109,7 +109,12 @@ def subscription_checkout(request, pk):
     context = {'product': product}
     return render(request, 'checkout.html', context)
 
-def subscription_success(request,pk ):
+def subscription_success(request, pk):
+    # Populates HTML screen with users selection
+    # Creates entry on CustomerSubscriptions model
     product = Subscription.objects.get(id=pk)
-    context = {'product': product}
+    user = request.user
+    subscript = product.stripe_subscription_id 
+    customer_sub = CustomerSubscriptions.objects.create(user=user, stripe_subscription_id=subscript)  
+    context = {'product': product}    
     return render(request, 'success.html', context)

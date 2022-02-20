@@ -48,6 +48,6 @@ urlpatterns = [
         subscription_checkout, 
         name='subscription-checkout'),
     #path('subscription/create-checkout-session', CreateCheckoutSession.as_view(), name='subscription-checkout'), 
-    path('subscription/success/', subscription_success, name='subscription-success'),
+    path('subscription/success/<pk>', subscription_success, name='subscription-success'),
     #path('subscription/cancel/', views.subscription_cancel, name='subscription-cancel'),
 ]

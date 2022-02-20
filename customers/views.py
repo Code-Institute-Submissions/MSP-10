@@ -106,3 +106,4 @@ def customer_feedback(request):
         form = FeedbackForm()
         context = {'form': form}
         return render(request, 'feedback.html', context)
+    

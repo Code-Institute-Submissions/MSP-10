@@ -47,7 +47,7 @@ Checkout
                       <li>{{product.treats}} treats for that sweet touch</li>
                     </ul>
                     <!-- Initiate Strip checkout -->
-                    <form action="/subscription/success/" method="POST">
+                    <form action="/subscription/success/{{ product.pk }}" method="POST">
                       {% csrf_token %}
                       <script src="https://checkout.stripe.com/checkout.js"    
                         class="stripe-button"
