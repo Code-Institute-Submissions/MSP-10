@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from django.shortcuts import render, redirect
 from .forms import RegisterForm, UpdateProfileForm, FeedbackForm, ContactForm
 from django.contrib.auth import authenticate, login, logout
