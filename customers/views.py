@@ -1,6 +1,6 @@
 from asyncio.windows_events import NULL
 from django.shortcuts import render, redirect
-from .forms import RegisterForm, UpdateProfileForm, FeedbackForm
+from .forms import RegisterForm, UpdateProfileForm, FeedbackForm, ContactForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -101,9 +101,23 @@ def customer_feedback(request):
             messages.success(request, 'Thank you for your Feedback')
             return redirect('customers:customer-feedback')
         else:
-            messages.error(request, 'Please the form fully')
+            messages.error(request, 'Please conplete the form fully')
     else:
         form = FeedbackForm()
         context = {'form': form}
         return render(request, 'feedback.html', context)
-    
+
+def contact_us(request):
+    # Feedback form for customers
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thank you for your query. You will recieve a response within 24hr')
+            return redirect('customers:contact_us')
+        else:
+            messages.error(request, 'Please complete the form fully')
+    else:
+        form = ContactForm()
+        context = {'form': form}
+        return render(request, 'contact_us.html', context)

@@ -63,4 +63,8 @@ urlpatterns = [
         views.customer_feedback,
         name="customer-feedback"
     ),
+    path('customers/contact/', 
+        views.contact_us,
+        name="contact_us"
+    ),
 ]

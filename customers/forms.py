@@ -3,7 +3,7 @@ from django import forms
 from crispy_forms.helper import FormHelper
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .models import Profile, Feedback
+from .models import Profile, Feedback, Contact
 
 
 class RegisterForm(UserCreationForm):
@@ -31,3 +31,9 @@ class FeedbackForm(forms.ModelForm):
     class Meta:
         model = Feedback
         fields = ['name', 'comments']
+
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = ['name', 'subscription', 'email', 'comments']

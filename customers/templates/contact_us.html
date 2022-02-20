@@ -1,0 +1,58 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Additional meta tags for specific pages -->
+{% block extra_meta %}
+{% endblock %}
+
+<!-- page specific css -->
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+<!-- Updates the page title -->
+{% block title %}
+Register Page
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+<!-- Indented to align with the base template -->
+            {% block content %}
+                <!-- Body Section of the Shipping page -->
+                <section class="py-5 static-page">
+                    <h1 class="text-center fs-1 fw-bold">Contact Us</h1>
+                    <div class="container px-5 my-5">
+                        <aside class="static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                            <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
+                                <div class="col-md-5 mb-4 mb-xl-0">
+                                    <div class="row justify-content-between text-50 py-2">
+                                        <!-- Form for Registration of new user -->
+                                        <form method="POST">
+                                            {% csrf_token %}
+                                            <label class="py-2 fs-3 fw-bold" id="name" for="name">Name:</label>
+                                            <input type="text" name="name" placeholder="Name..." class="form-control" aria-label="Name field">
+                                            <label class="py-2 fs-3 fw-bold" id="subscription" for="subscription">Subscription:</label>
+                                            <input type="text" name="subscription" placeholder="Subscription..." class="form-control" aria-label="Subscription field">
+                                            <label class="py-2 fs-3 fw-bold" id="email" for="email">Email:</label>
+                                            <input type="email" name="email" placeholder="Email Address..." class="form-control" aria-label="Email field">
+                                            <label class="py-2 fs-3 fw-bold" id="comments" for="comments">Query:</label>
+                                            <input type="text" name="comments" placeholder="Query..." class="form-control" aria-label="Query field">
+                                            <!--Submit button -->
+                                            <div class="p-3 d-flex justify-content-center">
+                                                <input type="submit" value="Submit" class="btn darkmocha-button fw-bold">
+                                            </div>
+                                        </form>
+                                        <!-- Error display function -->
+                                        {% for message in messages %}
+                                            {{message}}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            {% endblock %}
