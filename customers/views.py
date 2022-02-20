@@ -114,7 +114,7 @@ def contact_us(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Thank you for your query. You will recieve a response within 24hr')
-            return redirect('customers:contact_us')
+            return redirect('customers:contact-us')
         else:
             messages.error(request, 'Please complete the form fully')
     else:

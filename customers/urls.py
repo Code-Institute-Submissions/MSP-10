@@ -65,6 +65,6 @@ urlpatterns = [
     ),
     path('customers/contact/', 
         views.contact_us,
-        name="contact_us"
+        name="contact-us"
     ),
 ]
