@@ -32,14 +32,14 @@ Home Page
                             <div class="col-lg-8 col-xl-7 col-xxl-6">
                                 <div class="my-5 text-center text-xl-start">
                                     <h1 class="display-5 fw-bolder mb-2">Coffee Coffee Coffee</h1>
-                                    <p class="lead fw-normal text-50 mb-4">Sales pitch place holder! Sales pitch place holder! Sales pitch place holder! Sales pitch place holder! Sales pitch place holder!</p>
+                                    <p class="lead fw-normal text-50 mb-4">Coffee helps maintain altertness and energy levels. There is nothing better that a beautiful cup of coffee, any time of the day, except having the coffee delivered to you.</p>
                                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                        <a class="btn btn-lg px-4 me-sm-3 darkmocha-button" href="#features">Get Started</a>
-                                        <a class="btn btn-lg px-4 lightmocha-button" href="#!">Learn More</a>
+                                        <a class="btn btn-lg px-4 me-sm-3 darkmocha-button" href="{% url 'subscriptions:subscription-products' %}">Get Started</a>
+                                        <a class="btn btn-lg px-4 lightmocha-button" href="{% url 'about' %}">Learn More</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="{% static 'images/site_images/one_cups.jpeg' %}" alt="coffee cup" /></div>
                         </div>
                     </div>
                 </header>
@@ -58,7 +58,7 @@ Home Page
                                     <div class="col mb-5 h-100">
                                         <div class="feature darkmocha rounded-3 mb-3 text-center"><i class="bi bi-plus-circle-fill"></i></div>
                                         <h2 class="h5">Step Two</h2>
-                                        <p class="mb-0">Pick you favourite coffee</p>
+                                        <p class="mb-0">Pick you coffee bundle</p>
                                     </div>
                                     <div class="col mb-5 mb-md-0 h-100">
                                         <div class="feature darkmocha rounded-3 mb-3 text-center"><i class="bi bi-patch-check-fill"></i></div>
@@ -84,7 +84,6 @@ Home Page
                                 <div class="text-center">
                                     <div class="fs-4 mb-4 fst-italic">"There is no easier way to enjoy coffee. An easy way to recieve my monthly coffee needs."</div>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
                                         <div class="fw-bold">
                                             Jon Snow
                                             <span class="fw-bold mx-1">/</span>

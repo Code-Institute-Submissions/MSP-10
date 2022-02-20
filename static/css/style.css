@@ -71,3 +71,6 @@ body {
     background-image: none !important;
 }
 
+.about-image {
+    max-height: 400px;
+}

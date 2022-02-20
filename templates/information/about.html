@@ -25,14 +25,13 @@ About Page
                 <header class="bg-dark py-5 index-header">
                     <div class="container px-5">
                         <div class="row gx-5 align-items-center justify-content-center">
-                            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5 about-image" src="{% static 'images/site_images/one_cup.jpeg' %}" alt="Cup of coffee" /></div>
                             <div class="col-lg-8 col-xl-7 col-xxl-6">
                                 <div class="my-5 text-center text-xl-start">
                                     <h1 class="display-5 fw-bolder mb-2">Coffee Coffee Coffee</h1>
-                                    <p class="lead fw-normal text-50 mb-4">Sales pitch place holder! Sales pitch place holder! Sales pitch place holder! Sales pitch place holder! Sales pitch place holder!</p>
+                                    <p class="lead fw-normal text-50 mb-4">Each month you will receive a package with containing a delicious selection of coffee, an accessory to simplify the coffee making process and a sweat treat</p>
                                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                        <a class="btn btn-primary btn-lg px-4 me-sm-3 darkmocha-button" href="#features">Get Started</a>
-                                        <a class="btn btn-outline-light btn-lg px-4 lightmocha-button" href="#!">Learn More</a>
+                                        <a class="btn btn-primary btn-lg px-4 me-sm-3 darkmocha-button" href="{% url 'subscriptions:subscription-products' %}">Get Started</a>
                                     </div>
                                 </div>
                             </div>
@@ -49,26 +48,26 @@ About Page
                                     <div class="col mb-5 h-100">
                                         <div class="feature darkmocha rounded-3 mb-3 text-center"><i class="bi bi-person-badge-fill"></i></div>
                                         <h2 class="h5">All Organic</h2>
-                                        <p class="mb-0">Aenean pellentesque laoreet lacus eu elementum. Donec in tristique enim, at dignissim enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                        <p class="mb-0">All MochaBean products are certified organic.</p>
                                     </div>
                                     <div class="col mb-5 h-100">
                                         <div class="feature darkmocha rounded-3 mb-3 text-center"><i class="bi bi-plus-circle-fill"></i></div>
                                         <h2 class="h5">All Fair Trade</h2>
-                                        <p class="mb-0">Aenean pellentesque laoreet lacus eu elementum. Donec in tristique enim, at dignissim enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                        <p class="mb-0">Fair trade is an arrangement designed to help producers in growing countries achieve sustainable and equitable trade relationships</p>
                                     </div>
                                     <div class="col mb-5 mb-md-0 h-100">
                                         <div class="feature darkmocha rounded-3 mb-3 text-center"><i class="bi bi-patch-check-fill"></i></div>
                                         <h2 class="h5">Only the best roasts</h2>
-                                        <p class="mb-0">Aenean pellentesque laoreet lacus eu elementum. Donec in tristique enim, at dignissim enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                        <p class="mb-0">Only the best quality of coffee will be packaged and sent to you</p>
                                     </div>
                                     <div class="col h-100">
                                         <div class="feature darkmocha rounded-3 mb-3 text-center"><i class="bi bi-cup-fill"></i></div>
                                         <h2 class="h5">Perfection in every cup</h2>
-                                        <p class="mb-0">Aenean pellentesque laoreet lacus eu elementum. Donec in tristique enim, at dignissim enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                        <p class="mb-0">Coffee is not just a drink, it's an experience</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-1" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-1 about-image" src="{% static 'images/site_images/two_cups.jpeg' %}" alt="Two cups of Coffee"/></div>
                         </div>
                     </div>
                 </section>
