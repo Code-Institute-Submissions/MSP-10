@@ -1,0 +1,1 @@
+web: gunicorn mochabean.wsgi --log-file -
