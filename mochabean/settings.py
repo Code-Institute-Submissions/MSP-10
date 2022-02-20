@@ -71,16 +71,24 @@ WSGI_APPLICATION = 'mochabean.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': config('DBNAME'),
+#         'USER': config('DBUSER'),
+#         'PASSWORD': config('DBPASSWORD'),
+#         'HOST': config('DBHOST'),
+#         'PORT': config('DBPORT'),
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DBNAME'),
-        'USER': config('DBUSER'),
-        'PASSWORD': config('DBPASSWORD'),
-        'HOST': config('DBHOST'),
-        'PORT': config('DBPORT'),
+        'NAME': os.path.join(BASE_DIR, 'db.postgresql'),
     }
 }
+
 
 config('DBNAME')
 
