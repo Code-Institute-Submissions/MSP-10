@@ -16,7 +16,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'mochabeancollege.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'mochabeancollege.herokuapp.com', 'mochabeancoffee.herokuapp.com']
 
 
 # Application definition
