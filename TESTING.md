@@ -446,13 +446,6 @@ Note: There have been no errors raised due to the use of a pattern/texture on th
 
 
 
-Items requiring change based on the WAVE assessment are:
-* 
-* 
-* 
-
-
-
 ## Final Post Deployment Testing
 
 ### Final Compatability testing:
