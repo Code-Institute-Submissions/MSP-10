@@ -1,6 +1,3 @@
-from django.shortcuts import render
-
-from django.shortcuts import render
 from django.shortcuts import render, redirect
 from subscriptions.forms import SubscriberForm
 from subscriptions.models import newsletterSubscribers
@@ -13,13 +10,13 @@ def index(request):
         if form.is_valid():
             instance = form.save(commit=False)
             if newsletterSubscribers.objects.filter(
-                email=instance.email).exists():
+                    email=instance.email).exists():
                 messages.error(request, 'You are already subscribed')
             else:
                 instance.save()
                 messages.success(request, 'You are now Subscribed')
     form = SubscriberForm()
-    context = {'form': form,}
+    context = {'form': form}
     return render(request, 'index.html', context)
 
 
@@ -44,11 +41,11 @@ def about(request):
         if form.is_valid():
             instance = form.save(commit=False)
             if newsletterSubscribers.objects.filter(
-                email=instance.email).exists():
+                    email=instance.email).exists():
                 messages.error(request, 'You are already subscribed')
             else:
                 instance.save()
                 messages.success(request, 'You are now Subscribed')
     form = SubscriberForm()
-    context = {'form': form,}
+    context = {'form': form}
     return render(request, 'information/about.html', context)

@@ -7,7 +7,7 @@ class SubscriberForm(forms.ModelForm):
     class Meta:
         model = newsletterSubscribers
         fields = ['email']
-        
+
 
 class SubscriptionCreate(forms.ModelForm):
     # Form to Create a new subscription product
@@ -33,4 +33,11 @@ class SubscriptionCreate(forms.ModelForm):
 
     class Meta:
         model = Subscription
-        fields = ['name', 'description', 'stripe_subscription_id', 'price', 'coffee', 'accessory', 'treats']
+        fields = [
+            'name',
+            'description',
+            'stripe_subscription_id',
+            'price',
+            'coffee',
+            'accessory',
+            'treats']

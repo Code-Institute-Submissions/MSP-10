@@ -20,36 +20,45 @@ app_name = 'subscriptions'
 urlpatterns = [
     # Newsletter subscription urls
     path(
-        'unsubscribe/', 
-        newsletter_subscription_delete, 
+        'unsubscribe/',
+        newsletter_subscription_delete,
         name='newsletter-unsubscribe'),
     path(
-        'unsubscribed/', 
-        newsletter_subscription_confirmation, 
+        'unsubscribed/',
+        newsletter_subscription_confirmation,
         name='newsletter-unsubscribed'),
-    
+
     # Subscription Product urls
     path(
-        'subscription/products/', 
-        product.as_view(), 
+        'subscription/products/',
+        product.as_view(),
         name='subscription-products'),
     path(
-        'subscription/products/create/', 
-        product_create, 
+        'subscription/products/create/',
+        product_create,
         name='subscription-create'),
     path(
-        'subscription/products/update<pk>/', 
-        product_update, 
+        'subscription/products/update<pk>/',
+        product_update,
         name='subscription-update'),
     path(
-        'subscription/products/delete<pk>/', 
-        product_delete, 
+        'subscription/products/delete<pk>/',
+        product_delete,
         name='subscription-delete'),
     path(
-        'subscription/checkout<pk>/', 
-        subscription_checkout, 
+        'subscription/checkout<pk>/',
+        subscription_checkout,
         name='subscription-checkout'),
-    path('subscription/unsuccess/', subscription_unsuccess, name='subscription-unsuccess'),
-    path('subscription/success/<pk>', subscription_success, name='subscription-success'),
-    path('subscription/customer/', customer_subscription, name='subscription-customer'),
+    path(
+        'subscription/unsuccess/',
+        subscription_unsuccess,
+        name='subscription-unsuccess'),
+    path(
+        'subscription/success/<pk>',
+        subscription_success,
+        name='subscription-success'),
+    path(
+        'subscription/customer/',
+        customer_subscription,
+        name='subscription-customer'),
 ]

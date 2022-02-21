@@ -21,6 +21,7 @@ class NewsletterUnsubscribeTests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'newsletter/unsubscribe.html')
 
+
 class NewsletterUnsubscribeConfirmTests(SimpleTestCase):
     # Status check of the unsubscribed confirm page
     def test_newsletter_unsubscribed_status(self):
@@ -37,9 +38,10 @@ class NewsletterUnsubscribeConfirmTests(SimpleTestCase):
             reverse('subscriptions:newsletter-unsubscribed'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(
-            response, 
+            response,
             'newsletter/unsubscribe_confirm.html')
-        
+
+
 class SubscriptionProductsTests(TestCase):
     # Status check of the unsubscribed confirm page
     def test_subscription_products_status(self):

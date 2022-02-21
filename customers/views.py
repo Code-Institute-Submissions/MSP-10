@@ -43,7 +43,7 @@ def register_page(request):
                 messages.success(
                     request, 'Account created successfully for ' + user)
                 return redirect('customers:login-page')
-        context = {'form':form}
+        context = {'form': form}
         return render(request, 'register.html', context)
 
 
@@ -57,11 +57,11 @@ def customer_profile_view(request, pk):
     profile = Profile.objects.get(name=current_user)
     # Below will direct the customer to the update page if address is empty
     addy = Profile.objects.get(name=current_user).address1
-    if addy == None:
+    if addy is None:
         return redirect('customers:customer-update', pk)
     # Loads the customers Profile Page
     else:
-        context = {'profile':profile}
+        context = {'profile': profile}
         return render(request, 'profile_view.html', context)
 
 
@@ -82,6 +82,7 @@ def customer_profile_update(request, pk):
         context = {'form': form}
         return render(request, 'profile_update.html', context)
 
+
 def customer_profile_delete(request, pk):
     # View to delete account
     current_user = request.user
@@ -94,6 +95,7 @@ def customer_profile_delete(request, pk):
     profile = UpdateProfileForm(instance=profile)
     context = {'profile': profile}
     return render(request, 'delete.html', context)
+
 
 def customer_feedback(request):
     # Feedback form for customers
@@ -110,13 +112,14 @@ def customer_feedback(request):
         context = {'form': form}
         return render(request, 'feedback.html', context)
 
+
 def contact_us(request):
     # Feedback form for customers
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Thank you for your query. You will recieve a response within 24hr')
+            messages.success(request, 'Thank you for your query.')
             return redirect('customers:contact-us')
         else:
             messages.error(request, 'Please complete the form fully')

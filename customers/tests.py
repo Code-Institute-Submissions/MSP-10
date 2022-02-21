@@ -19,6 +19,7 @@ class TestCustomerRegistrationPageTests(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'register.html')
 
+
 class TestCustomerLoginPageTests(TestCase):
     # Test for the customer login page load
     def test_login_page_status_code(self):
@@ -33,6 +34,7 @@ class TestCustomerLoginPageTests(TestCase):
         response = self.client.get(reverse('customers:login-page'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'login.html')
+
 
 class TestCustomerRegister(TestCase):
     # Test Customer Registration
@@ -71,6 +73,7 @@ class TestResetPasswordTests(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'password/password_reset_form.html')
 
+
 class TestResetPasswordSentTests(TestCase):
     # Test for the customer reset_password sent
     def test_reset_password_sent_status_code(self):
@@ -85,6 +88,7 @@ class TestResetPasswordSentTests(TestCase):
         response = self.client.get(reverse('customers:password_reset_done'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'password/password_reset_done.html')
+
 
 class TestResetPasswordCompleteTests(TestCase):
     # Test for the customer reset_password complete
@@ -103,6 +107,7 @@ class TestResetPasswordCompleteTests(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(
             response, 'password/password_reset_complete.html')
+
 
 class TestCustomerFeedbackTests(TestCase):
     # Test for the customer reset_password complete
