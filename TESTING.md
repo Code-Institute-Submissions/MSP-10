@@ -123,14 +123,6 @@ No Python validation occured during this Sprint
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
 
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
-
 ### Potential Automation Test Cases
 * Landing page loading as expected
 * Policies page loads correctly
@@ -167,16 +159,6 @@ No Python validation occured during this Sprint
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
-
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
 
 ### Potential Automation Test Cases
 * FAQ page loads and questions expand
@@ -221,16 +203,6 @@ No Python validation occured during this Sprint
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
 
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
-
 ### Potential Automation Test Cases
 * Registering a new user
 * Field validation - negative tests
@@ -265,16 +237,6 @@ N/A
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
-
-<details>
-<summary> Expand for test results</summary>
-    <p float="left">
-        <img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-		<img src="" alt="Initial Python Unit Test"/>
-    </p>
-</details>
 
 ### Potential Automation Test Cases
 * Password reset process
@@ -359,9 +321,11 @@ Due to other commitments no progress was made during this time
 * As a staff member I want to amend a current product
 * As a staff member I want to create a new product
 * As an Admin User I need to setup stripe payment service
-* As a User I want to view available subscriptions
 * As a User I want to leave feedback/review
-* As an Admin member I want to create a (fake) facebook page
+* As a Admin user I want to setup a "fake" facebook account
+* As a user i want to see a custom 404 page
+* As a User I want to view available subscriptions
+
 
 ### Exploratory Test Session Goals
 
@@ -376,14 +340,16 @@ Due to other commitments no progress was made during this time
 * I want to confirm that payments are processed via stripe
 * I want to confirm that I can see all available subscriptions/products
 * I want to confirm I can leave feedback
+* I want to confirm the customer 404 page is display were required
 * I want to confirm that all User Stories are done to my satisfaction
 * I want to identify any edge cases
 * I want to identify any potential test cases for automation
 
 ### Potential Automation Test Cases
-* Create/amend/delete product/subscriptions
+* Create/amend/delete/view product-subscriptions
 * Confirm payment process
 * Contact/feedback forms
+* 404 page loads
 
 ### WAVE validation
 The following are the results from the WAVE validation site to verify accessibility and readability.
