@@ -1,0 +1,39 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Additional meta tags for specific pages -->
+{% block extra_meta %}
+{% endblock %}
+
+<!-- page specific css -->
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+<!-- Updates the page title -->
+{% block title %}
+404 Page
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+<!-- Indented to align with the base template -->
+            {% block content %}
+                <!-- Body Section of the login page page -->
+                <section class="py-5 static-page">
+                    <h1 class="text-center fs-1 fw-bold">404 Page not found</h1>
+                    <div class="container px-5 my-5">
+                        <aside class=" static-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                            <div class="d-flex align-items-center justify-content-center flex-column flex-xl-row text-center text-xl-start">
+                                <div class="col-md-5 mb-4 mb-xl-0">
+                                    <div class="row justify-content-between text-50 py-2">
+                                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="{% static 'images/site_images/404.png' %}" alt="broken cup" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            {% endblock %}

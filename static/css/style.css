@@ -57,7 +57,7 @@ body {
 
 /* The following ensures smaller page content fills view screen */
 .static-page{
-    min-height: 53.1em; 
+    min-height: 90vh; 
 }
 
 /* Remove the default settings of the accordion buttons accross the site */

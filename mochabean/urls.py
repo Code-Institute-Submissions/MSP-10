@@ -13,4 +13,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('', include('customers.urls', namespace='customers')),
     path('', include('subscriptions.urls', namespace='subscriptions')),
-]
+    ]
+
+# Custom Error pages
+handler404 = views.error_404

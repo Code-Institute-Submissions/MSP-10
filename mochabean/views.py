@@ -10,13 +10,13 @@ def index(request):
         if form.is_valid():
             instance = form.save(commit=False)
             if newsletterSubscribers.objects.filter(
-                    email=instance.email).exists():
+                email=instance.email).exists():
                 messages.error(request, 'You are already subscribed')
             else:
                 instance.save()
                 messages.success(request, 'You are now Subscribed')
     form = SubscriberForm()
-    context = {'form': form}
+    context = {'form': form,}
     return render(request, 'index.html', context)
 
 
@@ -41,11 +41,18 @@ def about(request):
         if form.is_valid():
             instance = form.save(commit=False)
             if newsletterSubscribers.objects.filter(
-                    email=instance.email).exists():
+                email=instance.email).exists():
                 messages.error(request, 'You are already subscribed')
             else:
                 instance.save()
                 messages.success(request, 'You are now Subscribed')
     form = SubscriberForm()
-    context = {'form': form}
+    context = {'form': form,}
     return render(request, 'information/about.html', context)
+
+
+# Custom Error Pages
+def error_404(request, exception):
+        data = {}
+        return render(request,'404.html', data)
+
