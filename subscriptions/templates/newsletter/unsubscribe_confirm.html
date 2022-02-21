@@ -23,11 +23,12 @@ Unsubscribe from Newsletter
             {% block content %}
                 <!-- Body Section of the unsubscribe newsletter page -->
                 <section class="py-5 static-page">
-                    <h1 class="text-center fs-1 fw-bold">Newsletter unsubscribe</h1>
+                    <h1 class="text-center fs-1 fw-bold">Unsubscribed</h1>
                     <div class="container px-5 my-5">
                         <aside class="newsletter-box bg-gradient rounded-3 p-4 p-sm-5 mt-5">
                             <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
                                 <div class="mb-4 mb-xl-0">
+                                    <div class="fs-3 fw-bold">We are sorry to see you go.</div>
                                     <!-- Confirmation/error message display -->
                                     {% for message in messages %}
                                         {{ message }}

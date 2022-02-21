@@ -18,13 +18,12 @@ The following sections are the results of the testing throughout the software de
 1. [WAVE validation](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#wave-validation)
 1. [Final Post Deployment Testing](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#final-post-deployment-testing)
 	1. [Final Compatability Testing](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#final-compatability-testing)
-	1. [Final Code Validation]()
-	1. [General Site validation]()
-	1. [User Acceptance Testing:]()
-	1. [Performance Testing:]()
-		1. [Issues Located]()
-		1. [Warnings Located]()
-1. [Unfixed bugs/ Improvements to current features]()
+	1. [Final Code Validation](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#final-code-validation)
+	1. [General Site validation](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#general-site-validation)
+	1. [User Acceptance Testing:](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#user-acceptance-testing)
+	1. [Performance Testing:](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#performance-testing)
+1. [Unfixed bugs](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#unfixed-bugs)
+1. [Improvements to current features](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#improvements-to-current-features)
 
 
 ## Testing Plan
@@ -37,7 +36,7 @@ During the manual exploratory test sessions:
 * Cross browser/device compatibiliy will be confirmed
 * General usibility will be assessed
 
-Upon initial deployment of the MVP the following testing will be conducted: 
+Upon initial deployment the following testing will be conducted: 
 * All available unit tests
 * Manual shakedown of all functionality
 * Performance testing of site loading
@@ -54,7 +53,22 @@ The following list of tools have been utilised during the testing of this projec
   
 * [unittest - Django built in unit test application](https://docs.djangoproject.com/en/3.2/topics/testing/overview/)
  * Used for python unit testing
-  
+
+* [WAVE Validation](https://wave.webaim.org/)
+ * Used for python unit testing
+
+* [WAVE - colour assesment](https://juicystudio.com/services/luminositycontrastratio.php)
+ * Used for python unit testing
+
+* [HTML Validator](https://validator.w3.org/)
+ * Used for python unit testing
+
+* [CSS Validator](https://jigsaw.w3.org/css-validator/)
+ * Used for python unit testing
+
+* [PEP8 Python Validation](http://pep8online.com/)
+ * Used for python unit testing
+
 
 ## Sprint 1 
 11th December - 17th December 2021
@@ -623,4 +637,6 @@ The following are the results from the final WAVE tests
 
 ## Production Shakedown Pre Submission
 
-# Unfixed bugs/ Improvements to current features
+# Unfixed bugs 
+
+# Improvements to current features
