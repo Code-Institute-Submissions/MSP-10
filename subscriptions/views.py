@@ -148,10 +148,20 @@ def subscription_unsuccess(request):
 
 
 def customer_subscription(request):
-    # Populates the users chosen subscription
+    # Display customers specific subscription
     current_user = request.user
-    customer = CustomerSubscriptions.objects.get(user=current_user)
-    plan = customer.stripe_subscription_id
-    product = Subscription.objects.get(stripe_subscription_id=plan)
-    context = {"product": product}
-    return render(request, "customer_subscription.html", context)
+    # Check for a subscription
+    try:
+        customer = CustomerSubscriptions.objects.get(user=current_user)
+    except CustomerSubscriptions.DoesNotExist:
+        customer = None
+    if customer is None:
+        # Behaviour if customer has no subscription
+        return redirect("subscriptions:subscription-products")
+    else:
+        # Populates the users chosen subscription
+        customer = CustomerSubscriptions.objects.get(user=current_user)
+        plan = customer.stripe_subscription_id
+        product = Subscription.objects.get(stripe_subscription_id=plan)
+        context = {"product": product}
+        return render(request, "customer_subscription.html", context)
