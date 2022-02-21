@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from crispy_forms.helper import FormHelper
 from .models import newsletterSubscribers, Subscription, CustomerSubscriptions
+from customers.models import Profile
 from .forms import SubscriberForm, SubscriptionCreate
 from django.http import JsonResponse, HttpResponseRedirect
 from django.contrib import messages
@@ -107,10 +108,19 @@ def product_delete(request, pk):
 #################################
 
 def subscription_checkout(request, pk):
-    # Enables the checkout process
-    product = Subscription.objects.get(id=pk)
-    context = {'product': product}
-    return render(request, 'checkout.html', context)
+    # Verifies that user profile details are up to date
+    current_user = request.user
+    profile = Profile.objects.get(name=current_user)
+    # Below will direct the customer to the update page if address is empty
+    addy = Profile.objects.get(name=current_user).address1
+    if addy == None:
+        return redirect('customers:customer-update', pk)
+    # Loads the customers Profile Page
+    else:
+        # Enables the checkout process
+        product = Subscription.objects.get(id=pk)
+        context = {'product': product}
+        return render(request, 'checkout.html', context)
 
 def subscription_success(request, pk):
     # Populates HTML screen with users selection

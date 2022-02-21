@@ -32,13 +32,13 @@ Contact Us
                                         <!-- Form for Registration of new user -->
                                         <form method="POST">
                                             {% csrf_token %}
-                                            <label class="py-2 fs-3 fw-bold" id="name" for="name">Name:</label>
+                                            <label class="py-2 fs-3 fw-bold" for="name">Name:</label>
                                             <input type="text" name="name" placeholder="Name..." class="form-control" aria-label="Name field">
-                                            <label class="py-2 fs-3 fw-bold" id="subscription" for="subscription">Subscription:</label>
+                                            <label class="py-2 fs-3 fw-bold" for="subscription">Subscription:</label>
                                             <input type="text" name="subscription" placeholder="Subscription..." class="form-control" aria-label="Subscription field">
-                                            <label class="py-2 fs-3 fw-bold" id="email" for="email">Email:</label>
+                                            <label class="py-2 fs-3 fw-bold" for="email">Email:</label>
                                             <input type="email" name="email" placeholder="Email Address..." class="form-control" aria-label="Email field">
-                                            <label class="py-2 fs-3 fw-bold" id="comments" for="comments">Query:</label>
+                                            <label class="py-2 fs-3 fw-bold" for="comments">Query:</label>
                                             <input type="text" name="comments" placeholder="Query..." class="form-control" aria-label="Query field">
                                             <!--Submit button -->
                                             <div class="p-3 d-flex justify-content-center">

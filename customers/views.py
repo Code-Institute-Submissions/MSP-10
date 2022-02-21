@@ -53,59 +53,47 @@ def logout_page(request):
 
 
 def customer_profile_view(request, pk):
-    # Ensure page is not displayed to logged in user
-    if request.user.is_authenticated:
-        return redirect('index')
+    current_user = request.user
+    profile = Profile.objects.get(name=current_user)
+    # Below will direct the customer to the update page if address is empty
+    addy = Profile.objects.get(name=current_user).address1
+    if addy == None:
+        return redirect('customers:customer-update', pk)
+    # Loads the customers Profile Page
     else:
-        current_user = request.user
-        profile = Profile.objects.get(name=current_user)
-        # Below will direct the customer to the update page if address is empty
-        addy = Profile.objects.get(name=current_user).address1
-        if addy == None:
-            return redirect('customers:customer-update', pk)
-        # Loads the customers Profile Page
-        else:
-            context = {'profile':profile}
-            return render(request, 'profile_view.html', context)
+        context = {'profile':profile}
+        return render(request, 'profile_view.html', context)
 
 
 def customer_profile_update(request, pk):
-    # Ensuring page is only displayed to logged in user
-    if request.user.is_authenticated:
-        return redirect('index')
-    else:
         # Update Customer profile
-        current_user = request.user
-        profile = Profile.objects.get(name=current_user)
-        form = UpdateProfileForm(instance=profile)
-        if request.method == 'POST':
-            form = UpdateProfileForm(
-                request.POST, instance=profile)
-            if form.is_valid():
-                form.save()
-                messages.success(request, 'Provider Updated Successfully')
-                form = UpdateProfileForm()
-                return redirect('customers:customer-profile', pk)
-        else:
-            context = {'form': form}
-            return render(request, 'profile_update.html', context)
+    current_user = request.user
+    profile = Profile.objects.get(name=current_user)
+    form = UpdateProfileForm(instance=profile)
+    if request.method == 'POST':
+        form = UpdateProfileForm(
+            request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Provider Updated Successfully')
+            form = UpdateProfileForm()
+            return redirect('customers:customer-profile', pk)
+    else:
+        context = {'form': form}
+        return render(request, 'profile_update.html', context)
 
 def customer_profile_delete(request, pk):
-    # Ensuring page is only displayed to logged in user
-    if request.user.is_authenticated:
-        return redirect('index')
-    else:    
-        # View to delete account
-        current_user = request.user
-        profile = Profile.objects.get(name=current_user)
-        if request.method == "POST":
-            Profile.delete(profile)
-            User.delete(current_user)
-            messages.success(request, 'Account Deleted Successfully')
-            return redirect('customers:login-page')
-        profile = UpdateProfileForm(instance=profile)
-        context = {'profile': profile}
-        return render(request, 'delete.html', context)
+    # View to delete account
+    current_user = request.user
+    profile = Profile.objects.get(name=current_user)
+    if request.method == "POST":
+        Profile.delete(profile)
+        User.delete(current_user)
+        messages.success(request, 'Account Deleted Successfully')
+        return redirect('customers:login-page')
+    profile = UpdateProfileForm(instance=profile)
+    context = {'profile': profile}
+    return render(request, 'delete.html', context)
 
 def customer_feedback(request):
     # Feedback form for customers

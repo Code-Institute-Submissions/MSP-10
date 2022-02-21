@@ -16,6 +16,7 @@ body {
     font-weight: bold;
 }
 
+/*formatting the body of the class pages */
 .index-header, .feedback, .newsletter-box, .static-box, .product-card {
     background-color: #7f5539 !important;
     color: #EDE0D4 !important;
@@ -49,6 +50,7 @@ body {
     color: #EDE0D4 !important;
 }
 
+/*formatting the body of the class pages */
 .guide, .newsletter, .static-page {
     background-color: #E6CCB2 !important; 
 }
@@ -64,6 +66,7 @@ body {
     box-shadow: none !important;
     background-image: none !important;
 }
+
 .accordion-button::after {
     box-shadow: none !important;
     background-image: none !important;
