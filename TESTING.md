@@ -358,181 +358,134 @@ Note: There have been no errors raised due to the use of a pattern/texture on th
 * Home page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/home.PNG" alt="WAVE Results for home page"/>
 </p>
 
 * About page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/about.PNG" alt="WAVE Results for about page"/>
 </p>
 
 * FAQ page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/faq.PNG" alt="WAVE Results for FAQ page"/>
 </p>
 
 * Policies page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/policies.PNG" alt="WAVE Results for policies page"/>
 </p>
 
 * Shipping page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/shipping.PNG" alt="WAVE Results for the shipping page"/>
 </p>
 
 * Customer Login page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/login.PNG" alt="WAVE Results for login page"/>
 </p>
 
 * Customer Registration page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/register.PNG" alt="WAVE Results for register page"/>
 </p>
 
-* Customer Profile page WAVE analysis
+* Subscription Products page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/products.PNG" alt="WAVE Results for products page"/>
 </p>
 
-* Customer Amend Profile page WAVE analysis
+* 404 page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/404.PNG" alt="WAVE Results for 404 screen"/>
 </p>
 
-* Customer Delete Profile page WAVE analysis
+* Feedback page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/feedback.PNG" alt="WAVE Results for feedback page"/>
 </p>
 
-* Subscription Products View Profile page WAVE analysis
+* Reset Password page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/reset_password.PNG" alt="WAVE Results for reset password page"/>
 </p>
 
-* Subscription Products Create page WAVE analysis
+* Reset Password Complete page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/reset_password_complete.PNG" alt="WAVE Results for reset password complete page"/>
 </p>
 
-* Subscription Products Amend Profile page WAVE analysis
+* Reset password email sent page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/reset_password_sent.PNG" alt="WAVE Results for reset password email sent page"/>
 </p>
 
-* Subscription Products Delete Profile page WAVE analysis
+* Newsletter Unsubscribe page WAVE analysis
 
 <p float="left">
-    <img src="" width="300" height="200" alt=" WAVE Results"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/unsubscribe.PNG" alt="WAVE Results for the newsletter unsubscribe page"/>
 </p>
 
+* Newsletter Unsubscribed page WAVE analysis
+
+<p float="left">
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/unsubscribed.PNG" alt="WAVE Results for the newsletter unsubscribed page"/>
+</p>
 
 
 ## Final Post Deployment Testing
 
 ### Final Compatability testing:
 
-The following Gifs are evidence collected from the compatability testing of the MSP-4 project (studyWorld)
+The following Gifs are evidence collected from the compatability testing of the MSP-5 project (mochabean)
 
 <details>
-    <summary><b>__iphone6/7/8 plus__</b></summary>
-    Device width: 414px
     <p float="left">
-        <img src="" width="300" height="200" alt="iphone6/7/8 plus test results for "/>
-		<img src="" width="300" height="200" alt="iphone6/7/8 plus test results for "/>
-		<img src="" width="300" height="200" alt="iphone6/7/8 plus test results for "/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/device/chrom_log.gif" alt="testing with chrome"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/device/chrom_purchase.gif"  alt="testing with chrome"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/device/edge.gif" alt="testing with edge"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/device/firefox.gif" alt="testing with firefox"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/device/nest_hub.gif" alt="testing with nest hub"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/device/pixel5_nav.gif" alt="testing with pixel 5"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/device/pixel5_user.gif" alt="testing with pixel 5"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/device/surface_duo.gif" alt="testing with surface duo"/>
     </p>
 </details>
 
-<details>
-    <summary><b>__samsung galaxy s5__</b></summary>
-    Device width: 360px
-    <p float="left">
-        <img src="" width="300" height="200" alt="Galaxy S5 test results for "/>
-        <img src="" width="300" height="200" alt="Galaxy S5 test results for "/>
-        <img src="" width="300" height="200" alt="Galaxy S5 test results for "/>
-    </p>
-</details>
 
-<details>
-    <summary><b>__Moto G4__</b></summary>
-    Device width: 360px
-    <p float="left">
-        <img src="" width="300" height="200" alt="Moto G4 test results for"/>
-        <img src="" width="300" height="200" alt="Moto G4 test results for"/>
-        <img src="" width="300" height="200" alt="Moto G4 test results for"/>
-    </p>
-</details>
-
-<details>
-    <summary><b>__iPad__</b></summary>
-    Device width: 1024px
-    <p float="left">
-        <img src="" width="300" height="200" alt="iPad test results for"/>
-        <img src="" width="300" height="200" alt="iPad test results for"/>
-        <img src="" width="300" height="200" alt="iPad test results for"/>
-    </p>
-</details>
-
-<details>
-    <summary><b>__Desktop Chrome__</b></summary>
-    <p float="left">
-        <img src="" width="300" height="200" alt="Desktop Chrome test results for the "/>
-		<img src="" width="300" height="200" alt="Desktop Chrome test results for the "/>
-		<img src="" width="300" height="200" alt="Desktop Chrome test results for the "/>
-		<img src="" width="300" height="200" alt="Desktop Chrome test results for the "/>
-		<img src="" width="300" height="200" alt="Desktop Chrome test results for the "/>
-		<img src="" width="300" height="200" alt="Desktop Chrome test results for the "/>
-		<img src="" width="300" height="200" alt="Desktop Chrome test results for the "/>
-		<img src="" width="300" height="200" alt="Desktop Chrome test results for the "/>
-    </p>
-</details>
-
-<details>
-    <summary><b>__Desktop Firefox__</b></summary>
-    <p float="left">
-        <img src="" width="300" height="200" alt="Desktop Firefox test results for "/>
-        <img src="" width="300" height="200" alt="Desktop Firefox test results for "/>
-        <img src="" width="300" height="200" alt="Desktop Firefox test results for "/>
-        <img src="" width="300" height="200" alt="Desktop Firefox test results for "/>
-    </p>
-</details>
-
-<details>
-    <summary><b>__Desktop Edge__</b></summary>
-    <p float="left">
-        <img src="" width="300" height="200" alt="Desktop Edge test results for the "/>
-        <img src="" width="300" height="200" alt="Desktop Edge test results for the "/>
-        <img src="" width="300" height="200" alt="Desktop Edge test results for the "/>
-        <img src="" width="300" height="200" alt="Desktop Edge test results for the "/>
-    </p>
-</details>
 
 #### HTML Code Validation Post Deployment
 <details>
     <summary>Expand for test results</summary>
     <p float="left">
-        <img src="" width="300" height="200" alt="HTML Validation Results for "/>
-        <img src="" width="300" height="200" alt="HTML Validation Results for "/>
-		<img src="" width="300" height="200" alt="HTML Validation Results for "/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/404.PNG" alt="HTML Validation Results for 404 page"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/about.PNG" alt="HTML Validation Results for about page"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/faq.PNG" alt="HTML Validation Results for faq page"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/feedback.PNG" alt="HTML Validation Results for feedback page"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/home.PNG" alt="HTML Validation Results for home page"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/login.PNG" alt="HTML Validation Results for login page"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/password_reset.PNG" alt="HTML Validation Results for password reset page"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/password_reset_complete.PNG" alt="HTML Validation Results for password reset complete page"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/password_reset_sent.PNG" alt="HTML Validation Results for password reset email sent page"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/policies.PNG" alt="HTML Validation Results for policies page"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/products.PNG" alt="HTML Validation Results for products page"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/register.PNG" alt="HTML Validation Results for register page"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/shipping.PNG" alt="HTML Validation Results for shipping page"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/unsubscribe.PNG" alt="HTML Validation Results for unsubscribe page"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/html_test/unsubscribed.PNG" alt="HTML Validation Results for unsubscribed page"/>
     </p>
 </details>
 
@@ -540,19 +493,7 @@ The following Gifs are evidence collected from the compatability testing of the 
 <details>
     <summary>Expand for test results</summary>
     <p float="left">
-        <img src="" width="300" height="200" alt="CSS Validation Results for "/>
-        <img src="" width="300" height="200" alt="CSS Validation Results for "/>
-		<img src="" width="300" height="200" alt="CSS Validation Results for "/>
-    </p>
-</details>
-
-#### JavaScript Code Validation Post Deployment
-<details>
-    <summary>Expand for test results</summary>
-    <p float="left">
-        <img src="" width="300" height="200" alt="JS Validation Results for "/>
-        <img src="" width="300" height="200" alt="JS Validation Results for "/>
-		<img src="" width="300" height="200" alt="JS Validation Results for "/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/css_test/css.PNG" width="300" height="200" alt="CSS Validation Results for only css"/>
     </p>
 </details>
 
@@ -560,9 +501,19 @@ The following Gifs are evidence collected from the compatability testing of the 
 <details>
     <summary>Expand for test results</summary>
     <p float="left">
-        <img src="" width="300" height="200" alt="Python Validation Results for "/>
-        <img src="" width="300" height="200" alt="Python Validation Results for "/>
-		<img src="" width="300" height="200" alt="Python Validation Results for "/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/customers_forms.PNG" alt="Python Validation Results for customes forms.py"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/customers_models.PNG" alt="Python Validation Results for customes models.py"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/customers_tests.PNG" alt="Python Validation Results for customes tests.py"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/customers_urls.PNG" alt="Python Validation Results for customes urls.py"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/customers_view.PNG" alt="Python Validation Results for customes view.py"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/mochabean_tests.PNG" alt="Python Validation Results for mochabean tests.py"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/mochabean_urls.PNG" alt="Python Validation Results for mochabean urls.py"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/mochabean_views.PNG" alt="Python Validation Results for mochabean views.py"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/subscriptions_forms.PNG" alt="Python Validation Results for subscriptions forms.py"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/subscriptions_models.PNG" alt="Python Validation Results for subscriptions models.py"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/subscriptions_tests.PNG" alt="Python Validation Results for subscriptions tests.py"/>
+		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/subscriptions_urls.PNG" alt="Python Validation Results for subscriptions urls.py"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/python_test/subscriptions_views.PNG" alt="Python Validation Results for subscriptions views.py"/>
     </p>
 </details>
 
@@ -578,23 +529,15 @@ Once the final code was deployed via Heroku, the original testers completed a fi
 ## Performance Testing:
 The following evidence are the results from the performance speed test conducted on the deployed site:
 <p float="left">
-<img src="" width="300" height="200" alt="Performance Results of the home page"/>
+<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/performance.PNG" alt="Performance Results of the home page"/>
 </p>
 
 
 ### Issues located
-
+- The stripe payment checkout only allows a very small number of calls/activations per minute. If this limit is exceeded it will attempt to open a new tab with an error message
+- Edge and firefox have varying virtical heights. therefore the high has been extended to suit all browsers
 
 ### Warnings located
-
-
-## Final WAVE Accessibility Assessment
-
-The following are the results from the final WAVE tests
-
-*
-
-## Production Shakedown Pre Submission
 
 # Unfixed bugs 
 
