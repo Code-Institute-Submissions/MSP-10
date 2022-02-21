@@ -1,6 +1,6 @@
 # Testing 
 
-The following sections are the results of the testing throughout the software development lifecycle for project "MSP-5 MochaBean". This information has been included in a separate document in order to keep the [README document]() uncluttered.
+The following sections are the results of the testing throughout the software development lifecycle for project "MSP-5 MochaBean". This information has been included in a separate document in order to keep the [README document](https://github.com/Sphere42/MSP-5/blob/main/README.md) uncluttered.
 
 # Table of Contents
 1. [Testing Plan](https://github.com/Sphere42/MSP-5/blob/main/TESTING.md#testing-plan)
