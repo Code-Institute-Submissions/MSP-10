@@ -32,21 +32,21 @@ Profile Update Page
                                         <!-- Form for Registration of new user -->
                                         <form method="POST">
                                             {% csrf_token %}
-                                            <label class="py-2 fs-3 fw-bold" id="first_name" for="first_name">First Name:</label>
+                                            <label class="py-2 fs-3 fw-bold" id="first_name">First Name:</label>
                                             <input type="text" name="first_name" placeholder="First Name..." class="form-control" aria-label="First name field">
-                                            <label class="py-2 fs-3 fw-bold" id="last_name" for="last_name">Surname:</label>
+                                            <label class="py-2 fs-3 fw-bold" id="last_name">Surname:</label>
                                             <input type="text" name="last_name" placeholder="Surname..." class="form-control" aria-label="Surname field">
-                                            <label class="py-2 fs-3 fw-bold" id="address1" for="address1">Address Line 1:</label>
+                                            <label class="py-2 fs-3 fw-bold" id="address1">Address Line 1:</label>
                                             <input type="text" name="address1" placeholder="Address Line 1..." class="form-control" aria-label="Address Line one field">
-                                            <label class="py-2 fs-3 fw-bold" id="address2" for="address2">Address Line 2:</label>
+                                            <label class="py-2 fs-3 fw-bold" id="address2">Address Line 2:</label>
                                             <input type="text" name="address2" placeholder="Address Line 2..." class="form-control" aria-label="Address Line Two field">
-                                            <label class="py-2 fs-3 fw-bold" id="address3" for="address3">Address Line 3:</label>
+                                            <label class="py-2 fs-3 fw-bold" id="address3">Address Line 3:</label>
                                             <input type="text" name="address3" placeholder="Address Line 3..." class="form-control" aria-label="Address Line Three field">
-                                            <label class="py-2 fs-3 fw-bold" id="city" for="city">City:</label>
+                                            <label class="py-2 fs-3 fw-bold" id="city">City:</label>
                                             <input type="text" name="city" placeholder="City..." class="form-control" aria-label="City field">
-                                            <label class="py-2 fs-3 fw-bold" id="postcode" for="postcode">Postcode:</label>
+                                            <label class="py-2 fs-3 fw-bold" id="postcode">Postcode:</label>
                                             <input type="text" name="postcode" placeholder="Postcode..." class="form-control" aria-label="Postcode field">
-                                            <label class="py-2 fs-3 fw-bold" id="country" for="country">Country:</label>
+                                            <label class="py-2 fs-3 fw-bold" id="country">Country:</label>
                                             {{form.country}}
                                             <!--Submit button -->
                                             <div class="p-3 d-flex justify-content-center">
