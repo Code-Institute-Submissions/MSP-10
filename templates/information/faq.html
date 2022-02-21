@@ -137,6 +137,19 @@ FAQ Page
                                         </div>
                                     </div>
                                     <hr>
+                                    <!-- Question nine with expandable answer -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="questionNine">
+                                            <button class="accordion-button darkmocha-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">How do I unsubscribe from the newsletter</button>
+                                        </h2>
+                                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="questionNine" data-bs-parent="#accordionQuestions">
+                                            <div class="accordion-body static-box">
+                                                We are sorry to hear that you wish to stop receiving our newsletter. Click the unsubscribe button to unsubscript from the newsletter.
+                                                <a class="btn btn-lg px-4 me-sm-3 darkmocha-button" href="{% url 'subscriptions:newsletter-unsubscribe' %}">Unsubscribe</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
                                 </div>
                             </div>
                         </aside>
