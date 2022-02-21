@@ -135,14 +135,6 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_LOCATION = 'static'
 STATIC_URL = config('AWS_STATIC_URL')
 
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-#     os.path.join(BASE_DIR, 'customers\static'),
-#     os.path.join(BASE_DIR, 'subscriptions\static'),
-# ]
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
