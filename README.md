@@ -381,3 +381,7 @@ The best Mentor a student could ever have: Felipe Souza Alarco
 ## Notes for the Assessor
 1. Commented code in the base header is to display knowledge of the required headers for Twitter cards and Facebook GL. However as fake accounts were not created these headers have not been populated
 1. While Sprints have been utilised, there is a gap in the work progress (ie empty sprints) due to higher priority commitments.
+1. Reset password option will sometimes return an error as gmail has resets the following settings periodically, please contact me if these need to be set again.
+  1. Less Secure Apps
+  1. Display/UnlockCaptcha
+  1. IMAP Enable.
