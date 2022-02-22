@@ -493,7 +493,7 @@ The following Gifs are evidence collected from the compatability testing of the 
 <details>
     <summary>Expand for test results</summary>
     <p float="left">
-        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/css_test/css.PNG" width="300" height="200" alt="CSS Validation Results for only css"/>
+        <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/css_test/css.PNG" alt="CSS Validation Results for only css"/>
     </p>
 </details>
 
