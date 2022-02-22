@@ -1,8 +1,3 @@
-# MochaBean
-
-![multidevicesnap]()
-
-
 # Project Purpose
 
 The purpose of Milestone Project 5 is to create a Full-Stack ecommerce web application based on business logic used to control a centrally-owned dataset as described in the assessment criteria.
@@ -10,27 +5,24 @@ The purpose of Milestone Project 5 is to create a Full-Stack ecommerce web appli
 
 # Project Summary
 
-The goal of this web application (MochaBeans) is to develop a a monthly subscription services of coffee. Customers can choose from various monthly boxe
+The goal of this web application (MochaBeans) is to develop a a monthly subscription services of coffee bundles. Customers can choose from various monthly boxe
 
 
 # Table of Contents
-1. [Mochabean site]()
-1. [Benefits and Rational]()
+1. [Mochabean Site](https://github.com/Sphere42/MSP-5/blob/main/README.md#mochabean-site)
+1. [Benefits and Rational](https://github.com/Sphere42/MSP-5/blob/main/README.md#benefits-and-rational)
 1. [User Stories and Functional Requirements](https://github.com/Sphere42/MSP-5/blob/main/README.md#user-stories-and-functional-requirements)
-1. [Final/Existing Feature Outcomes]()
-  1. [Landing Page]()
-  1. [Industry Certification Providers Page]()
-  1. [Practise Exams Pages]()
-  1. [Member Pages]()
-  1. [Resource Pages]()
-1. [Future Features to be Implemented]()
-1. [Technology Utilised]()
-1. [Testing]()
-  1. [Production Shakedown Testing Highlights]()
-1. [Deployment Process]()
-  1. [Direct Deployment]()
-  1. [Copying the Repository]()
-1. [Credits]()
+1. [Functional Scope](https://github.com/Sphere42/MSP-5/blob/main/README.md#functional-scope)
+1. [Business Model](https://github.com/Sphere42/MSP-5/blob/main/README.md#business-model)
+1. [Marketing](https://github.com/Sphere42/MSP-5/blob/main/README.md#marketing)
+1. [Final Existing Features](https://github.com/Sphere42/MSP-5/blob/main/README.md#final-existing-features)
+1. [Future Features to be Implemented](https://github.com/Sphere42/MSP-5/blob/main/README.md#future-features-to-be-implemented)
+1. [Technology Utilised](https://github.com/Sphere42/MSP-5/blob/main/README.md#technology-utilised)
+1. [Testing](https://github.com/Sphere42/MSP-5/blob/main/README.md#testing)
+  1. [Production Shakedown Testing Highlights](https://github.com/Sphere42/MSP-5/blob/main/README.md#production-shakedown-testing-highlights)
+1. [Deployment Process](https://github.com/Sphere42/MSP-5/blob/main/README.md#deployment-process)
+1. [Technology Utilised](https://github.com/Sphere42/MSP-5/blob/main/README.md#technology-utilised)
+1. [Credits](https://github.com/Sphere42/MSP-5/blob/main/README.md#credits)
 
 # Mochabean Site
 To create an e-commerce B2C website delivers a selected coffee bundle straght to your door each month.
@@ -125,10 +117,10 @@ The business model for this web application is a standard e-commerce Business to
 * A "Facebook" page was created in order to promote the brand
 
 <p float="left">
-    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/facebook.PNG" width="500" height="400" alt="Image of the final home page"/>
+    <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/facebook.png" width="500" height="400" alt="Image of the final home page"/>
 </p>
 
-# Final/Existing Feature Outcomes
+# Final Existing Features
 
 ## Site Colour Scheme
 
@@ -297,21 +289,21 @@ The steps to deploy to Heroku are as follows:
 1. Once the code is present and up to date, go to the [Heroku website](https://www.heroku.com/). If not already signed up for a free account, please do so.
 1. On the Heroku Dashboard, select the option for New App, (note you can have up to five applications live with a free heroku account)
 1. The site will then request an app name (this must be unique) and a region
-![Heroku App creation](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/heroku_create.PNG)
+![Heroku App creation](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/heroku_create.png)
 1. Next you will need to tell the Heroku platform what Buildpacks are required, this is done in the Buildpack section on the settings screen
-![Add Buildpack](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/add_buildpack.PNG)
+![Add Buildpack](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/add_buildpack.png)
 1. For this project you will need to add the Python Buildpack
-![Python Buildpack](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/python_buildpack.PNG)
+![Python Buildpack](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/python_buildpack.png)
 1. Next you will need to add the secrete keys and AWS configuration keys for you project. So far these parameters were contained in the .env file
 ![Postgres Database](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/postgres.PNG)
 1. Next you will need to add the secrete keys and AWS configuration keys for you project. So far these parameters were contained in the .env file
-![configuration](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/configurations.PNG)
+![configuration](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/configurations.png)
 1. Connect the app to your project code in Github via the deployment screen
-![Add Github connection](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/github_connect.PNG)
+![Add Github connection](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/github_connect.png)
 1. Deploying to Heroku can be done one of two ways:
     1. Automatically, which will mean the project will be with the latest code available each time it is loaded
     1. Manually, which will build the application as per the code available at the time of build. Any changes to the repository will not be added unless the manual build request is utilised again.
-![Screen to Deploy](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/deploy.PNG)
+![Screen to Deploy](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/deploy.png)
 1. Once the build and deployment is complete the following message should appear
 1. Done, your application is now deployed
 
@@ -325,7 +317,7 @@ Firstly, please remember that plagiarism is not only unprofessional, but illegal
 To obtain a copy of the code for this project, complete the following steps:
 
 * Go to the code page of the project and select the "code" buttom
-  ![copy2](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/code_copy.PNG)
+  ![copy2](https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/code_copy.png)
 
 * From here the project code can either be
   * Downloaded as a ZIP file

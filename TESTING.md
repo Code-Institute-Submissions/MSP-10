@@ -326,7 +326,6 @@ Due to other commitments no progress was made during this time
 * As a user i want to see a custom 404 page
 * As a User I want to view available subscriptions
 
-
 ### Exploratory Test Session Goals
 
 * I want to confirm that if a payment is unsuccessful I am notified
@@ -445,7 +444,6 @@ Note: There have been no errors raised due to the use of a pattern/texture on th
     <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/wave_testing/unsubscribed.PNG" alt="WAVE Results for the newsletter unsubscribed page"/>
 </p>
 
-
 ## Final Post Deployment Testing
 
 ### Final Compatability testing:
@@ -464,8 +462,6 @@ The following Gifs are evidence collected from the compatability testing of the 
 		<img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/device/surface_duo.gif" alt="testing with surface duo"/>
     </p>
 </details>
-
-
 
 #### HTML Code Validation Post Deployment
 <details>
@@ -525,20 +521,26 @@ This feedback has been included above within the applicable sprint and incorpora
 
 Once the final code was deployed via Heroku, the original testers completed a final round of User Acceptance Testing (Beta).
 
-
 ## Performance Testing:
 The following evidence are the results from the performance speed test conducted on the deployed site:
 <p float="left">
 <img src="https://github.com/Sphere42/MSP-5/blob/main/static/images/readme/performance.PNG" alt="Performance Results of the home page"/>
 </p>
 
-
 ### Issues located
 - The stripe payment checkout only allows a very small number of calls/activations per minute. If this limit is exceeded it will attempt to open a new tab with an error message
 - Edge and firefox have varying virtical heights. therefore the high has been extended to suit all browsers
 
-### Warnings located
 
 # Unfixed bugs 
+- Django default User authentication process is case sensitive for Usernames. While this does increase the availability of Usernames available to members, it may cause some confusion when logging in. Therefore a future feature will be to adjust the Username field to be case insensitive. Currently the placeholder text for the field indicates case sensitivity.
+- On the Product Update page the fields are the default Django form fields due to issues displaying existing information. Defect allow to go to prod and it is not effecting customers
+- Login/Register screen length is slightly longer then required on some devices due to incompatibility across browsers
 
-# Improvements to current features
+
+# Improvements to Current features
+* Ability to sent the Newletter
+* Ability for User to amend subscription
+* Ability to delete subscription without deleting the account
+* Ability for staff member to pull a list of all product subscriptions
+* Currently only card payments are accepted via Stripe - addition of PayPay/Crypto in the furture

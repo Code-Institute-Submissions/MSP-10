@@ -45,9 +45,12 @@ Product List
                     {% if request.user.is_staff %}
                     <!-- If User is staff member option will be delete/amend (not purchase) -->
                       <a href="{% url 'subscriptions:subscription-update' pk=obj.pk %}" class="btn btn-lg btn-block lightmocha-button">Amend</a>
-                    {% else %}
-                    <!-- If User is not staff member option will be purchase -->
+                    {% elif user.is_authenticated %}
+                    <!-- If User is not staff member but logged in option will be purchase -->
                       <a href="{% url 'subscriptions:subscription-checkout' pk=obj.pk %}" class="btn btn-lg btn-block lightmocha-button">Purchase</a>
+                    {% else %}
+                    <!-- If User is noth logged in, signin button -->
+                      <a href="{% url 'customers:login-page' %}" class="btn btn-lg btn-block lightmocha-button">Log In to Purchase</a>
                     {% endif %}
                   </div>
                 </div>
