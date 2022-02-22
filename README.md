@@ -377,3 +377,7 @@ Independant Reviewers and development support:
 1. Daragh Curtis
 
 The best Mentor a student could ever have: Felipe Souza Alarco
+
+## Notes for the Assessor
+1. Commented code in the base header is to display knowledge of the required headers for Twitter cards and Facebook GL. However as fake accounts were not created these headers have not been populated
+1. While Sprints have been utilised, there is a gap in the work progress (ie empty sprints) due to higher priority commitments.
